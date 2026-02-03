@@ -1,57 +1,47 @@
-# Awesome-AI-Memory
+# Agent-Memory
 
-<p align="center">
-    【English | <a href="README_cn.md">中文</a></a>】
-</p>
+🗺️ 目录表
+- [简介](#-简介)
+- [项目范围](#-项目范围)
+- [核心概念](#-核心概念)
+- [论文列表](#-论文列表)
+  - [综述](#综述)
+  - [方法类与框架类论文](#方法类与框架类论文)
+  - [数据集和评估基准类论文](#数据集与评估基准类论文)
+  - [模型和系统类论文](#模型和系统类论文)
+- [仓库资源](#-仓库资源)
+  - [测试基准](#测试基准)
+  - [开源系统](#开源系统)
+  - [多媒体资源](#多媒体资源)
 
-<div align="center">
-    <img src="assets/Gemini_Generated_Image_hretabhretabhret.png" alt="Survey Framework" width="82%">
-</div>
+## 👋 简介
+大语言模型（LLM）已迅速发展为强大的通用推理与生成引擎。然而，尽管其能力不断提升，LLM 仍然受到一个根本性限制的约束：上下文窗口（Context Window）长度有限。这一限制决定了模型在单次推理过程中能够直接访问的信息范围，使其在本质上仅具备短期记忆能力，难以支持长期对话、个性化交互、持续学习以及复杂的多阶段任务。
 
-[![Awesome](https://awesome.re/badge.svg)](https://github.com/IAAR-Shanghai/Awesome-AI-Memory) 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-![](https://img.shields.io/badge/PRs-Welcome-red)
-[![Papers](https://img.shields.io/badge/Papers-191-blue.svg)](https://github.com/IAAR-Shanghai/Awesome-AI-Memory/papers)
-[![Open Source Projects](https://img.shields.io/badge/Open%20Source%20Projects-84-green.svg)](https://github.com/IAAR-Shanghai/Awesome-AI-Memory/projects)
-
-
-## 👋 Introduction
-Large Language Models (LLMs) have rapidly evolved into powerful general-purpose reasoning and generation engines. Nevertheless, despite their continuously advancing capabilities, LLMs remain fundamentally constrained by a critical limitation: the finite length of their context window. This constraint defines the scope of information directly accessible during a single inference process, endowing models with only short-term memory capabilities. Consequently, they struggle to support extended conversations, personalized interactions, continuous learning, and complex multi-stage tasks.
-
-To transcend the inherent limitations of context windows, AI memory and memory systems for LLMs have emerged as a vital and active research and engineering frontier. By introducing external, persistent, and controllable memory structures beyond model parameters, these systems enable large models to store, retrieve, compress, and manage historical information during generation processes. This capability allows models to continuously leverage long-term experiences within limited context windows, achieving cross-session consistency and continuous reasoning abilities.
-
-Awesome-AI-Memory is a comprehensive repository dedicated to AI memory and memory systems for large language models, systematically curating relevant research papers, framework tools, and practical implementations. This repository endeavors to map the rapidly evolving research landscape in LLM memory systems, bridging multiple disciplines including natural language processing, information retrieval, intelligent agent systems, and cognitive science.
-
+为突破上下文窗口的固有限制，面向大模型的记忆与记忆系统（AI Memory & Memory Systems for LLMs）逐渐成为一个重要且活跃的研究与工程方向。通过为模型引入参数之外的外部、可持久化且可控的记忆结构，记忆系统使大模型能够在生成过程中存储、检索、压缩和管理历史信息，从而在有限上下文中持续利用长期经验，实现跨会话的一致性与连续推理能力。
 
 ---
 
-## 🎯 Goal of Repository
-Our mission is to establish a centralized, continuously evolving knowledge base that serves as a valuable reference for researchers and practitioners, ultimately accelerating the development of intelligent systems capable of long-term memory retention, sustained reasoning, and adaptive evolution over time.
+## 📏 项目范围
+用于扩展或补充大模型上下文窗口能力的记忆机制与系统设计，而非单纯的模型预训练或通用知识学习。内容同时涵盖理论研究与工程实践。
 
----
+🌀 包含内容（In Scope）
+- 面向大语言模型的记忆与记忆系统设计
+- 模型参数之外的外部显式记忆
+- 短期记忆、长期记忆、情节记忆与语义记忆
+- 作为记忆访问机制的检索增强生成（RAG）
+- 记忆管理策略（写入、更新、遗忘、压缩）
+- 智能体（Agent）中的记忆系统
+- 多智能体的共享记忆与协作记忆
+- 受认知科学与生物记忆启发的记忆模型
+- 与大模型记忆相关的评测方法、基准与数据集
+- 记忆增强型 LLM 的开源框架与工具
 
-## 📏 Project Scope
-This repository focuses on memory mechanisms and system designs that extend or augment the context window capabilities of large language models, rather than merely addressing model pre-training or general knowledge learning. The content encompasses both theoretical research and engineering practices.
+🌀 不包含内容（Out of Scope）
+- 与记忆无直接关联的一般模型预训练或规模化研究
+- 不涉及记忆交互的纯参数化知识学习
+- 与 LLM 无关的传统数据库或信息检索系统
+- 非大模型场景下的通用记忆系统（除非具有直接迁移价值）
 
-🌀 Included Content (In Scope)
-- Memory and memory system designs for large language models
-- External explicit memory beyond model parameters
-- Short-term memory, long-term memory, episodic memory, and semantic memory
-- Retrieval-Augmented Generation (RAG) as a memory access mechanism
-- Memory management strategies (writing, updating, forgetting, compression)
-- Memory systems in intelligent agents (Agents)
-- Shared and collaborative memory in multi-agent systems
-- Memory models inspired by cognitive science and biological memory
-- Evaluation methods, benchmarks, and datasets related to LLM memory
-- Open-source frameworks and tools for memory-enhanced LLMs
-
-🌀 Excluded Content (Out of Scope)
-- General model pre-training or scaling research without direct memory relevance
-- Purely parameterized knowledge learning without memory interaction
-- Traditional databases or information retrieval systems unrelated to LLMs
-- Generic memory systems outside the LLM context (unless demonstrating direct transfer value)
-
----
 
 <!-- ## 🗂️ AI-Memory Taxonomy
 
@@ -105,126 +95,100 @@ To systematically organize the diverse research and practical resources in the f
 - Personalization and user preference retention evaluation
 
 --- -->
+---
 
-## 🔔 Recent hot research and news
+## 🧠 核心概念
 
-+ 2025-12-24 – 🎉 Release Repository V(1.0)
-+ 2025-12-10 – 🎉 Initial Repo
+- 大模型记忆: LLM的记忆机制融合了隐性知识（通过训练过程内化于模型参数中）与显式存储（运行时可检索的外部存储），这种双重架构使模型突破token处理的局限，具备类似人类"记忆过往、认知当下、预见未来"的认知能力。
+
+- **记忆系统**：为大语言模型实现记忆功能的完整技术架构，包含四大核心组件：
+  - **记忆存储层**：向量数据库（如 Chroma、Weaviate）、图数据库或混合存储方案
+  - **记忆处理层**：嵌入模型、摘要生成器与记忆分割器
+  - **记忆检索层**：多阶段检索器、重排序模块与上下文注入器
+  - **记忆控制层**：记忆优先级管理器、遗忘控制器与一致性协调器
+
+- **记忆操作**：通过记忆系统工具调用执行的原子级记忆操作：
+  - **写入**：将对话内容转换为向量进行存储，通常结合摘要生成以减少噪声信息
+  - **检索**：根据当前上下文生成查询语句以获取Top-K相关记忆
+  - **更新**：通过向量相似度找到相关记忆并进行替换或增强
+  - **删除**：基于用户指令或自动策略（如隐私数据过期）删除特定记忆
+  - **压缩**：将多个相关记忆合并为摘要以释放存储空间
+
+- **记忆管理**：在记忆系统内实施记忆管控的方法论，包含以下机制：
+  - **记忆生命周期**：从创建、活跃使用、冷启动访问到归档/删除的全周期管理
+  - **冲突解决**：矛盾信息仲裁机制（如时间戳优先级、来源可信度加权）
+  - **资源预算**：为不同用户/任务分配内存配额以防止资源滥用
+  - **安全治理**：自动检测和去标识化个人身份信息（PII）
+
+- **记忆分类**：记忆系统特有的多维度分类体系：
+  - **按访问频率**：工作记忆（当前任务）、常用记忆（个人偏好）、归档记忆（历史记录）
+  - **按结构化程度**：结构化记忆（数据库记录）、半结构化记忆（对话摘要）、非结构化记忆（原始对话文本）
+  - **按共享范围**：个人记忆（单用户）、团队记忆（协作空间）、公共记忆（共享知识库）
+  - **按时效属性**：永久记忆（核心事实）、临时记忆（对话上下文）、时效性记忆（如"用户今天心情不好"）
+
+- **记忆机制**：驱动记忆系统功能的核心技术组件：
+  - **检索增强生成（RAG）**：通过从知识库中检索相关信息来增强生成能力
+  - **记忆反思循环**：模型定期"回顾"对话历史以生成高层次摘要
+  - **记忆路由**：根据查询类型（个人记忆/公共知识库）自动选择检索源
+
+- **显式记忆**：以原始文本形式存储在模型外部的记忆，通过融合混合索引策略的向量数据库实现：
+  - **稠密向量索引**：处理语义相似性查询
+  - **稀疏关键词索引**：处理精确匹配查询
+  - **多向量索引**：将长文档切分为多个部分，每个部分独立索引
+
+- **参数化记忆**：存储于语言模型固定权重中的知识与能力，具有以下特征：
+  - 作为模型的核心长期语义记忆载体
+  - 无需外部检索或显式上下文支持即可激活
+  - 提供零样本推理、通用响应与语言生成的基础能力
+
+- **长期记忆**：设计用于持久存储的关键信息，通常通过外部知识库实现，包含以下功能：
+  - **自动摘要生成**：将多轮对话提炼为结构化记忆
+  - **上下文绑定**：记录记忆上下文以防止错误泛化
+  - **多模态存储**：同时保存文本、图像、音频等多种模态记忆
+
+- **短期记忆**：受限于注意力机制的大语言模型上下文窗口中的活跃信息，包含以下关键技术：
+  - **KV缓存管理**：复用键值缓存以减少冗余计算
+  - **上下文压缩**：使用摘要替代详细历史（如："前5轮对话讨论了项目预算"）
+  - **滑动窗口注意力机制**：仅关注最近N个token，同时保留特殊标记
+  - **记忆摘要注入**：将长期记忆摘要动态插入短期上下文
+
+- **情景记忆**：记录特定用户交互历史的记忆类型，是个性化AI的基础：
+  - **用户身份识别**：跨会话识别同一用户
+  - **交互轨迹记录**：保存用户决策路径与反馈
+  - **情绪状态追踪**：记录用户情绪变化规律
+  - **偏好演化建模**：捕捉用户兴趣长期变化
+
+- **记忆遗忘**：大模型中刻意设计的遗忘机制，包含以下技术实现：
+  - **选择性遗忘（机器遗忘）**：移除训练数据中特定信息的影响，例如通过遗忘层覆盖特定知识
+  - **隐私保护遗忘**：自动识别并删除个人身份信息（PII），或设置自动过期策略
+  - **记忆衰减**：根据使用频率自动降低低频访问记忆的优先级
+  - **冲突驱动遗忘**：当新证据与旧记忆冲突时，策略性更新或淘汰旧记忆
+
+- **记忆检索**：从海量记忆库中精确定位相关信息的复杂过程：
+  - **语义预过滤**：通过向量相似度匹配获取Top-100候选结果
+  - **上下文重排序**：根据当前查询上下文重新排序结果
+  - **时间过滤**：优先选择最新相关数据
+
+- **记忆压缩**：在资源受限条件下最大化记忆效用的技术体系：
+  - **内容级压缩**：提取核心信息并舍弃冗余细节
+  - **表征级压缩**：向量量化（如乘积量化编码）、维度约简
+  - **组织级压缩**：聚类相似记忆、构建分层记忆结构
+  - **知识蒸馏**：将外部记忆中的关键模式迁移至参数化记忆
 
 ---
 
-🗺️ Table of Contents
-- [Introduction](#-introduction)
-- [Goal of Repository](#-goal-of-repository)
-- [Project Scope](#-project-scope)
-- [Recent hot research and news](#-Recent-hot-research-and-news)
-- [Core Concepts](#-core-concepts)
-- [Paper List](#-paper-list)
-  - [Survey](#Survey)
-  - [Framework & Methods](#Framework-Methods)
-  - [Benchmark & Datasets](#Benchmark-Datasets)
-  - [System & model](#System-model)
-- [Resource](#-resource)
-  - [Benchmarks and tasks](#Benchmarks-and-tasks)
-  - [Systems and open sources](#Systems-and-open-sources)
-  - [Multi-media resource](#Multi-media-resource)
-- [Make a Contribution](#-Make-a-Contribution)
-- [Star Trends](#-star-trends)
-
----
-
-## 🧠 Core Concepts
-
-- LLM Memory: A fusion of implicit knowledge encoded within parameters (acquired during training) and explicit storage outside parameters (retrieved at runtime), enabling models to transcend token limitations and possess human-like abilities to "remember the past, understand the present, and predict the future."
-
-- Memory System: The complete technical stack implementing memory functionality for large language models, comprising four core components:
-  - Memory Storage Layer: Vector databases (e.g., Chroma, Weaviate), graph databases, or hybrid storage solutions
-  - Memory Processing Layer: Embedding models, summarization generators, and memory segmenters
-  - Memory Retrieval Layer: Multi-stage retrievers, reranking modules, and context injectors
-  - Memory Control Layer: Memory prioritization managers, forgetting controllers, and consistency coordinators
-
-- Memory Operations: Atomic memory operations executed through tool calling in memory systems:
-  - Writing: Converting dialogue content into vectors for storage, often combined with summarization to reduce noise
-  - Retrieval: Generating queries based on current context to obtain Top-K relevant memories
-  - Updating: Finding relevant memories via vector similarity and replacing or enhancing them
-  - Deletion: Removing specific memories based on user instructions or automatic policies (e.g., privacy expiration)
-  - Compression: Merging multiple related memories into summaries to free storage space
-
-- Memory Management: The methodology for managing memories within memory systems, including:
-  - Memory Lifecycle: End-to-end management from creation, active usage, infrequent access, to archiving/deletion
-  - Conflict Resolution: Arbitration mechanisms for contradictory information (e.g., timestamp priority, source credibility weighting)
-  - Resource Budgeting: Allocating memory quotas to different users/tasks to prevent resource abuse
-  - Security Governance: Automatic detection and de-identification of PII (Personally Identifiable Information)
-
-- Memory Classification: A multi-dimensional classification system unique to memory systems:
-  - By Access Frequency: Working memory (current tasks), frequent memory (personal preferences), archived memory (historical records)
-  - By Structured Degree: Structured memory (database records), semi-structured memory (dialogue summaries), unstructured memory (raw conversations)
-  - By Sharing Scope: Personal memory (single user), team memory (collaborative spaces), public memory (shared knowledge bases)
-  - By Temporal Validity: Permanent memory (core facts), temporary memory (conversation context), time-sensitive memory (e.g., "user is in a bad mood today")
-
-- Memory Mechanisms: Core technical components enabling memory system functionality:
-  - Retrieval-Augmented Generation (RAG): Enhancing generation by retrieving relevant information from knowledge bases
-  - Memory Reflection Loop: Models periodically "review" conversation history to generate high-level summaries
-  - Memory Routing: Automatically selecting retrieval sources based on query type (personal memory/public knowledge base)
-
-- Explicit Memory: Memory stored as raw text outside the model, implemented through vector databases with hybrid indexing strategies:
-  - Dense Vector Indexing: Handling semantic similarity queries
-  - Sparse Keyword Indexing: Processing exact match queries
-  - Multi-vector Indexing: Segmenting long documents into multiple parts, each independently indexed
-
-- Parametric Memory: Knowledge and capabilities stored within the fixed weights of a language model's architecture, characterized by:
-  - Serving as the model's core long-term semantic memory carrier
-  - Being activatable without external retrieval or explicit contextual support
-  - Providing the foundational capability for zero-shot reasoning, general responses, and language generation
-
-- Long-Term Memory: Key information designed for persistent storage, typically implemented as external knowledge bases with capabilities including:
-  - Automatic Summarization: Distilling multi-turn dialogues into structured memory
-  - Context Binding: Recording memory context to prevent erroneous generalization
-  - Multimodal Storage: Simultaneously preserving text, images, audio, and other multimodal memories
-
-- Short-Term Memory: Active information within the LLM's context window, constrained by attention mechanisms. Key techniques include:
-  - KV Cache Management: Reusing key-value caches to reduce redundant computation
-  - Context Compression: Using summaries instead of detailed history (e.g., "the previous 5 dialogue rounds discussed project budget")
-  - Sliding Window Attention: Focusing only on the most recent N tokens while preserving special markers
-  - Memory Summary Injection: Dynamically inserting summaries of long-term memory into short-term context
-
-- Episodic Memory: Memory type recording specific user interaction history, fundamental to personalized AI:
-  - User Identity Recognition: Identifying the same user across sessions
-  - Interaction Trajectory Recording: Preserving user decision paths and feedback
-  - Emotional State Tracking: Recording patterns of user mood changes
-  - Preference Evolution Modeling: Capturing long-term changes in user interests
-
-- Memory Forgetting: Deliberately designed forgetting mechanisms in large models, including:
-  - Selective Forgetting (Machine Unlearning): Removing the influence of specific information from training data, such as covering specific knowledge with forgetting layers
-  - Privacy-Driven Forgetting: Automatically identifying and deleting PII information, or setting automatic expiration
-  - Memory Decay: Automatically lowering the priority of infrequently accessed memories based on usage frequency
-  - Conflict-Driven Forgetting: Strategically updating or discarding old memories when new evidence conflicts with them
-
-- Memory Retrieval: The complex process of precisely locating relevant information from massive memory repositories:
-  - Semantic Pre-filtering: Vector similarity matching to obtain Top-100 candidates
-  - Contextual Reranking: Reordering results based on current query context
-  - Temporal Filtering: Prioritizing the most recent relevant information
-
-- Memory Compression: A collection of techniques maximizing memory utility under limited resources:
-  - Content-level Compression: Extracting core information while discarding redundant details
-  - Representation-level Compression: Vector quantization (e.g., PQ coding), dimensionality reduction
-  - Organization-level Compression: Clustering similar memories, building hierarchical memory structures
-  - Knowledge Distillation: Transferring key patterns from external memory into parametric memory
-
----
-
-## 📚 Paper List
-Papers below are ordered by **publication date**:
+## 📚 论文列表
+以下论文按发表日期排列：
 
 <details>
-  <summary><strong>Survey</strong></summary>
+  <summary><strong>综述</strong></summary>
 
   <table style="width: 100%;">
     <tr>
-      <td><strong>Date</strong></td>
-      <td><strong>Paper & Summary</strong></td>
-      <td><strong>Tags</strong></td>
-      <td><strong>Links</strong></td>
+      <td><strong>时间</strong></td>
+      <td><strong>论文与摘要</strong></td>
+      <td><strong>标签</strong></td>
+      <td><strong>链接</strong></td>
     </tr>
     <tr>
       <td rowspan="2" style="width: 15%;">2025-12-15</td>
@@ -237,15 +201,15 @@ Papers below are ordered by **publication date**:
       </td>
       <td style="width: 15%;">
         <a href="https://arxiv.org/pdf/2512.13564">
-        <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge">
+        <img src="https://img.shields.io/badge/arXiv-paper-%23D2691E?logo=arxiv" alt="Paper Badge">
         </a>
       </td>
     </tr>
     <tr>
         <td colspan="3">
-          • Provides a comprehensive and up-to-date landscape of agent memory, explicitly distinguishing it from related concepts like LLM memory, RAG, and context engineering.<br>
-          • Introduces a unified taxonomy examining memory through three lenses: <strong>Forms</strong> (token-level, parametric, latent), <strong>Functions</strong> (factual, experiential, working), and <strong>Dynamics</strong> (formation, evolution, retrieval).<br>
-          • Discusses emerging research frontiers such as automation-oriented memory design, reinforcement learning integration, and trustworthiness, while compiling representative benchmarks and frameworks.
+          • 提供了一个全面且最新的智能体记忆全景图，明确将其与 LLM 记忆、RAG 和上下文工程等相关概念区分开来。<br>
+          • 引入了一个统一的分类体系，通过三个视角审视记忆：<strong>形式</strong>（Token 级、参数化、潜在）、<strong>功能</strong>（事实性、经验性、工作）和<strong>动态</strong>（形成、演变、检索）。<br>
+          • 探讨了新兴的研究前沿，如面向自动化的记忆设计、强化学习集成和可信度，同时汇编了具有代表性的基准和框架。
         </td>
     </tr>
     <tr>
@@ -255,15 +219,15 @@ Papers below are ordered by **publication date**:
       <td style="width: 15%;"><img src="https://img.shields.io/badge/Machine%20Forgetting-grey" alt="Machine Forgetting"></td>
       <td style="width: 15%;">
         <a href="https://dl.acm.org/doi/full/10.1145/3749987">
-        <img src="https://img.shields.io/badge/ACM-Paper-black?labelColor=blue" alt="Paper Badge">
+        <img src="https://img.shields.io/badge/ACM-paper-black?labelColor=blue" alt="Paper Badge">
         </a>
       </td>
     </tr>
     <tr>
         <td colspan="3">
-          • Provides an in-depth exploration of the concept and background of machine unlearning, highlighting its importance in modern machine learning.<br>
-          • Machine unlearning aims to enable learning algorithms to effectively remove the influence of specific data without requiring full model retraining.<br>
-          • The paper analyzes the necessity, challenges, and design requirements of machine unlearning, reviews current research progress, and emphasizes the field’s complexity and diversity in terms of algorithmic effectiveness, fairness, and privacy protection.
+          • 深入探讨了机器遗忘的概念和背景，强调了其在现代机器学习中的重要性。<br>
+          • 机器遗忘旨在使学习算法能够有效地消除特定数据的影响，而无需进行完整的模型重新训练。<br>
+          • 论文分析了机器遗忘的必要性、挑战和设计要求，回顾了当前的研究进展，并强调了该领域在算法有效性、公平性和隐私保护方面的复杂性和多样性。
         </td>
     </tr>
     <tr>
@@ -274,14 +238,14 @@ Papers below are ordered by **publication date**:
       <img src="https://img.shields.io/badge/Memory%20Modules-orange" alt="Memory Modules Badge">
       <td style="width: 15%;">
         <a href="https://dl.acm.org/doi/pdf/10.1145/3748302">
-        <img src="https://img.shields.io/badge/ACM-Paper-black?labelColor=blue" alt="Paper Badge"></a>
+        <img src="https://img.shields.io/badge/ACM-paper-black?labelColor=blue" alt="Paper Badge"></a>
       </td>
     </tr>
     <tr>
         <td colspan="3">
-          • Explores the memory mechanisms of LLM-based agents, emphasizing the crucial role of memory in agent self-evolution and complex interactions.<br>
-          • Systematically summarizes and categorizes existing memory module designs and evaluation methods, while analyzing their roles and limitations across different application scenarios.<br>
-          • Such agents are able to improve decision-making and task execution.
+          • 探讨了基于 LLM 的智能体的记忆机制，强调了记忆在智能体自我进化和复杂交互中的关键作用。<br>
+          • 系统总结和分类了现有的记忆模块设计和评估方法，并分析了它们在不同应用场景中的作用和局限性。<br>
+          • 此类智能体能够改善决策制定和任务执行。
         </td>
     </tr>
     <tr>
@@ -292,14 +256,14 @@ Papers below are ordered by **publication date**:
       <img src="https://img.shields.io/badge/Machine%20Forgetting-grey" alt="Machine Forgetting"></td>
       <td style="width: 15%;">
         <a href="https://arxiv.org/pdf/2503.01854v2">
-        <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge"></a>
+        <img src="https://img.shields.io/badge/arXiv-paper-%23D2691E?logo=arxiv" alt="Paper Badge"></a>
       </td>
     </tr>
     <tr>
         <td colspan="3">
-          • The paper investigates machine unlearning in large language models (LLMs), aiming to effectively remove the influence of undesirable data (e.g., sensitive or illegal information) without full retraining, while preserving overall model utility.<br>
-          • It defines the objectives and paradigms of LLM unlearning and establishes a comprehensive taxonomy.<br>
-          • The paper reviews existing approaches, evaluates their strengths and limitations, and discusses opportunities for future research.
+          • 论文调查了大语言模型（LLM）中的机器遗忘，旨在有效消除不良数据（如敏感或非法信息）的影响，无需完全重新训练，同时保留整体模型效用。<br>
+          • 它定义了 LLM 遗忘的目标和范式，并建立了一个全面的分类体系。<br>
+          • 论文回顾了现有方法，评估了它们的优势和局限性，并讨论了未来的研究机会。
         </td>
     </tr>
     <tr>
@@ -315,14 +279,14 @@ Papers below are ordered by **publication date**:
       </td>
       <td style="width: 15%;">
         <a href="https://arxiv.org/pdf/2505.00675">
-        <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge"></a>
+        <img src="https://img.shields.io/badge/arXiv-paper-%23D2691E?logo=arxiv" alt="Paper Badge"></a>
       </td>
     </tr>
     <tr>
         <td colspan="3">
-          • Explores multidimensional research on memory in artificial intelligence (AI), with a particular focus on memory operations and management in large language models (LLMs).<br>
-          • Categorizes various types of memory representations and operations—including integration, updating, indexing, forgetting, retrieval, and compression—and provides a systematic analysis of the importance of memory in AI and how it is implemented.<br>
-          • Through an extensive review of the literature, the paper identifies four key research themes: long-term memory, parametric memory, long-context memory, and multi-source memory integration.
+          • 探索了人工智能（AI）中关于记忆的多维研究，特别关注大语言模型（LLM）中的记忆操作和管理。<br>
+          • 对各种类型的记忆表示和操作（包括整合、更新、索引、遗忘、检索和压缩）进行了分类，并系统分析了记忆在 AI 中的重要性及其实现方式。<br>
+          • 通过广泛的文献回顾，论文确定了四个关键研究主题：长期记忆、参数化记忆、长上下文记忆和多源记忆整合。
         </td>
     </tr>
     <tr>
@@ -334,32 +298,32 @@ Papers below are ordered by **publication date**:
       </td>
       <td style="width: 15%;">
         <a href="https://arxiv.org/pdf/2504.02441">
-        <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge"></a>
+        <img src="https://img.shields.io/badge/arXiv-paper-%23D2691E?logo=arxiv" alt="Paper Badge"></a>
       </td>
     </tr>
     <tr>
         <td colspan="3">
-          • Provides a comprehensive examination of memory mechanisms in large language models (LLMs), with a particular focus on different types of memory and their roles within the models.<br>
-          • While LLMs excel at information retrieval and interaction summarization, their long-term memory remains unstable.<br>
-          • Integrating memory into AI systems is crucial for delivering context-rich responses, reducing hallucinations, improving data processing efficiency, and enabling the self-evolution of AI systems.
+          • 对大语言模型（LLM）中的记忆机制进行了全面考察，特别关注不同类型的记忆及其在模型中的作用。<br>
+          • 虽然 LLM 在信息检索和交互总结方面表现出色，但其长期记忆仍然不稳定。<br>
+          • 将记忆集成到 AI 系统中对于提供上下文丰富的响应、减少幻觉、提高数据处理效率以及实现 AI 系统的自我进化至关重要。
         </td>
     </tr>
     <tr>
       <td rowspan="2" style="width: 15%;">2025-04-23</td>
-      <td style="width: 55%;"><strong>From Human Memory to AI Memory A Survey on Memory Mechanisms in the Era of LLMs </strong></td>
+      <td style="width: 55%;"><strong>From Human Memory to AI Memory A Survey on Memory Mechanisms in the Era of LLMs</strong></td>
       <td style="width: 15%;"><img src="https://img.shields.io/badge/Human%20Memory-red" alt="Human Memory">
       <img src="https://img.shields.io/badge/Memory%20Mechanisms-yellowgreen" alt="Memory Mechanisms">
       </td>
       <td style="width: 15%;">
         <a href="https://arxiv.org/pdf/2504.15965">
-        <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge"></a>
+        <img src="https://img.shields.io/badge/arXiv-paper-%23D2691E?logo=arxiv" alt="Paper Badge"></a>
       </td>
     </tr>
     <tr>
         <td colspan="3">
-          • Explores the relationship between human memory and the memory mechanisms of LLM-based artificial intelligence (AI) systems.<br>
-          • The main contributions include a systematic definition of memory in LLM-driven AI systems and its conceptual linkage to human memory.<br>
-          • The paper proposes a three-dimensional memory taxonomy based on object, form, and time, and summarizes key open issues in current research on personal memory and system memory.
+          • 探讨了人类记忆与基于 LLM 的人工智能（AI）系统的记忆机制之间的关系。<br>
+          • 主要贡献包括系统定义了 LLM 驱动的 AI 系统中的记忆，及其与人类记忆的概念联系。<br>
+          • 论文提出了一个基于对象、形式和时间的三维记忆分类体系，并总结了当前个人记忆和系统记忆研究中的关键开放问题。
         </td>
     </tr>
     <tr>
@@ -368,14 +332,14 @@ Papers below are ordered by **publication date**:
       <td style="width: 15%;"><img src="https://img.shields.io/badge/Machine%20Forgetting-grey" alt="Machine Forgetting">
       <td style="width: 15%;">
         <a href="https://arxiv.org/pdf/2404.02062">
-        <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge"></a>
+        <img src="https://img.shields.io/badge/arXiv-paper-%23D2691E?logo=arxiv" alt="Paper Badge"></a>
       </td>
     </tr>
     <tr>
         <td colspan="3">
-          • The paper explores digital forgetting in large language models (LLMs) and corresponding unlearning methods, with a focus on addressing issues related to privacy, copyright, and social ethics.<br>
-          • It analyzes different types of model architectures and training processes, as well as practical approaches to digital forgetting, including data retraining, machine unlearning, and prompt engineering.<br>
-          • By introducing the concept of “forgetting guarantees,” the paper emphasizes effective mechanisms for both exact and approximate forgetting.
+          • 论文探讨了大语言模型（LLM）中的数字遗忘及相应的遗忘方法，重点是解决与隐私、版权和社会伦理相关的问题。<br>
+          • 它分析了不同类型的模型架构和训练过程，以及数字遗忘的实际方法，包括数据重新训练、机器遗忘和提示工程。<br>
+          • 通过引入“遗忘保证”的概念，论文强调了精确遗忘和近似遗忘的有效机制。
         </td>
     </tr>  
     <tr>
@@ -389,14 +353,14 @@ Papers below are ordered by **publication date**:
       </td>
       <td style="width: 15%;">
         <a href="https://arxiv.org/pdf/2411.00489">
-        <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge"></a>
+        <img src="https://img.shields.io/badge/arXiv-paper-%23D2691E?logo=arxiv" alt="Paper Badge"></a>
       </td>
     </tr>
     <tr>
         <td colspan="3">
-          • This paper systematically examines the interplay between human long-term memory mechanisms and AI long-term memory, and proposes an adaptive long-term memory cognitive architecture (SALM).<br>
-          • It introduces the structure of human memory, including sensory memory, working memory, and different types of long-term memory (episodic, semantic, and procedural memory).<br>
-          • The paper analyzes the classification of AI long-term memory—parametric and non-parametric memory—as well as their storage and retrieval mechanisms.
+          • 本文系统地考察了人类长期记忆机制与 AI 长期记忆之间的相互作用，并提出了一种自适应长期记忆认知架构（SALM）。<br>
+          • 它介绍了人类记忆的结构，包括感官记忆、工作记忆以及不同类型的长期记忆（情景记忆、语义记忆和程序记忆）。<br>
+          • 论文分析了 AI 长期记忆的分类——参数化记忆和非参数化记忆——及其存储和检索机制。
         </td>
     </tr>
   </table>
@@ -405,14 +369,14 @@ Papers below are ordered by **publication date**:
 
 
 <details>
-  <summary><strong>Framework & Methods</strong></summary>
+  <summary><strong>方法类与框架类论文</strong></summary>
 
   <table style="width: 100%;">
     <tr>
-      <td><strong>Date</strong></td>
-      <td><strong>Paper & Summary</strong></td>
-      <td><strong>Tags</strong></td>
-      <td><strong>Links</strong></td>
+      <td><strong>时间</strong></td>
+      <td><strong>论文与摘要</strong></td>
+      <td><strong>标签</strong></td>
+      <td><strong>链接</strong></td>
     </tr>
     <tr>
       <td rowspan="2" style="width: 15%;">2026-01-29</td>
@@ -423,15 +387,14 @@ Papers below are ordered by **publication date**:
         <img src="https://img.shields.io/badge/Context%20Reconstruction-green" alt="Context Reconstruction">
       </td>
       <td style="width: 15%;"><a href="https://arxiv.org/pdf/2601.21714">
-        <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge">
-      </a></td>
+      <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge"></a></td>
     </tr>
     <tr>
-      <td colspan="3">
-        • Proposed the E-mem framework, shifting from traditional memory preprocessing to Episodic Context Reconstruction to prevent information loss caused by de-contextualization.<br>
-        • Adopted a heterogeneous Master-Assistant architecture where assistant agents maintain uncompressed context as memory nodes while the master agent handles global planning.<br>
-        • Introduced a routing mechanism allowing assistants to reason within locally restored original contexts, achieving SOTA performance on LoCoMo and HotpotQA while reducing token costs by over 70%.
-      </td>
+        <td colspan="3">
+          • 提出了 E-mem 框架，通过情景上下文重构（Episodic Context Reconstruction）取代传统的记忆预处理，解决了去语境化导致的信息丢失问题。<br>
+          • 采用了异构分层的主从智能体架构（Master-Assistant）：助手智能体作为记忆节点维护未压缩的完整上下文，而主智能体负责全局规划。<br>
+          • 引入了路由机制，使助手智能体能够在本地恢复的原始上下文中进行推理并提取精确证据，在 LoCoMo 和 HotpotQA 上取得了 SOTA 性能，同时显著降低了 Token 成本（降低 70% 以上）。
+        </td>
     </tr>
     <tr>
       <td rowspan="2" style="width: 15%;">2026-01-29</td>
@@ -447,9 +410,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • Proposed ShardMemo, a tiered memory architecture: Tier A (working state), Tier B (sharded evidence), and Tier C (versioned skill library).<br>
-        • Enforced a "scope-before-routing" strategy in Tier B and modeled shard selection as a Masked MoE routing problem under fixed budgets, using cost-aware gating.<br>
-        • Improved F1 by +6.87 on LoCoMo and HotpotQA compared to cosine similarity routing, while reducing retrieval work and latency by 20.5%.
+        • 提出了 ShardMemo，一种分层记忆服务架构：Tier A（工作状态）、Tier B（分片证据存储）和 Tier C（版本化技能库）。<br>
+        • 在 Tier B 中实施了“路由前范围过滤”（scope-before-routing）策略，并将分片选择建模为受限预算下的 Masked MoE 路由问题，利用成本感知门控机制优化检索。<br>
+        • 在 LoCoMo 和 HotpotQA 上，ShardMemo 在固定预算下比余弦相似度路由提升了 +6.87 F1，同时减少了 20.5% 的检索工作量和延迟。
       </td>
     </tr>
     <tr>
@@ -466,9 +429,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • Proposed MemCtrl, a framework using MLLMs as active memory controllers to filter redundant observations online for embodied agents.<br>
-        • Introduced a trainable memory head ($\mu$) acting as a gate to dynamically determine whether to retain, update, or discard observations during exploration.<br>
-        • Trained via offline supervision and online RL, MemCtrl improved task completion rates by ~16% for small MLLMs on EmbodiedBench, with >20% gains on specific instruction subsets.
+        • 提出了 MemCtrl，一种利用多模态大模型（MLLM）作为主动记忆控制器的框架，用于在线过滤具身智能体的冗余观察。<br>
+        • 引入了一个可训练的记忆头（$\mu$），它可以作为门控机制，在探索过程中动态决定是保留、更新还是丢弃当前的观察或反思。<br>
+        • 通过离线监督学习和在线强化学习训练记忆头，在 EmbodiedBench 上使小型 MLLM 的任务完成率平均提升了约 16%，在特定指令子集上提升超过 20%。
       </td>
     </tr>
     <tr>
@@ -485,9 +448,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • Proposed AMA (Adaptive Memory via Multi-Agent Collaboration), leveraging Constructor, Retriever, Judge, and Refresher agents to manage multi-granularity memory.<br>
-        • Utilized a hierarchical memory design (Raw Text, Fact Knowledge, Episode), where the Retriever dynamically routes queries and the Judge detects conflicts.<br>
-        • The Refresher maintains long-term consistency via logic-driven updates. AMA significantly outperformed baselines on LoCoMo and LongMemEval while reducing token consumption by 80%.
+        • 提出了 AMA（Adaptive Memory via Multi-Agent Collaboration）框架，通过 Constructor、Retriever、Judge 和 Refresher 四个协作智能体来管理多粒度记忆。<br>
+        • 采用了分层记忆设计（原始文本、事实知识、剧集记忆），Retriever 根据任务意图动态路由查询，Judge 负责逻辑审计和冲突检测。<br>
+        • Refresher 模块通过逻辑驱动的更新维护长期记忆的一致性。在 LoCoMo 和 LongMemEval 上，AMA 在减少 80% Token 消耗的同时显著优于现有基线。
       </td>
     </tr>
     <tr>
@@ -504,28 +467,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • Proposed the Global Verifier (GLOVE) framework to address memory-environment misalignment caused by dynamic environmental drifts.<br>
-        • Established "relative truth" via active probing to detect cognitive dissonance by comparing retrieved memories with fresh observations, realigning memory without ground truth.<br>
-        • Significantly improved agent adaptability and success rates in web navigation, discrete planning, and continuous control tasks under explicit and implicit environment drifts.
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="2" style="width: 15%;">2026-01-26</td>
-      <td style="width: 55%;"><strong>FadeMem: Biologically-Inspired Forgetting for Efficient Agent Memory</strong></td>
-      <td style="width: 15%;">
-        <img src="https://img.shields.io/badge/Biologically--Inspired-lightgreen" alt="Biologically-Inspired">
-        <img src="https://img.shields.io/badge/Forgetting%20Mechanism-gray" alt="Forgetting Mechanism">
-        <img src="https://img.shields.io/badge/Memory%20Management-steelblue" alt="Memory Management">
-      </td>
-      <td style="width: 15%;"><a href="https://arxiv.org/pdf/2601.18642">
-        <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge">
-      </a></td>
-    </tr>
-    <tr>
-      <td colspan="3">
-        • Proposed FadeMem, a memory architecture inspired by the Ebbinghaus forgetting curve, introducing active forgetting mechanisms to prevent information overload.<br>
-        • Implemented a dual-layer hierarchy with adaptive exponential decay governed by semantic relevance, access frequency, and temporal patterns.<br>
-        • Combined with LLM-guided conflict resolution, FadeMem achieved superior multi-hop reasoning on Multi-Session Chat and LoCoMo while reducing storage by 45%.
+        • 提出了 Global Verifier (GLOVE) 框架，旨在解决动态环境漂移导致的记忆-环境失准问题。<br>
+        • 通过主动探测（Active Probing）建立“相对真理”，通过对比检索到的记忆与新观察结果来检测认知失调，并在无真值监督的情况下重新对齐记忆。<br>
+        • 在 Web 导航、离散规划和连续控制任务中，GLOVE 显著提高了智能体在环境结构或逻辑发生显式/隐式漂移时的适应能力和成功率。
       </td>
     </tr>
     <tr>
@@ -543,9 +487,28 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • MemWeaver proposes a tri-layer memory framework (Graph, Experience, Passage) that consolidates long-term interactions into temporally grounded structures, ensuring evidence traceability.<br>
-        • It employs a dual-channel retrieval strategy to "weave" structured relational facts with original textual evidence, supporting complex multi-hop and temporal reasoning tasks.<br>
-        • Experiments on the LoCoMo benchmark show it improves reasoning accuracy while actively reducing input context length by over 95% compared to long-context baselines.
+        • MemWeaver 提出了一个三层混合记忆框架（图记忆、经验记忆、段落记忆），将长期交互整合为具备时间感知和证据可溯源的结构化信息。<br>
+        • 该模型采用双通道检索策略，将结构化的关系事实与原始文本证据“编织”在一起，有效支持复杂的多跳推理和时间推理任务。<br>
+        • LoCoMo 基准测试表明，相比长上下文基线模型，它在提升推理准确率的同时，将输入上下文长度减少了 95% 以上。
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" style="width: 15%;">2026-01-26</td>
+      <td style="width: 55%;"><strong>FadeMem: Biologically-Inspired Forgetting for Efficient Agent Memory</strong></td>
+      <td style="width: 15%;">
+        <img src="https://img.shields.io/badge/Biologically--Inspired-lightgreen" alt="Biologically-Inspired">
+        <img src="https://img.shields.io/badge/Forgetting%20Mechanism-gray" alt="Forgetting Mechanism">
+        <img src="https://img.shields.io/badge/Memory%20Management-steelblue" alt="Memory Management">
+      </td>
+      <td style="width: 15%;"><a href="https://arxiv.org/pdf/2601.18642">
+        <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge">
+      </a></td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        • 提出了 FadeMem，一种受艾宾浩斯遗忘曲线启发的智能体记忆架构，引入了主动遗忘机制以防止信息过载。<br>
+        • 采用了双层记忆层级（长期与短期），利用基于语义相关性、访问频率和时间模式的自适应指数衰减函数来管理记忆保留。<br>
+        • 结合 LLM 引导的冲突解决和记忆融合，FadeMem 在 Multi-Session Chat 和 LoCoMo 上以减少 45% 的存储空间实现了卓越的多跳推理和检索性能。
       </td>
     </tr>
     <tr>
@@ -562,28 +525,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • Proposed a clustering-based memory compression strategy designed for on-device personalization under limited context windows.<br>
-        • Groups similar memories and merges them within clusters (instead of simple concatenation), reducing redundancy while preserving semantic coherence.<br>
-        • Demonstrated significant reduction in token usage and improved personalized generation quality compared to naive concatenation baselines.
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="2" style="width: 15%;">2026-01-13</td>
-      <td style="width: 55%;"><strong>Chain-of-Memory: Lightweight Memory Construction with Dynamic Evolution for LLM Agents</strong></td>
-      <td style="width: 15%;">
-        <img src="https://img.shields.io/badge/Lightweight-lightyellow" alt="Lightweight">
-        <img src="https://img.shields.io/badge/Dynamic%20Evolution-orange" alt="Dynamic Evolution">
-        <img src="https://img.shields.io/badge/Reasoning-blue" alt="Reasoning">
-      </td>
-      <td style="width: 15%;"><a href="https://arxiv.org/pdf/2601.14287">
-        <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge">
-      </a></td>
-    </tr>
-    <tr>
-      <td colspan="3">
-        • Proposed CoM (Chain-of-Memory), advocating a shift from expensive structured construction to lightweight construction with dynamic utilization.<br>
-        • Introduced Dynamic Memory Chain Evolution to organize retrieved fragments into coherent inference paths with adaptive truncation to prune noise.<br>
-        • Achieved 7.5%–10.4% accuracy gains on LoCoMo and LongMemEval while reducing token consumption to ~2.7% compared to complex memory structures.
+        • 提出了一种基于聚类的记忆压缩策略，专为端侧 LLM 的个性化设计，以应对有限的上下文窗口。<br>
+        • 方法将相似的记忆分组，并在簇内合并记忆（而非简单的拼接或平均），从而在减少冗余的同时保留语义连贯性。<br>
+        • 实验表明，该方法在严格的上下文限制下显著降低了 Token 使用量，并在个性化生成质量上优于简单的拼接或平均基线。
       </td>
     </tr>
     <tr>
@@ -599,9 +543,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
         <td colspan="3">
-          • TeleMem introduces a unified long-term and multimodal memory framework that extracts narrative-grounded information to maintain coherent user profiles without schema-driven hallucinations.<br>
-          • It employs a structured writing pipeline for batching, retrieval, and consolidation, significantly improving storage and token efficiency, and incorporates a multimodal memory module with ReAct-style reasoning for video understanding.<br>
-          • Experimental results on the ZH-4O benchmark show TeleMem outperforming the state-of-the-art Mem0 baseline by 19% in accuracy while reducing token usage by 43% and speeding up operations by 2.1×.
+          • TeleMem 引入了统一的长期和多模态记忆框架，通过提取叙事基础信息来维护连贯的用户画像，避免模式驱动的幻觉。<br>
+          • 它采用结构化写入管道进行批处理、检索和整合，显著提升存储和 Token 效率，并集成了具有 ReAct 风格推理的多模态记忆模块用于视频理解。<br>
+          • 在 ZH-4O 基准测试上的实验结果表明，TeleMem 在准确率上比 SOTA Mem0 基线提升 19%，同时减少 43% 的 Token 使用量并将操作速度提升 2.1 倍。
         </td>
     </tr>
     <tr>
@@ -618,9 +562,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
         <td colspan="3">
-          • Proposes STITCH, an agentic memory system that indexes trajectory steps using "Contextual Intent"—comprising thematic scope, event type, and key entity types—to disambiguate recurring information in long-horizon tasks.<br>
-          • Introduces a retrieval mechanism that filters and prioritizes memory snippets based on structural intent compatibility rather than just semantic similarity, effectively suppressing context-incompatible history.<br>
-          • Presents CAME-Bench, a multi-domain benchmark designed to evaluate context-aware retrieval in realistic, goal-oriented trajectories, where STITCH achieves state-of-the-art performance.
+          • 提出了 STITCH，一种智能体记忆系统，使用"上下文意图"（包含主题范围、事件类型和关键实体类型）来索引轨迹步骤，以消除长周期任务中重复信息的歧义。<br>
+          • 引入了一种检索机制，基于结构意图兼容性而非仅语义相似性来过滤和优先排序记忆片段，有效抑制上下文不兼容的历史信息。<br>
+          • 提出了 CAME-Bench，一个多领域基准测试，旨在评估真实目标导向轨迹中的上下文感知检索能力，STITCH 在该基准上取得了 SOTA 性能。
         </td>
     </tr>
     <tr>
@@ -639,9 +583,28 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • Introduces PersonalAlign, a new task requiring GUI agents to align with implicit user intents—specifically resolving vague instructions and anticipating routines—by leveraging long-term user records.<br>
-        • Presents AndroidIntent, a benchmark constructed from 20k long-term records, featuring hierarchically annotated user preferences and routines to evaluate personalization capabilities.<br>
-        • Proposes HIM-Agent (Hierarchical Intent Memory Agent), which utilizes a streaming aggregation module and hierarchical filters (Execution-based and State-based) to continuously update and organize user memory for improved reactive and proactive performance.
+        • 提出了 PersonalAlign，一项新任务，要求 GUI 智能体通过利用长期用户记录来对齐隐式用户意图——特别是解析模糊指令和预测用户习惯。<br>
+        • 提出了 AndroidIntent，一个基于 2 万条长期记录构建的基准测试，包含分层标注的用户偏好和习惯，用于评估个性化能力。<br>
+        • 提出了 HIM-Agent（层级意图记忆智能体），利用流式聚合模块和层级过滤器（基于执行和状态）持续更新和组织用户记忆，以提升响应式和主动式性能。
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" style="width: 15%;">2026-01-13</td>
+      <td style="width: 55%;"><strong>Chain-of-Memory: Lightweight Memory Construction with Dynamic Evolution for LLM Agents</strong></td>
+      <td style="width: 15%;">
+        <img src="https://img.shields.io/badge/Lightweight-lightyellow" alt="Lightweight">
+        <img src="https://img.shields.io/badge/Dynamic%20Evolution-orange" alt="Dynamic Evolution">
+        <img src="https://img.shields.io/badge/Reasoning-blue" alt="Reasoning">
+      </td>
+      <td style="width: 15%;"><a href="https://arxiv.org/pdf/2601.14287">
+        <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge">
+      </a></td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        • 提出了 CoM (Chain-of-Memory) 框架，主张从昂贵的结构化记忆构建转向轻量级构建（Flat Index）与复杂的动态利用。<br>
+        • 引入了动态记忆链演化机制（Dynamic Memory Chain Evolution），将检索到的碎片组织成连贯的推理路径，并利用自适应截断修剪无关噪声。<br>
+        • 在 LongMemEval 和 LoCoMo 上，CoM 相比复杂记忆结构将 Token 消耗降低至约 2.7%，同时实现了 7.5%–10.4% 的准确率提升。
       </td>
     </tr>
     <tr>
@@ -659,9 +622,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • Introduces AtomMem, a dynamic memory framework that reframes agentic memory management as a learnable sequential decision-making problem rather than a static, hand-crafted workflow.<br>
-        • Deconstructs memory processes into atomic CRUD (Create, Read, Update, Delete) operations and employs reinforcement learning (GRPO) to learn a task-aligned policy for autonomously orchestrating these operations.<br>
-        • Experimental results on long-context benchmarks (HotpotQA, 2WikiMultihopQA, Musique) demonstrate that AtomMem consistently outperforms static memory baselines by dynamically tailoring memory strategies to specific task demands.
+        • 提出了 AtomMem，一种动态记忆框架，将智能体记忆管理重新定义为可学习的序列决策问题，而非静态的手工设计流程。<br>
+        • 将记忆过程解构为原子级 CRUD（创建、读取、更新、删除）操作，并使用强化学习（GRPO）学习任务对齐的策略来自主编排这些操作。<br>
+        • 在长上下文基准测试（HotpotQA、2WikiMultihopQA、Musique）上的实验结果表明，AtomMem 通过动态调整记忆策略以适应特定任务需求，持续优于静态记忆基线。
       </td>
     </tr>
     <tr>
@@ -678,9 +641,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
         <td colspan="3">
-          • Fine-Mem is a unified reinforcement learning framework designed to optimize long-horizon memory management for LLM agents by aligning fine-grained feedback with memory operations.<br>
-          • It addresses reward sparsity through Chunk-level Step Reward (CSR), which provides immediate supervision via constructed QA tasks, and solves credit assignment issues with Evidence-Anchored Reward Attribution (EARA) by linking global rewards to specific memory operations.<br>
-          • Experimental results demonstrate that Fine-Mem consistently outperforms strong baselines on benchmarks like Memalpha and MemoryAgentBench, showing superior adaptability and generalization across different models.
+          • Fine-Mem 是一个统一的强化学习框架，旨在通过将细粒度反馈与记忆操作对齐来优化 LLM 智能体的长周期记忆管理。<br>
+          • 它通过分块级步骤奖励（CSR）解决奖励稀疏问题（通过构建 QA 任务提供即时监督），并通过证据锚定奖励归因（EARA）解决信用分配问题（将全局奖励与特定记忆操作关联）。<br>
+          • 实验结果表明，Fine-Mem 在 Memalpha 和 MemoryAgentBench 等基准测试上持续优于强基线，展现了在不同模型间的优越适应性和泛化能力。
         </td>
     </tr>
     <tr>
@@ -697,9 +660,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
         <td colspan="3">
-          • MemoBrain introduces an "executive memory" paradigm for tool-augmented agents, functioning as a co-pilot to construct dependency-aware memory and actively manage context under bounded budgets.<br>
-          • The framework employs specific memory operations—Trajectory Folding and Selective Flush—to organize reasoning progress, retaining a high-salience structural backbone while discarding transient execution artifacts.<br>
-          • Experiments on benchmarks like GAIA, WebWalker, and BrowseComp-Plus demonstrate that MemoBrain consistently outperforms strong baselines by enabling coherent, goal-directed reasoning over long horizons.
+          • MemoBrain 为工具增强型智能体引入了"执行记忆"范式，作为协同驾驶员构建依赖感知记忆并在有限预算下主动管理上下文。<br>
+          • 该框架采用特定的记忆操作——轨迹折叠和选择性刷新——来组织推理进度，保留高显著性的结构骨架同时丢弃临时执行产物。<br>
+          • 在 GAIA、WebWalker 和 BrowseComp-Plus 等基准测试上的实验表明，MemoBrain 通过实现长周期内连贯的目标导向推理，持续优于强基线。
         </td>
     </tr>
     <tr>
@@ -715,9 +678,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
         <td colspan="3">
-          • TSM is a memory framework that models semantic time for point-wise memory and supports the construction and utilization of durative memory.<br>
-          • It builds a semantic timeline to organize episodic interactions and consolidates them into time-aware durative memories (topics and personas) to capture long-term user states.<br>
-          • During memory utilization, TSM incorporates the query’s temporal intent to retrieve temporally appropriate durative memories, significantly improving performance on benchmarks like LONGMEMEVAL and LOCOMO.
+          • TSM 是一种记忆框架，为点状记忆建模语义时间，并支持持续性记忆的构建与利用。<br>
+          • 它构建语义时间线来组织情景交互，并将其整合为时间感知的持续性记忆（主题和画像），以捕捉长期用户状态。<br>
+          • 在记忆利用过程中，TSM 结合查询的时间意图来检索时间适当的持续性记忆，在 LongMemEval 和 LoCoMo 等基准测试上显著提升了性能。
         </td>
     </tr>
     <tr>
@@ -734,9 +697,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
         <td colspan="3">
-          • Bi-Mem is an agentic framework that constructs hierarchical memory (fact, scene, persona) bidirectionally using an inductive agent for bottom-up aggregation and a reflective agent for top-down calibration to mitigate noise and hallucination.<br>
-          • It employs an associative retrieval mechanism that leverages spreading activation to connect memory units across granularities, enabling coherent recall of both contextual scenes and specific facts.<br>
-          • Empirical evaluations on the LoCoMo benchmark demonstrate that Bi-Mem significantly outperforms leading memory baselines in long-term personalized conversational tasks.
+          • Bi-Mem 是一个智能体框架，使用归纳智能体进行自下而上的聚合和反思智能体进行自上而下的校准，双向构建层级记忆（事实、场景、画像），以减少噪声和幻觉。<br>
+          • 它采用关联检索机制，利用扩散激活连接跨粒度的记忆单元，实现上下文场景和特定事实的连贯回忆。<br>
+          • 在 LoCoMo 基准测试上的实证评估表明，Bi-Mem 在长期个性化对话任务中显著优于领先的记忆基线。
         </td>
     </tr>
     <tr>
@@ -753,9 +716,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
         <td colspan="3">
-          • HiMem is a hierarchical long-term memory framework designed for long-horizon dialogues, integrating fine-grained "Episode Memory" (via topic-aware segmentation) with abstract "Note Memory" (via knowledge extraction) to bridge concrete events and stable knowledge.<br>
-          • It employs a conflict-aware "Memory Reconsolidation" mechanism that uses retrieval feedback to revise and supplement stored knowledge, enabling continual self-evolution and correction of memory over time.<br>
-          • Evaluations on long-horizon benchmarks demonstrate that HiMem outperforms baselines in accuracy, consistency, and reasoning, validating the effectiveness of its hierarchical organization and dynamic updating strategies.
+          • HiMem 是一种为长周期对话设计的层级长期记忆框架，将细粒度的"情景记忆"（通过主题感知分割）与抽象的"笔记记忆"（通过知识提取）相结合，以桥接具体事件和稳定知识。<br>
+          • 它采用冲突感知的"记忆再巩固"机制，利用检索反馈来修订和补充存储的知识，实现记忆随时间的持续自我演化和纠正。<br>
+          • 在长周期基准测试上的评估表明，HiMem 在准确性、一致性和推理方面优于基线，验证了其层级组织和动态更新策略的有效性。
         </td>
     </tr>
     <tr>
@@ -772,9 +735,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
         <td colspan="3">
-          • SEEM introduces a dual-layer memory framework combining a Graph Memory Layer for static facts and an Episodic Memory Layer for narrative progression, both anchored by provenance pointers to raw interaction passages.<br>
-          • The system employs a "Reverse Provenance Expansion" (RPE) mechanism to reconstruct coherent narrative contexts from fragmented evidence during retrieval, addressing the "scattered retrieval" problem in long-term interactions.<br>
-          • Experiments on benchmarks like LoCoMo and LongMemEval show SEEM significantly outperforms competitive memory-augmented baselines (like HippoRAG 2) in narrative coherence and logical consistency.
+          • SEEM 引入了双层记忆框架，结合用于静态事实的图记忆层和用于叙事进展的情景记忆层，两者都通过来源指针锚定到原始交互段落。<br>
+          • 该系统采用"反向来源扩展"（RPE）机制，在检索过程中从碎片化证据重建连贯的叙事上下文，解决了长期交互中的"分散检索"问题。<br>
+          • 在 LoCoMo 和 LongMemEval 等基准测试上的实验表明，SEEM 在叙事连贯性和逻辑一致性方面显著优于竞争性的记忆增强基线（如 HippoRAG 2）。
         </td>
     </tr>
     <tr>
@@ -792,9 +755,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
         <td colspan="3">
-          • MemBuilder is a reinforcement learning framework that trains LLMs to actively construct and manage a multi-dimensional memory system (Core, Episodic, Semantic, and Procedural) rather than relying on static prompting.<br>
-          • It introduces "Attributed Dense Rewards Policy Optimization" (ADRPO) to solve reward sparsity and credit assignment issues by using synthetic session-level QA for immediate feedback and gradient weighting based on memory component contribution.<br>
-          • Experimental results show that a lightweight 4B model trained with MemBuilder outperforms state-of-the-art closed-source models (including Claude 4.5 Sonnet) on long-term dialogue benchmarks like LoCoMo and LongMemEval.
+          • MemBuilder 是一个强化学习框架，训练 LLM 主动构建和管理多维记忆系统（核心、情景、语义和程序记忆），而非依赖静态提示。<br>
+          • 它引入"归因密集奖励策略优化"（ADRPO）来解决奖励稀疏和信用分配问题，通过合成会话级 QA 提供即时反馈，并基于记忆组件贡献进行梯度加权。<br>
+          • 实验结果表明，使用 MemBuilder 训练的轻量级 4B 模型在 LoCoMo 和 LongMemEval 等长期对话基准测试上超越了 SOTA 闭源模型（包括 Claude 4.5 Sonnet）。
         </td>
     </tr>
     <tr>
@@ -811,9 +774,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • <strong>ProMem Framework</strong>: Addresses the limitations of "one-off" static summarization by proposing a proactive memory extraction framework inspired by Recurrent Processing Theory (RPT).<br>
-        • <strong>Recurrent Feedback Loop</strong>: Introduces a self-questioning mechanism where the agent actively probes dialogue history to verify facts and recover missing details, ensuring memory completeness and accuracy.<br>
-        • <strong>Performance</strong>: Outperforms state-of-the-art baselines (e.g., Mem0) on HaluMem and LongMemEval benchmarks, demonstrating high robustness in token compression and cost-effectiveness with Small Language Models.<br>
+        • <strong>ProMem 框架</strong>：针对现有静态摘要记忆“一次性”和“无反馈”的缺陷，提出了一种基于循环处理理论（RPT）的主动记忆提取框架。<br>
+        • <strong>循环验证机制</strong>：引入“自我提问-验证”反馈回路，让智能体主动回顾原始对话以纠正幻觉并补全缺失细节，而非盲目地进行前馈式摘要。<br>
+        • <strong>性能表现</strong>：在 HaluMem 和 LongMemEval 基准测试中显著优于 Mem0 和 LightMem，且在 Token 高压缩率和小模型（SLM）场景下仍保持鲁棒性。<br>
       </td>
     </tr>
     <tr>
@@ -830,11 +793,10 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • Proposed <strong>CompassMem</strong>, an event-centric memory framework inspired by Event Segmentation Theory, organizing memory as an <strong>Event Graph</strong> with explicit logical relations (causal, temporal).<br>
-        • Transforms memory from passive storage into a <strong>Logic Map</strong>, enabling agents to actively navigate structured dependencies via a Planner-Explorer-Responder mechanism.<br>
-        • Features active multi-path memory search that dynamically expands or skips nodes based on subgoal satisfaction, avoiding redundant retrieval.<br>
-        • Demonstrates superior performance on LoCoMo and NarrativeQA benchmarks, significantly improving multi-hop and temporal reasoning compared to baselines like HippoRAG and Mem0.<br>
-      <br>
+        • 提出了 <strong>CompassMem</strong>，一种受事件分割理论启发的以事件为中心的记忆框架，将记忆组织为通过显式逻辑关系（因果、时序）连接的 <strong>事件图（Event Graph）</strong>。<br>
+        • 将记忆从被动存储转化为 <strong>逻辑地图（Logic Map）</strong>，通过“规划器-探索者-响应者”机制支持智能体在结构化依赖中主动导航。<br>
+        • 引入主动多路径记忆搜索机制，根据子目标满足情况动态扩展或跳过节点，避免无效检索。<br>
+        • 在 LoCoMo 和 NarrativeQA 基准测试上表现优异，特别是在多跳和时序推理任务上显著超越了 HippoRAG 和 Mem0 等基线。
       </td>
     </tr>
     <tr>
@@ -851,9 +813,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • <strong>PersonaTree Framework</strong>: Introduces a globally maintained **PersonaTree** grounded in the Biopsychosocial model as a dynamic user profile. By constraining the trunk with a schema and iteratively updating branches, it enables controllable memory growth and compression.<br>
-        • <strong>MemListener Training</strong>: Trains a lightweight MemListener model via **Reinforcement Learning with process-based rewards** to generate structured, executable memory operations (ADD, UPDATE, DELETE), achieving performance comparable to large reasoning models.<br>
-        • <strong>Adaptive Response Generation</strong>: Implements a dual-mode strategy that utilizes PersonaTree directly for low-latency responses or triggers an agentic recall mode guided by the tree for complex queries, outperforming baselines in consistency and noise suppression.<br>
+        • <strong>PersonaTree 框架</strong>：提出了一种基于生物心理社会模型的全局用户画像树（PersonaTree），通过约束主干 Schema 并动态更新枝叶，实现记忆的可控生长与压缩，有效解决了长程对话中的噪声积累问题。<br>
+        • <strong>MemListener 与 RL 训练</strong>：利用基于过程奖励的强化学习（Process-Reward RL）训练轻量级模型 MemListener，使其能将非结构化对话流转化为结构化的 {ADD, UPDATE, DELETE} 树操作，决策性能媲美强推理模型。<br>
+        • <strong>自适应推理机制</strong>：设计了双模式推理策略，延迟敏感场景下直接利用 PersonaTree 增强生成，长尾细节需求下触发 Agentic 模式利用树结构引导深度检索，显著提升了角色一致性。<br>
       </td>
     </tr>
     <tr>
@@ -870,9 +832,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • <strong>Membox Architecture</strong>: Addresses the "fragmentation-compensation" flaw in existing systems by proposing a hierarchical architecture centered on **Topic Continuity** to preserve temporal and causal flow.<br>
-        • <strong>Topic Loom & Trace Weaver</strong>: Introduces a *Topic Loom* to group continuous dialogue into cohesive "memory boxes" and a *Trace Weaver* to link these boxes into long-range event timelines across discontinuities.<br>
-        • <strong>Performance</strong>: Achieves up to 68% F1 improvement on temporal reasoning tasks in the LoCoMo benchmark compared to baselines like Mem0, while using significantly fewer context tokens.<br>
+        • <strong>Membox 架构</strong>：针对现有记忆系统“碎片化-补偿”范式的缺陷，提出以**话题连续性**为核心的分层架构，旨在保留对话的时间和因果流。<br>
+        • <strong>Topic Loom 与 Trace Weaver</strong>：利用滑动窗口机制（Topic Loom）将连续对话打包成“记忆盒”，并通过 Trace Weaver 将这些盒子编织成跨越不连续时间的长程事件线索。<br>
+        • <strong>性能提升</strong>：在 LoCoMo 基准测试中，时间推理任务的 F1 分数比 Mem0 和 A-MEM 提升高达 68%，同时显著降低了 Token 消耗，实现了效率与效果的平衡。<br>
       </td>
     </tr>
     <tr>
@@ -890,9 +852,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
         <td colspan="3">
-          • HiMeS is a memory framework for AI assistants that emulates the hippocampus–neocortex interaction by integrating short-term dialogue compression with long-term user profile storage.<br>
-          • It utilizes a short-term memory extractor trained via reinforcement learning to proactively pre-retrieve knowledge, and a partitioned long-term memory network to re-rank results based on historical user interactions.<br>
-          • Evaluations on real-world industrial datasets demonstrate that HiMeS significantly outperforms traditional RAG baselines in personalized question-answering tasks.
+          • HiMeS 是一种面向 AI 助手的记忆框架，通过整合短期对话压缩与长期用户画像存储来模拟海马体-新皮层交互。<br>
+          • 它利用通过强化学习训练的短期记忆提取器进行主动预检索知识，并使用分区长期记忆网络基于历史用户交互重新排序结果。<br>
+          • 在真实工业数据集上的评估表明，HiMeS 在个性化问答任务中显著优于传统 RAG 基线。
         </td>
     </tr>
     <tr>
@@ -910,9 +872,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • SYNAPSE is a brain-inspired memory architecture that replaces static vector retrieval with a unified episodic–semantic graph, addressing the “context isolation” issue in traditional RAG systems, where semantically distant yet causally related memories cannot be effectively associated.<br>
-        • It introduces cognitive dynamics such as spreading activation, lateral inhibition, and temporal decay to dynamically propagate relevance and filter noise within the graph, rather than relying solely on precomputed links or vector similarity.<br>
-        • SYNAPSE achieves state-of-the-art performance on the LoCoMo benchmark, significantly improving multi-hop reasoning capabilities and robustness to adversarial queries through an uncertainty-aware gating mechanism.
+        • SYNAPSE 是一种受脑启发的记忆架构，通过构建“统一情景-语义图”取代静态向量检索，解决了传统 RAG 无法关联语义距离远但因果相关记忆的“上下文孤立”问题。<br>
+        • 它引入了扩散激活（Spreading Activation）、侧向抑制和时间衰减等认知动力学机制，在图中动态传播相关性并过滤噪声，而非仅依赖预计算链接或向量相似度。<br>
+        • 在 LoCoMo 基准测试中取得 SOTA，通过不确定性门控机制显著提升了多跳推理能力和对抗性查询的鲁棒性。
       </td>
     </tr>
     <tr>
@@ -929,10 +891,10 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • Proposed CODEMEM, a memory management system tailored for repository-level iterative code generation.<br>
-        • Introduces <strong>Code Context Memory</strong>: Uses AST-guided selection to dynamically update and merge repository context, keeping it relevant while discarding noise.<br>
-        • Introduces <strong>Code Session Memory</strong>: Uses AST-based change analysis to detect conflicts and forgetting, organizing history into code-centric units (diffs) rather than just text.<br>
-        • Achieves SOTA on CodeIF-Bench and CoderEval, improving instruction following by ~12% and reducing interaction rounds by 2–3.<br>
+        • 提出了CODEMEM，一种专为仓库级迭代代码生成设计的内存管理系统。<br>
+        • 引入<strong>代码上下文记忆（Code Context Memory）</strong>：利用AST引导的选择机制动态更新和合并仓库上下文，保持其相关性并过滤噪声。<br>
+        • 引入<strong>代码会话记忆（Code Session Memory）</strong>：通过基于AST的变更分析来检测冲突和遗忘，将历史交互组织为以代码为中心的单元（Diffs），而非纯文本。<br>
+        • 在CodeIF-Bench和CoderEval上取得SOTA，指令遵循能力提升约12%，并减少了2-3轮交互。
       </td>
     </tr>
     <tr>
@@ -949,9 +911,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • <strong>LatentGraphMem Framework</strong>: Proposes a memory framework combining implicit graph memory for stability and efficiency with explicit subgraph retrieval for interpretability, storing graph structures in latent space.<br>
-        • <strong>Three-Stage Training Strategy</strong>: Involves training a graph builder (global representation), a subgraph retriever (budgeted edge selection), and joint fine-tuning (coordination optimization) for effective end-to-end QA.<br>
-        • <strong>Performance</strong>: Consistently outperforms explicit-graph and latent-memory baselines on long-horizon benchmarks like HotpotQA, NarrativeQA, and WikiHop across multiple model scales, achieving up to 63.34% average accuracy.<br>
+        • <strong>LatentGraphMem 框架</strong>：提出了一种结合隐式图记忆和显式子图检索的记忆框架，通过在潜在空间存储图结构记忆以提高稳定性和效率，同时提供任务特定的显式子图检索以增强可解释性。<br>
+        • <strong>三阶段训练策略</strong>：包含图构建器训练（构建全局图表示）、子图检索器训练（在固定预算下选择相关边）和联合微调（优化构建器和检索器的协作），实现了高效的端到端问答。<br>
+        • <strong>实验验证</strong>：在 HotpotQA、NarrativeQA 和 WikiHop 等长程基准测试中，LatentGraphMem 在不同模型规模下均优于现有的显式图和隐式记忆基线，平均准确率最高提升至 63.34%。<br>
       </td>
     </tr>
     <tr>
@@ -968,9 +930,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • <strong>MAGMA Architecture</strong>: Proposes a multi-graph agentic memory architecture that explicitly models memory items across orthogonal semantic, temporal, causal, and entity graphs, overcoming the limitations of monolithic memory stores.<br>
-        • <strong>Adaptive Topological Retrieval</strong>: Introduces an intent-aware Adaptive Traversal Policy that dynamically routes retrieval through relevant relational views, decoupling memory representation from retrieval logic for transparent reasoning.<br>
-        • <strong>Performance</strong>: Consistently outperforms state-of-the-art agentic memory systems (e.g., Nemori, A-MEM) on long-horizon benchmarks like LoCoMo and LongMemEval, while reducing retrieval latency and token consumption.<br>
+        • <strong>MAGMA 架构</strong>：提出了一种基于多图的智能体记忆架构，通过语义、时间、因果和实体四个正交的关系图来明确建模记忆项，解决了传统单体记忆库中信息纠缠的问题。<br>
+        • <strong>自适应拓扑检索</strong>：引入了基于意图的自适应遍历策略，根据查询意图动态选择相关的关系视图进行遍历，将记忆表示与检索逻辑解耦，实现了透明的推理路径。<br>
+        • <strong>性能表现</strong>：在 LoCoMo 和 LongMemEval 等长程基准测试中，MAGMA 优于现有的 SOTA 智能体记忆系统（如 Nemori、A-MEM），同时显著降低了检索延迟和 Token 消耗。<br>
       </td>
     </tr>
     <tr>
@@ -987,9 +949,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • <strong>TiMem Framework</strong>: Introduces a temporal-hierarchical memory framework using a Temporal Memory Tree (TMT) to progressively consolidate raw dialog into abstract persona representations, emphasizing temporal continuity.<br>
-        • <strong>Core Mechanisms</strong>: Features semantic-guided consolidation (fine-tuning free) and complexity-aware memory recall (Recall Planner + Gating) to balance precision and efficiency across query types.<br>
-        • <strong>Performance</strong>: Achieves SOTA accuracy on LoCoMo (75.30%) and LongMemEval-S (76.88%) benchmarks, while significantly reducing recalled context length (-52.20%) on LoCoMo.<br>
+        • <strong>TiMem 框架</strong>：提出了一种基于时间记忆树（TMT）的时间-层级记忆框架，将对话从原始片段逐步整合为抽象的画像表示，强调时间连续性。<br>
+        • <strong>核心机制</strong>：包含语义引导的记忆整合（无需微调）和复杂度感知的记忆召回机制（召回规划器+门控），在不同查询复杂度下平衡精度与效率。<br>
+        • <strong>实验表现</strong>：在 LoCoMo 和 LongMemEval-S 长程基准测试中均取得 SOTA（准确率分别为 75.30% 和 76.88%），同时在 LoCoMo 上显著降低了召回上下文长度（-52.20%）。<br>
       </td>
     </tr>
     <tr>
@@ -1006,9 +968,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • <strong>MemRL Framework</strong>: Proposes a non-parametric reinforcement learning framework that enables frozen LLM agents to self-evolve by optimizing episodic memory, avoiding the costs and forgetting issues of fine-tuning.<br>
-        • <strong>Intent-Experience-Utility Triplet</strong>: Introduces a Two-Phase Retrieval mechanism (semantic recall + value-aware selection) and a runtime utility update rule, using Q-values to distinguish high-utility strategies from noise.<br>
-        • <strong>Performance</strong>: Significantly outperforms MemP and RAG on benchmarks like HLE, BigCodeBench, and ALFWorld, demonstrating that agents can continuously improve via runtime trial-and-error without weight updates.<br>
+        • <strong>MemRL 框架</strong>：提出了一个基于非参数化强化学习的框架，允许冻结权重的 LLM 智能体通过优化情景记忆来“自我进化”，解决了微调带来的遗忘问题和计算成本。<br>
+        • <strong>意图-经验-效用三元组</strong>：引入双阶段检索机制（语义召回 + 价值感知选择）和运行时效用更新规则，利用 Q 值估计来区分高价值策略与语义相似的噪声。<br>
+        • <strong>实验表现</strong>：在 HLE、BigCodeBench 和 ALFWorld 等基准测试中显著优于 MemP 和 RAG，证明了在不更新模型权重的情况下，智能体可以通过运行时试错持续提升能力。<br>
       </td>
     </tr>
     <tr>
@@ -1027,9 +989,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • Introduces SimpleMem, an efficient memory framework tailored for lifelong LLM agents based on semantic lossless compression.<br>
-        • The system operates via a three-stage pipeline: Semantic Structured Compression to filter low-entropy noise, Recursive Memory Consolidation to synthesize abstract representations, and Adaptive Query-Aware Retrieval to minimize token usage.<br>
-        • Experiments on the LoCoMo benchmark demonstrate a 26.4% improvement in F1 score and up to 30× reduction in inference token consumption compared to full-context models, significantly outperforming baselines like Mem0.
+        • 提出了SimpleMem，一种基于语义无损压缩的、专为终身LLM智能体设计的高效记忆框架。<br>
+        • 该系统通过三阶段流水线运行：语义结构化压缩以过滤低熵噪声，递归记忆整合以合成抽象表征，以及自适应查询感知检索以最小化Token使用。<br>
+        • 在LoCoMo基准上的实验表明，与全上下文模型相比，F1分数提高了26.4%，推理Token消耗减少了高达30倍，显著优于Mem0等基线。
       </td>
     </tr>
     <tr>
@@ -1046,9 +1008,9 @@ Papers below are ordered by **publication date**:
     </tr>
     <tr>
       <td colspan="3">
-        • <strong>AgeMem Framework</strong>: Proposes a unified framework that integrates both Long-Term (LTM) and Short-Term (STM) memory management directly into the agent's policy via tool-based actions (e.g., Add, Update, Filter).<br>
-        • <strong>Three-Stage Progressive RL</strong>: Introduces a step-wise GRPO algorithm and a three-stage training strategy (LTM construction, STM control, integrated reasoning) to address sparse rewards and enable end-to-end optimization.<br>
-        • <strong>Performance</strong>: Outperforms strong baselines like LangMem and Mem0 across five long-horizon benchmarks (e.g., ALFWorld, HotpotQA), achieving higher task success rates, better memory quality, and more efficient context usage.<br>
+        • <strong>AgeMem 框架</strong>：提出了一种统一的智能体记忆框架，将长期记忆（LTM）和短期记忆（STM）的管理直接作为工具化动作（如增删改、摘要、过滤）整合到智能体策略中。<br>
+        • <strong>三阶段渐进式 RL</strong>：为了解决记忆操作带来的奖励稀疏问题，设计了分步 GRPO 算法和三阶段训练策略（LTM构建、干扰下的STM控制、综合推理），实现端到端优化。<br>
+        • <strong>实验效果</strong>：在 ALFWorld、HotpotQA 等五个长程基准测试中，AgeMem 在任务完成率、记忆质量和上下文使用效率上均显著优于 LangMem 和 Mem0 等现有基线。<br>
       </td>
     </tr>
     <tr>
@@ -1058,16 +1020,17 @@ Papers below are ordered by **publication date**:
       <img src="https://img.shields.io/badge/Contextual%20Memory-cyan" alt="Contextual Memory">
       <img src="https://img.shields.io/badge/Model%20Architecture-indigo" alt="Model Architecture">
       </td>
+      </td>
       <td style="width: 15%;"><a href="https://arxiv.org/pdf/2512.24695">
       <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge">
       </td>
     </tr>
     <tr>
-        <td colspan="3">
-      • Full arXiv version including all appendices — not the previously released trimmed version.<br>
-      • Presents a Nested Learning paradigm that unifies a large portion of optimizer and TTT-layer modules.<br>
-      • Architectural innovation: HOPE — composed of modified Titans attention and self-modified FFNs. By controlling the chunksize of self-modification of FFN parameter, FFN layers operating at different frequencies implicitly retain memories at different hierarchical levels during runtime.<br>
-      • Empirical results are modest.<br>
+      <td colspan="3">
+        • arxiv 完整版， 包括所有附录内容. 非之前公布的残血版.<br>
+        • 梳理了一个Nested Leaning的学习范式, 统一了很大一部分的optimizer + TTT layer. <br>
+        • 结构创新:HOPE: 由 modified Titans attention + self modified FFN 组成, 通过控制FFN层参数self-modified的更新频率， 使得不同更新频率FFN层在运行时隐式记住中不同层级的记忆.<br>
+        • 试验偏弱.<br>
       </td>
     </tr>
     <tr>
@@ -1084,8 +1047,8 @@ Management</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Provides TeleAI background and introduces a decision-theoretic memory framework (DAM) that formulates the timing and content of memory read/write as an optimal decision problem, with relevance to RL-style formulations.<br>
-        • Contains minimal or no experimental validation.
+        • TeleAI背景， 一个理论框架(DAM)， 把记忆的读写的时机和内容的问题包装成一个决策论下的最优问题. 考虑类似RL问题的可以参考一下.<br>
+        • 基本无试验.
       </td>
     </tr>
     <tr>
@@ -1100,9 +1063,9 @@ Management</strong></td>
       </td>
     </tr>
     <tr>
-       <td colspan="3"> 
-      • An OPPO-affiliated paper proposes a two-layer framework that, in RL settings, separates learning to extract memories (level-1) from learning the memory-extraction method itself (level-2).<br>
-      • Experiments using Flash-Searcher and GPT-5-Mini achieve SOTA on benchmarks including GAIA.<br>
+      <td colspan="3">
+        • oppo背景的文章, 通过设计双层框架在RL问题中分离记忆抽取式的学习(一层学习)和记忆抽取方式本身的学习(二层学习).<br>
+        • 试验基于Flash-Searcher和GPT-5-Mini, 在包括GAIA上取得SOTA.<br>
       </td>
     </tr>
     <tr>
@@ -1118,9 +1081,9 @@ Management</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • MemR³ closed-loop retrieval controller: designed for long-term conversational memory, it can dynamically choose among three actions—retrieve, reflect, and respond.<br>
-        • Evidence–gap state tracker: the system maintains a global (evidence, gap) state that explicitly tracks "what is known" and "what is missing," making the process interpretable.<br>
-        • Experiments show that on the LoCoMo benchmark, MemR³ significantly improves answer quality across different underlying memory systems (e.g., RAG, Zep).<br>
+        • MemR³ 闭环检索控制器：为长期对话记忆设计，能动态选择检索、反思、回答三种动作。<br>
+        • 证据-缺口状态追踪器：系统维护一个全局的 (证据, 缺口) 状态，明确追踪“已掌握什么”和“还缺什么”，使过程可解释。<br>
+        • 试验显示，在LoCoMo基准测试上，MemR³能显著提升不同底层记忆系统（如RAG、Zep）的回答质量。<br>
       </td>
     </tr>
     <tr>
@@ -1138,9 +1101,9 @@ through Bayesian Selection and Contrastive Refinement</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • A Bayesian procedural memory (experience) framework: MACLA.<br>
-        • Overall still a rule-based algorithm; operations include extraction, retrieval/storage, and refinement (Bayesian posterior calibration).<br>
-        • On unseen tasks in ALFWorld, performance (90.3%) exceeded that on seen tasks (87.2%), achieving +3.1% positive generalization.<br>
+        • 基于贝叶斯的程序记忆(经验)框架:MACLA.<br>
+        • 整体仍然是一个基于规则的算法，操作包括提取，检索存储，精炼(贝叶斯后验概率校准).<br>
+        • 在ALFWorld的未见任务上，性能（90.3%）反而比已见任务（87.2%）更高，实现了+3.1%的正泛化。<br>
       </td>
     </tr>
     <tr>
@@ -1157,9 +1120,9 @@ through Bayesian Selection and Contrastive Refinement</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • HINDSIGHT is a unified memory architecture that treats memory as a structured, first-class substrate for reasoning, organizing information into four logical networks: world facts, agent experiences, synthesized entity summaries, and evolving beliefs.<br>
-        • The system introduces TEMPR (Temporal Entity Memory Priming Retrieval) for building temporal entity graphs and CARA (Coherent Adaptive Reasoning Agents) for preference-conditioned reasoning, enabling agents to epistemically distinguish evidence from inference.<br>
-        • Experimental results on LongMemEval and LoCoMo benchmarks demonstrate that HINDSIGHT significantly outperforms existing memory systems and full-context frontier models in multi-session consistency and open-domain question answering.
+        • HINDSIGHT 是一种统一的记忆架构,将记忆视为结构化的、一流的推理基质,将信息组织为四个逻辑网络:世界事实、智能体经验、综合实体摘要和不断演化的信念。<br>
+        • 该系统引入了 TEMPR(时序实体记忆启动检索)用于构建时序实体图,以及 CARA(连贯自适应推理智能体)用于基于偏好的条件推理,使智能体能够从认识论上区分证据和推理。<br>
+        • 在 LongMemEval 和 LoCoMo 基准测试上的实验结果表明,HINDSIGHT 在多会话一致性和开放域问答方面显著优于现有记忆系统和全上下文前沿模型。
       </td>
     </tr>
     <tr>
@@ -1178,9 +1141,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • ReMe (paper version): an Alibaba-affiliated framework for enhancing LLM procedural memory (experience), including the ReMe algorithm and the reme.library dataset.<br>
-        • Core idea: maintain an experience pool with operations—Acquisition, Reuse, and Refinement.<br>
-        • Experiments on BFCL-V3 and AppWorld show dynamic experience pools > static pools > baseline, with scaling studies for both model and judge models.
+        • ReMe的文章版, 阿里背景的关于LLM程序记忆(经验)进行增强的框架. 包含框架算法ReMe和数据集reme.library。<br>
+        • 核心是维护一个经验池，操作包括获取（Acquisition）， 重用（Reuse），精炼（Refinement）。<br>
+        • BFCL-V3和AppWorld上的试验显示动态经验池好于静态经验池好于baseline, 有针对模型和judge模型的scale试验.<br>
       </td>
     </tr>
     <td rowspan="2" style="width: 15%;">2025-12-10</td>
@@ -1196,12 +1159,12 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • LightSearcher is an efficient reinforcement learning (RL)-based search architecture grounded in experiential memory. During large language model (LLM)-driven reasoning, it autonomously optimizes agent tool invocation without relying on external data by transforming implicit reasoning trajectories into explicit experiential guidance through contrastive experiential memory.<br>
-        • Evaluated on four multi-hop question answering benchmarks—Natural Questions (NQ), HotpotQA, MuSiQue, and 2WikiMultihopQA—LightSearcher achieves accuracy comparable to the state-of-the-art DeepSearch baseline while significantly reducing both tool invocation latency and model response time.<br>
-        • The method reduces tool invocations by 39.6%, shortens reasoning time by 48.6%, and decreases token consumption by 21.2%, substantially improving tool-use efficiency without compromising task performance.
-    </td>
+        • LightSearcher是基于经验记忆的RL高效搜索架构，在大模型强化推理过程中，不依赖额外数据，通过“对比经验记忆”将隐性推理轨迹转化为显性经验指导，实现Agent搜索工具调用的自主优化。<br>
+        • 在四个多跳QA基准数据集（NQ、HotpotQA、Musique、2WikiMultihopQA）上，保持与SOTA DeepSearch基线相当准确率，搜索工具调用和模型回复时间显著缩短。<br>
+        • 搜索工具调用次数减少 39.6%，推理时间缩短 48.6%，Token消耗降低 21.2%，在保持模型效果的同时显著提升了工具调用效率。
+      </td>
     </tr>
-        <tr>
+      <tr>
       <td rowspan="2" style="width: 15%;">2025-12-3</td>
       <td style="width: 55%;"><strong>MemVerse: Multimodal Memory for Lifelong Learning Agents</strong></td>
       <td style="width: 15%;">
@@ -1215,10 +1178,10 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • A lifelong learning memory framework for multimodal agents.<br>
-        • Retrieval-based long-term memory + parameterized fast memory + periodic distillation.<br>
-        • Multimodal handling: unified conversion into textual descriptions.<br>
-        • Experiments show improvements over baselines on ScienceQA (text) and MSR-VTT (video); LoCoMo (text) results remain unpublished (in appendix).<br>
+        • 针对多模态agent的终身学习记忆框架.<br>
+        • 检索式长期记忆 + 参数化快速记忆 + 定期蒸馏机制.<br>
+        • 如何处理多模态: 统一转化为文本描述.<br>
+        • 试验主要在ScienceQA(文本), MSR-VTT(视频)上展示了超出基线的性能，LoCoMo(文本)试验在附录中尚未没有公开.<br>
       </td>
     </tr>
     <tr>
@@ -1238,9 +1201,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Introduces ComoRAG, a retrieval-augmented generation framework inspired by the human Prefrontal Cortex, designed to achieve stateful reasoning in long narrative contexts.<br>
-          • The framework employs a dynamic memory workspace and a metacognitive regulation loop (including Self-Probe, Mem-Fuse, and Mem-Update) to iteratively fuse fragmented evidence into coherent context.<br>
-          • Experimental results demonstrate that ComoRAG consistently outperforms strong baselines on challenging benchmarks like NarrativeQA and ∞BENCH, particularly excelling in complex narrative queries requiring global understanding.
+          • 介绍了 ComoRAG,这是一个受人类前额叶皮层启发的检索增强生成框架,旨在实现长叙事上下文中的有状态推理。<br>
+          • 该框架采用动态记忆工作空间和元认知调节循环(包括自我探测、记忆融合和记忆更新),以迭代方式将碎片化的证据融合为连贯的上下文。<br>
+          • 实验结果表明,ComoRAG 在 NarrativeQA 和 ∞BENCH 等具有挑战性的基准测试中持续优于强大的基线,特别是在需要全局理解的复杂叙事查询中表现出色。
         </td>
     </tr>
     <tr>
@@ -1254,9 +1217,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • MemSearcher is a large language model (LLMs) agent trained through end-to-end Reinforcement Learning (RL), aiming to enhance the efficiency of knowledge acquisition tasks.<br>
-          • MemSearcher optimizes memory management by adopting a new framework called multi-context Group Relative Strategy Optimization (Multi-Context GRPO), which enables the model to self-evolve in multiple conversations.<br>
-          • Compared with traditional ReAct search agents, MemSearcher offers significant performance improvements while maintaining low token consumption, especially on smaller models.
+          • MemSearcher 是一个通过端到端强化学习(RL)训练的大型语言模型(LLM)智能体,旨在提高知识获取任务的效率。<br>
+          • MemSearcher 通过采用一种称为多上下文组相对策略优化(Multi-Context GRPO)的新框架来优化记忆管理,使模型能够在多个对话中自我演化。<br>
+          • 与传统的 ReAct 搜索智能体相比,MemSearcher 在保持低令牌消耗的同时提供了显著的性能改进,尤其是在较小的模型上。
         </td>
     </tr>
     <tr>
@@ -1274,9 +1237,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Proposes D-SMART, a model-agnostic framework designed to maintain logical and factual consistency in multi-turn dialogues by coupling a Dynamic Structured Memory (DSM) with a Reasoning Tree (RT).<br>
-        • DSM incrementally builds an OWL-compliant knowledge graph from conversation history to prevent context decay, while RT guides the LLM through explicit, traceable multi-step reasoning over this graph.<br>
-        • Comprehensive experiments on MT-Bench-101 demonstrate that D-SMART significantly outperforms state-of-the-art baselines, improving consistency scores by over 48% and exhibiting strong stability in extended dialogues.
+        • 提出了 D-SMART,这是一个与模型无关的框架,旨在通过将动态结构化记忆(DSM)与推理树(RT)耦合来维持多轮对话中的逻辑和事实一致性。<br>
+        • DSM 从对话历史中增量构建符合 OWL 标准的知识图谱以防止上下文衰减,而 RT 则引导 LLM 在该图谱上进行明确的、可追溯的多步推理。<br>
+        • 在 MT-Bench-101 上的综合实验表明,D-SMART 显著优于最先进的基线,一致性得分提高了 48% 以上,并在扩展对话中表现出强大的稳定性。
       </td>
     </tr>
     <tr>
@@ -1290,9 +1253,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Memory-as-action (MemAct) addresses the issue of working Memory management for large language models (LLMS) in long-duration tasks.<br>
-          • MemAct transforms memory management into a learnable intrinsic capability, enabling agents to dynamically manage memories while performing tasks, and introduces the Dynamic Context Policy Optimization (DCPO) algorithm to handle the trajectory breakage problem caused by memory editing.<br>
-          • MemAct performs exceptionally well in multi-objective question answering tasks, demonstrating higher accuracy and robustness than traditional models.
+          • Memory-as-action (MemAct) 解决了大型语言模型(LLM)在长期任务中的工作记忆管理问题。<br>
+          • MemAct 将记忆管理转化为可学习的内在能力,使智能体能够在执行任务时动态管理记忆,并引入动态上下文策略优化(DCPO)算法来处理记忆编辑引起的轨迹断裂问题。<br>
+          • MemAct 在多目标问答任务中表现出色,展示了比传统模型更高的准确性和鲁棒性。
         </td>
     </tr>
     <tr>
@@ -1306,9 +1269,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • MemGen is a dynamic generative memory framework designed to enhance the reasoning and decision-making capabilities of agents based on large language models (LLMS).<br>
-          • MemGen simulates human cognitive patterns by interweaving memory with the reasoning process.<br>
-          • This framework consists of two parts: memory triggers and memory weavers, which can dynamically determine when to invoke potential memories and integrate them into the reasoning process.
+          • MemGen 是一个动态生成式记忆框架,旨在增强基于大型语言模型(LLM)的智能体的推理和决策能力。<br>
+          • MemGen 通过将记忆与推理过程交织在一起来模拟人类认知模式。<br>
+          • 该框架由两部分组成:记忆触发器和记忆编织器,它们可以动态决定何时调用潜在记忆并将其整合到推理过程中。
         </td>
     </tr>
     <tr>
@@ -1323,9 +1286,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • The paper investigates memory management in large language model (LLM) agents and its impact on long-term performance.<br>
-          • It identifies issues such as error propagation and misaligned experience replay, highlighting the importance of high-quality memory.<br>
-          • By comparing multiple memory insertion and deletion strategies, the study finds that selective insertion performs better for long-term learning, while historical deletion is particularly effective at reducing low-quality memory records.
+          • 该论文研究了大型语言模型(LLM)智能体中的记忆管理及其对长期性能的影响。<br>
+          • 它识别了诸如错误传播和经验重放不一致等问题,强调了高质量记忆的重要性。<br>
+          • 通过比较多种记忆插入和删除策略,该研究发现选择性插入对长期学习表现更好,而历史删除在减少低质量记忆记录方面特别有效。
         </td>
     </tr>
     <tr>
@@ -1341,9 +1304,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Introduces a framework for adaptive, user-centered AI agents that combines persistent memory, dynamic coordination, and evolving user profiles to enable personalized long-term interactions.<br>
-          • The approach integrates established agentic AI patterns—such as Multi-Agent Collaboration and Multi-Source Retrieval—with mechanisms like self-validation and implicit user profiling to tailor responses to individual needs.<br>
-          • Evaluations on three public datasets and a pilot user study demonstrate improvements in retrieval accuracy, response correctness, and perceived personalization compared to standard RAG baselines.
+          • 介绍了一种用于自适应、以用户为中心的 AI 智能体框架,该框架结合了持久记忆、动态协调和不断演化的用户画像,以实现个性化的长期交互。<br>
+          • 该方法整合了既定的智能体 AI 模式——如多智能体协作和多源检索——以及自我验证和隐式用户画像等机制,以根据个人需求定制响应。<br>
+          • 在三个公共数据集和试点用户研究上的评估表明,与标准 RAG 基线相比,在检索准确性、响应正确性和感知个性化方面都有所改进。
         </td>
     </tr>
     <tr>
@@ -1359,9 +1322,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • TOOLMEM, a memory-augmented agent that learns from past tool use. It stores summarized, retrievable “what this tool is good/bad at” knowledge and injects the relevant memories into context to better predict tool quality and choose the right tool for new tasks.<br>
-        • TOOLMEM maintains structured capability entries per tool. From each experience, it retrieves similar memories and updates them via a RAG-style merge/refinement, keeping a compact, evolving capability memory. At inference time, it retrieves the most relevant capability memories to guide scoring and tool selection.<br>
-        • They evaluate on text generation tools and text-to-image tools, comparing against no-memory and few-shot baselines. TOOLMEM improves quality prediction and makes better tool choices overall. 
+        • TOOLMEM 让智能体把“使用不同工具后的表现经验”沉淀成可检索的记忆；做新任务时检索相关经验并注入上下文，从而更准地评估并选择工具。<br>
+        • TOOLMEM 把每个工具的能力总结成结构化条目，交互得到任务、工具输出和质量反馈后，先检索相似记忆再用 RAG 方式合并/修正，持续更新能力库；推理时同样检索并用于质量预测或工具选择。<br>
+        • 在文本生成和文生图上，对比无记忆与 few-shot 等基线；结果显示 TOOLMEM 在质量评分预测和多工具择优上整体更稳定、更好。 
       </td>
     </tr>
     <tr>
@@ -1377,9 +1340,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • The paper introduces CAM, a Constructivist Agentic Memory system inspired by Jean Piaget’s theory, designed to enhance Large Language Models (LLMs) in long-form document comprehension.<br>
-        • CAM features structured schemata, flexible assimilation, and dynamic accommodation, utilizing an incremental overlapping clustering algorithm for efficient memory development and an adaptive Prune-and-Grow strategy for retrieval.<br>
-        • Experimental results across diverse benchmarks show that CAM achieves dual advantages in both performance and efficiency compared to existing structured and unstructured memory approaches.
+        • 该论文介绍了 CAM,这是一个受让·皮亚杰理论启发的建构主义智能体记忆系统,旨在增强大型语言模型(LLM)在长文档理解方面的能力。<br>
+        • CAM 具有结构化图式、灵活的同化和动态的顺应特性,利用增量重叠聚类算法实现高效的记忆发展,并采用自适应的修剪和生长策略进行检索。<br>
+        • 在多个基准测试的实验结果表明,与现有的结构化和非结构化记忆方法相比,CAM 在性能和效率方面都实现了双重优势。
       </td>
     </tr>
     <tr>
@@ -1398,9 +1361,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Proposes Mem-α, a reinforcement learning framework that trains agents to effectively manage complex memory systems (comprising core, episodic, and semantic components) through interaction and feedback.<br>
-          • Unlike approaches relying on pre-defined instructions, Mem-α treats memory construction as a sequential decision-making problem, optimizing directly for downstream question-answering accuracy.<br>
-          • Experimental results show that Mem-α significantly outperforms existing baselines and demonstrates remarkable generalization, effectively handling contexts exceeding 400k tokens despite being trained on 30k token sequences.
+          • 提出了 Mem-α,这是一个强化学习框架,通过交互和反馈训练智能体有效管理复杂的记忆系统(包括核心记忆、情景记忆和语义记忆组件)。<br>
+          • 与依赖预定义指令的方法不同,Mem-α 将记忆构建视为序列决策问题,直接优化下游问答准确性。<br>
+          • 实验结果表明,Mem-α 显著优于现有基线,并展示了卓越的泛化能力,尽管仅在 30k 令牌序列上训练,却能有效处理超过 400k 令牌的上下文。
         </td>
     </tr>
     <tr>
@@ -1419,9 +1382,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • ReasoningBank, a test-time learning framework that distills an agent’s own successful and failed trajectories into reusable reasoning memories. For new tasks, the agent retrieves relevant memories to guide decision-making and then writes new experience back into the bank, forming a self-improving loop without requiring ground-truth feedback.<br>
-        • Each memory is stored as a compact structured item and retrieved via embedding similarity (top-k) to augment the agent’s prompt. After task execution, an LLM-as-a-judge provides proxy success/failure signals: successful trajectories yield transferable strategies, while failed ones yield pitfalls and corrective rules. In addition, MaTTS expands test-time computation through parallel trajectory sampling and serial self-reflection, both of which generate stronger memory signals.<br>
-        • Experiments are conducted on WebArena and Mind2Web and SWE-Bench-Verified, comparing against No Memory and prior memory-based baselines. Performance is evaluated using success rate, efficiency (steps), and task-specific metrics. Results show consistent improvements across different backbone models
+        • ReasoningBank 把智能体在测试阶段做任务时产生的成功/失败轨迹“提炼成可复用的推理记忆”，新任务来时检索相关记忆来指导决策，并把新经验再写回形成闭环，从而在无真值反馈的 test-time learning 场景里持续变强。<br>
+        • 每条记忆被压缩成结构化 memory item，通过 embedding 相似度检索 top-k 注入系统指令；任务完成后用 LLM-as-a-judge 给轨迹打“成功/失败”代理信号：成功轨迹抽取可迁移策略，失败轨迹抽取陷阱与防错护栏，最后用“直接追加”的轻量方式写入库。同时提出 MaTTS：并行扩展用多条轨迹做 self-contrast 以筛掉伪解、提炼稳定规律；串行扩展用自我反思/自我修正把中间推理也转成记忆信号。<br>
+        • 在 WebArena、Mind2Web和 SWE-Bench-Verified上，对比 No Memory、Synapse、AWM 等基线；WebArena 用 BrowserGym 环境、每题最多 30 步，并用成功率与平均步数等衡量效果与效率。结果显示 ReasoningBank 在多种 backbone 上整体更好。
       </td>
     </tr>
     <tr>
@@ -1440,9 +1403,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Proposes a "pretraining-with-memories" architecture that decouples reasoning capabilities (anchor model) from long-tail world knowledge (hierarchical memory bank).<br>
-        • The system dynamically retrieves and attaches context-dependent parameter blocks from a massive memory bank to a small anchor model during inference, enabling efficient scaling.<br>
-        • Experiments demonstrate that a 160M model augmented with memories matches the performance of a standard model with over twice the parameters, specifically excelling at long-tail knowledge tasks.
+        • 提出了一种"带记忆的预训练"架构,将推理能力(锚定模型)与长尾世界知识(分层记忆库)解耦。<br>
+        • 该系统在推理过程中动态检索并将上下文相关的参数块从大规模记忆库附加到小型锚定模型上,实现了高效的扩展。<br>
+        • 实验表明,一个经记忆增强的 160M 模型可以匹配参数量超过两倍的标准模型的性能,特别是在长尾知识任务中表现出色。
       </td>
     </tr>
     <tr>
@@ -1458,9 +1421,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • The "Conflict-Aware Retrieval Enhancement Generation" (CARE) model aims to address the context-memory conflict problem that occurs in Retrieval Enhancement Generation (RAG).<br>
-          • CARE optimizes the performance of large language models (LLMs) by introducing context evaluators, especially in dealing with conflicts between external and internal knowledge.<br>
-          • This method significantly enhances the accuracy and reliability of the model in multiple tasks through techniques such as conflict-aware fine-tuning, soft prompts, and adversarial soft prompts.
+          • "冲突感知检索增强生成"(CARE)模型旨在解决检索增强生成(RAG)中出现的上下文-记忆冲突问题。<br>
+          • CARE 通过引入上下文评估器来优化大型语言模型(LLM)的性能,特别是在处理外部知识和内部知识之间的冲突时。<br>
+          • 该方法通过冲突感知微调、软提示和对抗性软提示等技术,显著增强了模型在多个任务中的准确性和可靠性。
         </td>
     </tr>
     <tr>
@@ -1474,9 +1437,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • PRIME is a multi-agent inference framework. PRIME provides intuitive answers to simple questions through fast-response agents.<br>
-          • PRIME performs complex reasoning through multiple specific agents, such as memory, planning, search and reading agents.<br>
-          • PRIME still needs to improve its belief correction mechanism and optimize the interaction among agents.
+          • PRIME 是一个多智能体推理框架。PRIME 通过快速响应智能体为简单问题提供直观答案。<br>
+          • PRIME 通过多个特定智能体(如记忆、规划、搜索和阅读智能体)执行复杂推理。<br>
+          • PRIME 仍需要改进其信念纠正机制并优化智能体之间的交互。
         </td>
     </tr>
     <tr>
@@ -1496,9 +1459,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • SGMem is a hierarchical memory management framework designed to address memory fragmentation in long-term conversational agents by organizing dialogue into sentence-level graphs.<br>
-        • It explicitly models associations across turns, rounds, and sessions, and uses a multi-hop retrieval mechanism to integrate raw dialogue history with generated memory such as summaries, facts, and insights.<br>
-        • Extensive experiments on LongMemEval and LoCoMo benchmarks demonstrate that SGMem consistently improves retrieval coherence and outperforms strong baselines in question answering accuracy.
+        • SGMem 是一个分层记忆管理框架,旨在通过将对话组织为句子级图谱来解决长期对话智能体中的记忆碎片化问题。<br>
+        • 它显式地建模跨轮次、回合和会话的关联,并使用多跳检索机制将原始对话历史与生成的记忆(如摘要、事实和洞察)整合在一起。<br>
+        • 在 LongMemEval 和 LoCoMo 基准测试上的大量实验表明,SGMem 持续改进检索连贯性,并在问答准确性方面优于强大的基线。
       </td>
     </tr>
     <tr>
@@ -1516,9 +1479,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • PRINCIPLES builds a retrievable memory of dialogue strategy principles from offline self-play. At inference time, the model retrieves and applies these principles to guide strategy selection and response generation, without any additional training. <br>
-        • In the offline stage, the agent conducts multi-turn self-play with a user simulator and uses rewards to identify success or failure. Successful cases directly yield principles, while failed cases trigger strategy revision and rollback until success; principles are then extracted by contrasting failure-to-success trajectories in a structured form. In the online stage, relevant principles are retrieved using contextual embeddings, reinterpreted to fit the current dialogue, and then used to guide planning and response generation.<br>
-        • Experiments on emotional support and persuasion tasks show that PRINCIPLES improves success rates and strategy prediction performance while increasing strategy diversity. Ablation studies confirm the importance of retrieval and reinterpretation, and human evaluations indicate overall preference for the proposed method. 
+        • PRINCIPLES 用离线 self-play 自动“总结可检索的对话策略原则”，在推理时按当前情境检索并注入这些原则来指导策略选择与回复生成，无需额外训练。<br>
+        • 离线阶段：模拟多轮对话并用奖励判断“成功/失败”；成功则从对话中抽取原则，失败则生成并修订策略、回到失败前重试直到成功，再从“失败→成功”的对比中抽取形如 should… rather than… because… 的原则。在线阶段：用情境检索 top-k 原则，再做一次“重解释”让原则更贴合当前对话，最后据此规划策略并生成回复。<br>
+        • 在情感支持与劝服任务上评测，指标含成功率/轮次，以及策略预测 F1 与熵。结果整体提升成功率与策略匹配度，并提高策略分布熵；消融显示检索与重解释是关键，人评也在多个维度偏好 PRINCIPLES。
       </td>
     </tr>
     <tr>
@@ -1536,9 +1499,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Introduces WebWeaver, a dual-agent framework comprising a Planner and a Writer designed to tackle open-ended deep research (OEDR) by emulating human research processes.<br>
-        • The Planner uses a dynamic cycle to interleave evidence acquisition with outline optimization, building a memory bank of evidence; the Writer performs hierarchical, citation-grounded retrieval to compose the report section by section.<br>
-        • WebWeaver achieves state-of-the-art performance on benchmarks like DeepResearch Bench by effectively managing long contexts and mitigating hallucinations through targeted memory retrieval.
+        • 介绍了 WebWeaver,这是一个由规划器和写作器组成的双智能体框架,旨在通过模拟人类研究过程来解决开放式深度研究(OEDR)问题。<br>
+        • 规划器使用动态循环将证据获取与大纲优化交织在一起,构建证据记忆库;写作器执行分层的、基于引用的检索,逐节撰写报告。<br>
+        • WebWeaver 通过有效管理长上下文并通过有针对性的记忆检索缓解幻觉,在 DeepResearch Bench 等基准测试上实现了最先进的性能。
       </td>
     </tr>
     <tr>
@@ -1559,9 +1522,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • MOOM is a dual-branch memory extraction framework designed for ultra-long role-playing dialogues, modeling "plot development" and "character portrayal" as core storytelling elements.<br>
-          • It incorporates a novel forgetting mechanism based on "competition-inhibition" theory to effectively control memory capacity and prevent uncontrolled expansion.<br>
-          • The authors introduce ZH-4O, a large-scale Chinese role-playing dataset with average 600-turn dialogues and manual memory annotations, demonstrating MOOM's superior performance over state-of-the-art methods.
+          • MOOM 是一个为超长角色扮演对话设计的双分支记忆提取框架,将"情节发展"和"角色刻画"建模为核心叙事元素。<br>
+          • 它融合了基于"竞争-抑制"理论的新颖遗忘机制,以有效控制记忆容量并防止不受控制的扩展。<br>
+          • 作者引入了 ZH-4O,这是一个大规模的中文角色扮演数据集,平均包含 600 轮对话和手动记忆标注,展示了 MOOM 相对于最先进方法的卓越性能。
         </td>
     </tr>
      <tr>
@@ -1581,9 +1544,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • PREMem (Pre-storage Reasoning for Episodic Memory) is a novel approach that shifts complex reasoning processes from response generation to the memory construction phase.<br>
-        • It extracts fine-grained memory fragments (categorized into factual, experiential, and subjective information) and establishes explicit cross-session relationships based on cognitive schema theory, capturing evolution patterns like extensions and transformations.<br>
-        • Experiments on LongMemEval and LoCoMo benchmarks show significant performance improvements, enabling smaller models to achieve results comparable to larger baselines while reducing inference computational demands.
+        • PREMem(情景记忆的预存储推理)是一种新颖的方法,将复杂的推理过程从响应生成阶段转移到记忆构建阶段。<br>
+        • 它提取细粒度的记忆片段(分为事实、经验和主观信息),并基于认知图式理论建立显式的跨会话关系,捕获扩展和转换等演化模式。<br>
+        • 在 LongMemEval 和 LoCoMo 基准测试上的实验显示了显著的性能改进,使较小的模型能够达到与较大基线相当的结果,同时减少了推理计算需求。
       </td>
     </tr>
     <tr>
@@ -1597,9 +1560,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Introduces the “OpenUnlearning” framework, designed to advance research on unlearning in large language models (LLMs).<br>
-          • OpenUnlearning integrates a wide range of unlearning algorithms and evaluation methods, streamlining the research workflow for studying forgetting.<br>
-          • Through targeted and task-specific evaluations, OpenUnlearning ensures the credibility and robustness of unlearning assessment standards.
+          • 介绍了"OpenUnlearning"框架,旨在推进大型语言模型(LLM)中反学习的研究。<br>
+          • OpenUnlearning 整合了广泛的反学习算法和评估方法,简化了研究遗忘的工作流程。<br>
+          • 通过有针对性的和特定任务的评估,OpenUnlearning 确保了反学习评估标准的可信度和鲁棒性。
         </td>
     </tr>
     <tr>
@@ -1618,9 +1581,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Memory-R1 is an RL-driven framework that empowers LLMs to actively manage and utilize external memory via two specialized agents: a Memory Manager and an Answer Agent.<br>
-          • The Memory Manager learns structured operations (ADD, UPDATE, DELETE) to maintain memory, while the Answer Agent filters retrieved memories for accurate reasoning.<br>
-          • With only 152 training samples, it outperforms strong baselines on LoCoMo, MSC, and LongMemEval, demonstrating high data efficiency and generalization.
+          • Memory-R1 是一个由强化学习驱动的框架,通过两个专门的智能体使 LLM 能够主动管理和利用外部记忆:记忆管理器和回答智能体。<br>
+          • 记忆管理器学习结构化操作(添加、更新、删除)来维护记忆,而回答智能体则过滤检索到的记忆以进行准确推理。<br>
+          • 仅使用 152 个训练样本,它就在 LoCoMo、MSC 和 LongMemEval 上优于强大的基线,展示了高数据效率和泛化能力。
         </td>
     </tr>
     <tr>
@@ -1635,9 +1598,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • MemoryVLA is a newly developed robot operation framework, aiming to enhance the performance of robots in complex tasks by integrating visual, language, and perception-cognitive mechanisms.<br>
-          • This framework adopts an architecture similar to the human dual memory system, enhancing the robot's ability to handle long-sequence tasks.<br>
-          • MemoryVLA introduces perception-cognitive memory banks (PCMB), which can effectively integrate historical information with current decisions, thereby enhancing the success rate of robots in responding to complex scenarios.
+          • MemoryVLA 是一个新开发的机器人操作框架,旨在通过整合视觉、语言和感知-认知机制来增强机器人在复杂任务中的性能。<br>
+          • 该框架采用类似于人类双重记忆系统的架构,增强了机器人处理长序列任务的能力。<br>
+          • MemoryVLA 引入了感知-认知记忆库(PCMB),可以有效地将历史信息与当前决策整合在一起,从而提高机器人应对复杂场景的成功率。
         </td>
     </tr>
     <tr>
@@ -1657,9 +1620,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Proposes a Multiple Memory System (MMS) inspired by cognitive psychology to address the issue of low-quality memory content in existing agent memory modules.<br>
-          • The system processes short-term memory into diverse fragments—keywords, cognitive perspectives, episodic memory, and semantic memory—to construct specialized retrieval and contextual memory units.<br>
-          • Experimental results on the LoCoMo dataset demonstrate that MMS significantly outperforms methods like MemoryBank and A-MEM, particularly in multi-hop reasoning and open-domain tasks.
+          • 提出了一个受认知心理学启发的多重记忆系统(MMS),以解决现有智能体记忆模块中低质量记忆内容的问题。<br>
+          • 该系统将短期记忆处理为多样化的片段——关键词、认知视角、情景记忆和语义记忆——以构建专门的检索和上下文记忆单元。<br>
+          • 在 LoCoMo 数据集上的实验结果表明,MMS 显著优于 MemoryBank 和 A-MEM 等方法,特别是在多跳推理和开放域任务中。
         </td>
     </tr>
     <tr>
@@ -1675,9 +1638,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Semantic Anchoring is a hybrid agentic memory architecture designed to enhance the long-term context retention of LLMs by enriching vector-based storage with explicit linguistic cues such as syntactic dependencies, discourse relations, and coreference links.<br>
-          • The proposed framework employs a multi-stage pipeline involving dependency parsing, coreference resolution, and discourse tagging to construct a hybrid index, allowing retrieval systems to access memories based on both semantic similarity and structural linguistic roles.<br>
-          • Experimental results on adapted long-term dialogue datasets (MultiWOZ-Long and DialogRE-L) demonstrate that Semantic Anchoring outperforms strong RAG baselines, improving factual recall and discourse coherence by up to 18% while maintaining higher user satisfaction.
+          • 语义锚定是一种混合智能体记忆架构,旨在通过使用句法依赖、话语关系和共指链接等显式语言线索来丰富基于向量的存储,从而增强 LLM 的长期上下文保留能力。<br>
+          • 所提出的框架采用多阶段流水线,涉及依赖解析、共指消解和话语标注,以构建混合索引,允许检索系统基于语义相似性和结构性语言角色访问记忆。<br>
+          • 在适应的长期对话数据集(MultiWOZ-Long 和 DialogRE-L)上的实验结果表明,语义锚定优于强大的 RAG 基线,事实召回和话语连贯性提高了多达 18%,同时保持更高的用户满意度。
         </td>
     </tr>
     <tr>
@@ -1692,9 +1655,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Memp treats procedural memory as an external, learnable store of past successful experiences so an LLM agent can reuse effective “how-to” routines on new tasks, improving success and reducing wasted steps.<br>
-        • Memp follows a Build–Retrieve–Update loop: it builds memory items from trajectories/scripts, retrieves the most relevant items via semantic keys and vector similarity, and updates memory online by adding, filtering, and correcting items so the memory becomes more reliable over time.<br>
-        • On TravelPlanner and ALFWorld, Memp outperforms a ReAct baseline with higher success/score and fewer steps; vector-based retrieval beats random selection; online updates yield further gains, and learned memories can transfer from stronger to weaker models with diminishing returns as retrieval size grows.
+        • Memp 把智能体的成功经验“程序化”存成可检索的程序性记忆，让LLM在新任务中直接复用做事套路，以提升成功率并减少无效步骤。<br>
+        • 框架是 Build–Retrieve–Update：把轨迹/脚本等经验构成记忆条目（Build），用任务语义构造 key 做向量检索取回相关记忆（Retrieve），并在在线执行中对记忆进行新增、筛选与纠错式更新以保证可靠性。<br>
+        • 在 TravelPlanner 与 ALFWorld 上，相比 ReAct 基线，Memp 整体更高分/更高成功率、步数更少；向量检索优于随机；在线更新随任务推进带来持续增益，并展示了强记忆对弱模型的迁移提升及检索数量的边际效应。
       </td>
     </tr>
     <tr>
@@ -1708,9 +1671,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • "Context-as-memory" significantly enhances the scene consistency and Memory capacity of long video generation by leveraging historical Context as memory.<br>
-          • The paper studies key designs such as context learning mechanisms, camera control, and memory retrieval strategies, and points out the balance between computational efficiency and generation quality.<br>
-          • Based on the long video generation architecture of the diffusion model, the current technological progress, challenges and future directions are expounded.
+          • "上下文即记忆"通过利用历史上下文作为记忆,显著增强了长视频生成的场景一致性和记忆容量。<br>
+          • 该论文研究了关键设计,如上下文学习机制、相机控制和记忆检索策略,并指出了计算效率和生成质量之间的平衡。<br>
+          • 基于扩散模型的长视频生成架构,阐述了当前的技术进展、挑战和未来方向。
         </td>
     </tr>
     <tr>
@@ -1730,9 +1693,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Introduces Intrinsic Memory Agents, a multi-agent framework designed to address context limitations and role inconsistency using structured, agent-specific memories.<br>
-          • The method employs role-aligned memory templates and intrinsic updates derived directly from agent outputs, preserving heterogeneous perspectives and domain expertise without external summarization.<br>
-          • Evaluations on the PDDL benchmark demonstrate a 38.6% performance improvement with high token efficiency, while case studies show enhanced quality in complex planning tasks.
+          • 介绍了内在记忆智能体,这是一个多智能体框架,旨在使用结构化的、特定于智能体的记忆来解决上下文限制和角色不一致问题。<br>
+          • 该方法采用角色对齐的记忆模板和直接从智能体输出派生的内在更新,在没有外部摘要的情况下保留了异构视角和领域专业知识。<br>
+          • 在 PDDL 基准测试上的评估显示性能提高了 38.6%,同时具有高令牌效率,而案例研究显示在复杂规划任务中质量得到增强。
         </td>
     </tr>
     <tr>
@@ -1752,9 +1715,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • RCR-Router is a role-aware context routing framework designed for multi-agent LLM systems to address the limitations of static and full-context routing, such as excessive token consumption and redundant memory exposure.<br>
-        • The framework dynamically selects semantically relevant memory subsets for each agent based on their specific role and the current task stage, enforcing a strict token budget and utilizing an iterative feedback mechanism to refine context.<br>
-        • Experiments on multi-hop QA benchmarks (HotPotQA, MuSiQue, 2WikiMultihop) demonstrate that RCR-Router reduces token usage by 25–47% while maintaining or improving answer quality compared to baseline strategies.
+        • RCR-Router 是一个角色感知的上下文路由框架,为多智能体 LLM 系统设计,以解决静态和全上下文路由的限制,如过度的令牌消耗和冗余的记忆暴露。<br>
+        • 该框架根据每个智能体的特定角色和当前任务阶段动态选择语义相关的记忆子集,执行严格的令牌预算,并利用迭代反馈机制来优化上下文。<br>
+        • 在多跳问答基准测试(HotPotQA、MuSiQue、2WikiMultihop)上的实验表明,与基线策略相比,RCR-Router 将令牌使用量减少了 25-47%,同时保持或提高了答案质量。
       </td>
     </tr>
     <tr>
@@ -1771,9 +1734,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Introduces MLP Memory, a lightweight parametric module that learns to internalize retrieval patterns without requiring explicit document access during inference, effectively bridging the gap between RAG and parametric fine-tuning.<br>
-        • By pretraining an MLP to imitate a kNN retriever’s behavior on the entire pretraining dataset, the model compresses large datastores into a differentiable memory component that integrates with Transformer decoders via probability interpolation.<br>
-        • Experimental results show that MLP Memory achieves superior scaling behavior, improves QA performance by 12.3% relative to baselines, reduces hallucinations by up to 10 points, and offers 2.5× faster inference than RAG.
+        • 介绍了 MLP Memory,这是一个轻量级的参数化模块,学习将检索模式内化,而无需在推理过程中显式访问文档,有效地弥合了 RAG 和参数化微调之间的差距。<br>
+        • 通过预训练 MLP 来模仿 kNN 检索器在整个预训练数据集上的行为,该模型将大型数据存储压缩为可微分的记忆组件,通过概率插值与 Transformer 解码器集成。<br>
+        • 实验结果表明,MLP Memory 实现了卓越的扩展行为,相对于基线将问答性能提高了 12.3%,减少了多达 10 个点的幻觉,并且推理速度比 RAG 快 2.5 倍。
       </td>
     </tr>
     <tr>
@@ -1790,9 +1753,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • The paper proposes MemTool, a short-term memory framework for managing dynamic tool sets across multi-turn conversations. It offers three architectures: Autonomous Agent, Workflow, and Hybrid, balancing autonomy and control.<br>
-        • In Autonomous Mode, the agent autonomously adds/removes tools using Search_Tools and Remove_Tools. Workflow Mode follows a fixed pipeline: pruning tools, then searching and adding new ones. Hybrid Mode separates tool removal and adding, offering a balance of stability and flexibility.<br>
-        • Using ScaleMCP’s 5,000 MCP servers and a 100-turn dialogue, the authors evaluate 13 LLMs with a 128-tool limit. Autonomous Mode achieves 90-94% tool removal efficiency, while Workflow and Hybrid perform consistently well, with Autonomous and Hybrid excelling in task completion.
+        • 论文提出 MemTool，用于在多轮对话中管理不断变化的工具集合（MCP servers）的短期记忆框架，提供 Autonomous / Workflow / Hybrid 三种架构，以在自治性与可控性之间权衡。<br>
+        • Autonomous 模式下，智能体通过 Search_Tools 与 Remove_Tools 自主增删工具；Workflow 模式采用固定流程：先剪枝删工具，再检索加工具；Hybrid 模式将删工具独立出来，同时保留智能体通过 Search_Tools 加工具的能力，实现稳定与灵活的折中。<br>
+        • 基于 ScaleMCP 的 5000 个 MCP servers 构造 100 轮工具使用对话（约 5 次工具调用/轮），评测 13 个 LLM，并设定 128 工具上限。结果显示：Autonomous 在强推理模型上工具移除效率可达 90–94%，中等模型可降至 0–60%；Workflow 与 Hybrid 的工具移除更稳定，而任务完成度通常是 Autonomous 与 Hybrid 更好。
       </td>
     </tr>
     <tr>
@@ -1808,9 +1771,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • SynapticRAG is a novel memory retrieval framework for large language models (LLMs), designed to enhance memory retrieval in cross-session conversations.<br>
-          • By combining temporal association triggers with biologically inspired synaptic propagation mechanisms, SynapticRAG significantly improves the identification of relevant conversational history.<br>
-          • Experimental results show that the framework achieves improvements of up to 14.66% across multiple performance metrics and demonstrates clear advantages in dynamic memory management.
+          • SynapticRAG 是一个用于大型语言模型(LLM)的新颖记忆检索框架,旨在增强跨会话对话中的记忆检索。<br>
+          • 通过将时间关联触发器与受生物学启发的突触传播机制相结合,SynapticRAG 显著改进了相关对话历史的识别。<br>
+          • 实验结果表明,该框架在多个性能指标上实现了高达 14.66% 的改进,并在动态记忆管理方面展示了明显的优势。
         </td>
     </tr>
     <tr>
@@ -1824,9 +1787,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • MEM1 is an innovative end-to-end reinforcement learning framework designed to enhance the efficiency of large language models (LLMs) in long-term multi-round interactions.<br>
-          • MEM1 effectively solves the problem of memory dilation in context processing of traditional models by constructing a compact shared internal state.<br>
-          • The experimental results show that MEM1 significantly improves performance in multiple tasks while reducing memory usage, demonstrating its wide applicability and optimization potential in dynamic environments.
+          • MEM1 是一个创新的端到端强化学习框架,旨在提高大型语言模型(LLM)在长期多轮交互中的效率。<br>
+          • MEM1 通过构建紧凑的共享内部状态,有效解决了传统模型上下文处理中的记忆膨胀问题。<br>
+          • 实验结果表明,MEM1 在多个任务中显著提高了性能,同时减少了记忆使用,展示了其在动态环境中的广泛适用性和优化潜力。
         </td>
     </tr>
     <tr>
@@ -1840,9 +1803,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • MemAgent is a long text processing method that uses reinforcement learning (RL) to dynamically update memory, aiming to address the performance degradation and high computational complexity issues of large language models (LLMS) when dealing with long texts.<br>
-          • The model can maintain a linear time complexity while handling inputs of infinite length by treating memory as a latent variable and introducing stream processing and multi-session strategies.<br>
-          • The experimental results show that MemAgent performs outstandingly with high accuracy in ultra-long text tasks, especially having obvious advantages in complex multi-hop reasoning tasks.
+          • MemAgent 是一种使用强化学习(RL)动态更新记忆的长文本处理方法,旨在解决大型语言模型(LLM)在处理长文本时的性能下降和高计算复杂性问题。<br>
+          • 该模型通过将记忆视为潜在变量并引入流处理和多会话策略,在处理无限长度的输入时可以保持线性时间复杂度。<br>
+          • 实验结果表明,MemAgent 在超长文本任务中表现出色,具有高准确性,特别是在复杂的多跳推理任务中具有明显优势。
         </td>
     </tr>
     <tr>
@@ -1860,9 +1823,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • The paper proposes HippoRAG 2, a “long-term memory–inspired” structured RAG system. It builds a knowledge graph from text and retrieves evidence via graph-based propagation (PPR) to support multi-hop association, while improving basic factual recall that earlier structured RAGs often hurt.<br>
-        • Offline, an LLM performs OpenIE to extract triples and form a KG, and adds passages as nodes linked to phrase nodes to fuse concept-level structure with context-rich passages. Online, it first retrieves top-k triples with embeddings, then uses an LLM for triple filtering to remove irrelevant triples; the remaining nodes seed a PPR run to rank the most relevant passages for the generator.<br>
-        • It evaluates factual QA, multi-hop reasoning, and narrative understanding, reporting Recall@5 for retrieval and F1 for QA. Compared with BM25, dense retrievers, and multiple structured-RAG baselines, HippoRAG 2 generally improves retrieval and end-to-end QA, and ablations plus “growing-corpus” settings support the contribution of its components.    
+        • HippoRAG 2，是一种“类人长期记忆”的结构化 RAG：把文本抽成三元组建图，用图上的扩散式检索（PPR）做多跳联想，同时补齐传统结构化RAG在“基础事实记忆”上的短板。<br>
+        • 离线用 LLM 做 OpenIE 抽取三元组建 KG，并把段落作为 passage node接入图，实现“概念—语境”融合；在线检索时先用向量召回 top-k 三元组，再让 LLM 做 triple filtering 去掉无关三元组，然后以过滤后的节点作为种子跑 PPR，输出最相关段落供生成器回答。<br>
+        • 在事实问答、多跳推理与叙事理解等数据集上评测，用 Recall@5 衡量检索、用 F1 衡量 QA；对比 BM25、Contriever/GTR 及多种结构化RAG基线，结果总体显示 HippoRAG 2 在检索与最终 QA 上更强，并通过消融与持续扩展语料设置验证关键模块有效。  
       </td>
     </tr>
     <tr>
@@ -1881,9 +1844,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Introduces G-Memory, a hierarchical memory system designed to address the lack of self-evolution capabilities in Large Language Model (LLM)-based Multi-Agent Systems (MAS).<br>
-        • Implements a three-tier graph architecture—Insight Graph, Query Graph, and Interaction Graph—to manage lengthy interaction histories by abstracting generalizable insights and condensing specific collaborative trajectories.<br>
-        • Experimental results across embodied action and knowledge QA benchmarks demonstrate that G-Memory significantly enhances agent team performance, improving success rates by up to 20.89% without modifying the original frameworks.
+        • 介绍了 G-Memory,这是一个分层记忆系统,旨在解决基于大型语言模型(LLM)的多智能体系统(MAS)缺乏自我演化能力的问题。<br>
+        • 实现了三层图架构——洞察图、查询图和交互图——通过抽象可泛化的洞察和浓缩特定的协作轨迹来管理冗长的交互历史。<br>
+        • 在具身动作和知识问答基准测试中的实验结果表明,G-Memory 显著增强了智能体团队的性能,在不修改原始框架的情况下将成功率提高了多达 20.89%。
       </td>
     </tr>
     <tr>
@@ -1897,9 +1860,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • M+ is a memory-augmented model designed to improve long-term information retention in large language models (LLMs).<br>
-          • Built upon MemoryLLM, M+ integrates long-term memory mechanisms with a jointly trained retriever, substantially enhancing the model’s ability to handle knowledge spanning over 20,000 tokens while maintaining comparable GPU memory overhead.<br>
-          • M+ achieves strong performance across multiple benchmarks, outperforming MemoryLLM and other competitive baselines, and demonstrates efficient information compression and end-to-end training, exhibiting mechanisms that closely resemble human memory.
+          • M+ 是一个记忆增强模型,旨在改善大型语言模型(LLM)中的长期信息保留。<br>
+          • 基于 MemoryLLM 构建,M+ 将长期记忆机制与联合训练的检索器集成,大幅增强了模型处理跨越 20,000 个令牌的知识的能力,同时保持了可比的 GPU 内存开销。<br>
+          • M+ 在多个基准测试中实现了强劲的性能,优于 MemoryLLM 和其他竞争基线,并展示了高效的信息压缩和端到端训练,表现出与人类记忆非常相似的机制。
         </td>
     </tr>
     <tr>
@@ -1918,9 +1881,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • MemGuide is a two-stage framework designed to enhance multi-session task-oriented dialogue (TOD) by incorporating task intent and slot-level guidance into memory selection.<br>
-        • It employs Intent-Aligned Retrieval to match current context with stored intent descriptions and Missing-Slot Guided Filtering to prioritize memory units that fill information gaps using a Chain-of-Thought reasoner.<br>
-        • The authors also introduce MS-TOD, a multi-session TOD benchmark. Evaluations show MemGuide significantly improves task success rates and reduces dialogue turns compared to strong baselines.
+        • MemGuide 是一个两阶段框架,旨在通过将任务意图和槽位级指导纳入记忆选择来增强多会话任务导向对话(TOD)。<br>
+        • 它采用意图对齐检索将当前上下文与存储的意图描述匹配,并采用缺失槽位引导过滤来优先考虑使用思维链推理器填补信息空白的记忆单元。<br>
+        • 作者还引入了 MS-TOD,一个多会话 TOD 基准。评估显示,与强大的基线相比,MemGuide 显著提高了任务成功率并减少了对话轮次。
       </td>
     </tr>
     <tr>
@@ -1936,9 +1899,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • CoMEM addresses the token overload and performance degradation issues in traditional Retrieval-Augmented Generation (RAG) for Vision-Language Models (VLMs) by introducing a general continuous memory mechanism.<br>
-          • The method innovatively utilizes the VLM itself as a memory encoder combined with a lightweight Q-Former, efficiently compressing diverse multimodal and multilingual knowledge into a compact set of continuous embeddings.<br>
-          • CoMEM is data- and parameter-efficient (requiring only 1.2% trainable parameters) and plug-and-play, significantly enhancing performance on complex multimodal reasoning tasks while keeping the inference model frozen.
+          • CoMEM 通过引入通用的连续记忆机制,解决了视觉-语言模型(VLM)中传统检索增强生成(RAG)的令牌过载和性能下降问题。<br>
+          • 该方法创新性地将 VLM 本身用作记忆编码器,结合轻量级 Q-Former,有效地将多样化的多模态和多语言知识压缩为一组紧凑的连续嵌入。<br>
+          • CoMEM 具有数据和参数效率(仅需要 1.2% 的可训练参数)并且即插即用,在保持推理模型冻结的同时显著增强了复杂多模态推理任务的性能。
         </td>
     </tr>
     <tr>
@@ -1957,9 +1920,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Introduces Limited Memory Language Models (LMLM), a new class of models that externalizes factual knowledge to an external database during pre-training rather than encoding it in parameters.<br>
-        • The approach uses a modified pre-training objective that masks retrieved factual values from the loss, encouraging the model to perform targeted lookups for facts instead of memorizing them.<br>
-        • Experiments demonstrate that LMLMs match the factual precision of significantly larger models while enabling instant, verifiable knowledge updates and effective machine unlearning through simple database operations.
+        • 介绍了有限记忆语言模型(LMLM),这是一类新的模型,在预训练期间将事实知识外化到外部数据库中,而不是将其编码在参数中。<br>
+        • 该方法使用修改后的预训练目标,从损失中屏蔽检索到的事实值,鼓励模型执行有针对性的事实查找,而不是记忆它们。<br>
+        • 实验表明,LMLM 与明显更大的模型的事实精度相匹配,同时通过简单的数据库操作实现即时、可验证的知识更新和有效的机器反学习。
       </td>
     </tr>
     <tr>
@@ -1979,9 +1942,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Proposes Reflective Memory Management (RMM), a novel framework for long-term dialogue agents that addresses the limitations of rigid memory granularity and fixed retrieval mechanisms.<br>
-          • Integrates Prospective Reflection to dynamically organize dialogue history into topic-based memories, and Retrospective Reflection to iteratively refine retrieval using online reinforcement learning guided by LLM attribution signals.<br>
-          • Experimental results on MSC and LongMemEval benchmarks demonstrate that RMM significantly outperforms strong baselines, achieving over 10% improvement in accuracy and enhancing response personalization.
+          • 提出了反思性记忆管理(RMM),这是一个用于长期对话智能体的新颖框架,解决了僵化的记忆粒度和固定检索机制的局限性。<br>
+          • 整合了前瞻性反思以动态地将对话历史组织为基于主题的记忆,以及回顾性反思以使用由 LLM 归因信号引导的在线强化学习迭代地优化检索。<br>
+          • 在 MSC 和 LongMemEval 基准测试上的实验结果表明,RMM 显著优于强大的基线,准确度提高了 10% 以上,并增强了响应个性化。
         </td>
     </tr>
     <tr>
@@ -1997,9 +1960,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • MemoRAG aims to enhance the ability of large language models (LLMs) in handling long contexts by improving the information retrieval and generation process through a global memory-enhanced retrieval mechanism.<br>
-          • This framework adopts a lightweight global memory module and a complex generation system, which can effectively manage long contexts and generate useful clues to assist in answer generation.<br>
-          • This model is applicable to a variety of tasks, including long document question answering and summarization, demonstrating its potential in handling complex long text scenarios.
+          • MemoRAG 旨在通过全局记忆增强检索机制改进信息检索和生成过程,从而增强大型语言模型(LLM)处理长上下文的能力。<br>
+          • 该框架采用轻量级的全局记忆模块和复杂的生成系统,可以有效地管理长上下文并生成有用的线索以辅助答案生成。<br>
+          • 该模型适用于各种任务,包括长文档问答和摘要,展示了其在处理复杂长文本场景方面的潜力。
         </td>
     </tr>
     <tr>
@@ -2016,9 +1979,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • SAGE addresses the long-term memory and multitasking challenges of large language models (LLMs) in dynamic environments through three collaborative agents. SAGE integrates a reflection mechanism and memory optimization based on the Ebbinghaus forgetting curve, helping the model effectively filter and store important information while reducing cognitive load.<br>
-        • SAGE continuously optimizes the Assistant’s decisions through an iterative feedback mechanism and reflection functionality. Its MemorySyntax component simulates human memory decay, dynamically managing both short-term and long-term memory to ensure the retention of critical information while reducing unnecessary memory burden.<br>
-        • Experiments show that SAGE significantly improves model performance on AgentBench and long-text tasks (e.g., HotpotQA), with performance improvements up to 2.26x in multi-hop question answering and code generation tasks, and it effectively resolves 73.6% of ambiguous references in dialog tasks, demonstrating its potential in real-world applications.
+        • SAGE 通过三个协作代理（用户、助手、检查员）解决大语言模型在动态环境中的长期记忆和多任务处理能力问题。SAGE结合反思机制和基于艾宾浩斯遗忘曲线的记忆优化，帮助模型有效筛选和存储重要信息，减少认知负担。<br>
+        • SAGE通过迭代反馈机制和反思功能，不断优化助手的决策。其MemorySyntax组件模拟人类记忆衰退，动态管理短期和长期记忆，确保重要信息得到保留，减少不必要的记忆负担。<br>
+        • 实验表明，SAGE在AgentBench和长文本任务（如HotpotQA）上大幅提升了模型表现，尤其在多跳问答和代码生成任务中，表现提高高达2.26倍，并有效解决了对话任务中的73.6%模糊引用问题，展现了其在实际应用中的潜力。  
       </td>
     </tr>
     <tr>
@@ -2037,11 +2000,11 @@ Framework for Experience-Driven Agent Evolution</strong></td>
       </td>
     </tr>
     <tr>
-      <td colspan="3">
-        • Introduces ComoRAG, a retrieval-augmented generation framework inspired by the human Prefrontal Cortex, designed to achieve stateful reasoning in long narrative contexts.<br>
-        • The framework employs a dynamic memory workspace and a metacognitive regulation loop (including Self-Probe, Mem-Fuse, and Mem-Update) to iteratively fuse fragmented evidence into coherent context.<br>
-        • Experimental results demonstrate that ComoRAG consistently outperforms strong baselines on challenging benchmarks like NarrativeQA and ∞BENCH, particularly excelling in complex narrative queries requiring global understanding.
-      </td>
+        <td colspan="3">
+          • 介绍了 ComoRAG,这是一个受人类前额叶皮层启发的检索增强生成框架,旨在实现长叙事上下文中的有状态推理。<br>
+          • 该框架采用动态记忆工作空间和元认知调节循环(包括自我探测、记忆融合和记忆更新),以迭代方式将碎片化的证据融合为连贯的上下文。<br>
+          • 实验结果表明,ComoRAG 在 NarrativeQA 和 ∞BENCH 等具有挑战性的基准测试中持续优于强大的基线,特别是在需要全局理解的复杂叙事查询中表现出色。
+        </td>
     </tr>
     <tr>
       <td rowspan="2" style="width: 15%;">2025-04-10</td>
@@ -2058,9 +2021,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • The paper proposes Dynamic Cheatsheet (DC)—a continuously updated “sticky-note” external memory for black-box LLMs at inference time. It distills verified solving patterns and reuses them across problems, enabling test-time learning without training.<br>
-        • DC consists of a Generator (Gen) and a Memory Curator (Cur): Gen produces an answer using the current memory, and Cur then refines/filters/compresses the information. A retrieval-based variant selects the most relevant past examples and solutions by similarity to assist generation, while preventing memory bloat.<br>
-        • DC is evaluated across multiple tasks and models (e.g., AIME, GPQA-Diamond, Game of 24, MMLU-Pro; GPT-4o, Claude 3.5 Sonnet, etc.) using metrics such as Soft Match and Functionally Correct. Results show substantial gains; for example, the jump on Game of 24 is largely driven by reusable Python solver code being repeatedly “written and reused” in memory.
+        • 论文提出 Dynamic Cheatsheet（DC）——在推理阶段给黑盒大模型加一个可持续更新的“便签式外部记忆”，把已验证的解题套路沉淀下来并在后续复用，实现无需训练的测试时学习。<br>
+        • DC包含生成器 Gen 与 记忆策展 Cur：先用当前记忆生成答案，再由 Cur 提炼/筛选/压缩信息；检索式变体会按相似度取最相关历史样例及其解来辅助当前生成，同时控制记忆不膨胀。<br>
+        • 在 AIME、GPQA-Diamond、Game of 24、MMLU-Pro 等多任务、跨模型（GPT-4o、Claude 3.5 Sonnet 等）评测，使用 Soft Match / Functionally Correct 等指标；结果显示 DC 在多项任务上显著提升，如 Game of 24 的跃升主要来自可复用的 Python 求解代码被反复“写入—复用”。 
       </td>
     </tr>
     <tr>
@@ -2079,9 +2042,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • MemQ is proposed to decouple reasoning (natural-language steps) from query generation/execution (SPARQL): the LLM produces a clear reasoning plan, while the actual query is obtained via memory retrieval + rule-based reconstruction, reducing errors and hallucinations caused by entangling tool calls with reasoning.<br>
-        • During training, gold SPARQL queries are decomposed into query fragments, and a natural-language explanation is generated for each fragment to build a query memory bank of (explanation → fragment) pairs. At inference time, the LLM generates step-by-step plans; reconstruction uses semantic retrieval (Sentence-BERT) to fetch an adaptive Top-N set of fragments, then assembles them with rules and fills entity slots to produce the final executable query.<br>
-        • Experiments on WebQSP and CWQ use Hits@1 and F1, where MemQ achieves the best overall performance. Additional analyses with structural consistency / edge hit rate show the reconstructed queries are closer to the gold graphs, and ablation studies confirm that the main gains come from the memory bank + decoupling design.
+        • 提出 MemQ，把“推理（自然语言步骤）”和“生成/执行查询（SPARQL）”分开：LLM 负责写清楚推理计划，查询由“记忆库检索 + 规则重建”得到，减少混合工具调用带来的错误与幻觉。<br>
+        • 训练时把金标 SPARQL 规则拆成查询片段（含 CVT 等结构），再为每个片段生成自然语言解释，形成（解释→片段）的查询记忆库；推理时 LLM 生成逐步计划，重建时用语义检索（Sentence-BERT）从记忆库取 Top-N 片段并自适应选取，最后按规则拼接并填充实体得到完整查询。<br>
+        • 在 WebQSP 与 CWQ 上用 Hits@1、F1 评测，结果整体最优；并用结构一致性/边命中率等指标验证重建查询更接近 gold，同时消融实验证明“记忆库 + 解耦”是主要增益来源。
       </td>
     </tr>
     <tr>
@@ -2096,9 +2059,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • The paper examines machine unlearning in large language models (LLMs) and the importance of its evaluation, with a particular focus on removing undesirable or unnecessary data memories.<br>
-          • It introduces Unlearning with Calibration (UWC) to calibrate model performance and strengthen the evaluation of different unlearning methods.<br>
-          • The study emphasizes the importance of selecting appropriate evaluation metrics and recommends Extraction Strength (ES) as a primary evaluation tool to ensure accuracy and robustness in assessment.
+          • 该论文研究了大型语言模型(LLM)中的机器反学习及其评估的重要性,特别关注删除不需要或不必要的数据记忆。<br>
+          • 它引入了带校准的反学习(UWC)来校准模型性能,并加强对不同反学习方法的评估。<br>
+          • 该研究强调了选择适当评估指标的重要性,并推荐提取强度(ES)作为主要评估工具,以确保评估的准确性和鲁棒性。
         </td>
     </tr>
     <tr>
@@ -2112,9 +2075,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • LM2 aims to overcome the limitations of traditional Transformers in multi-step reasoning, relational argumentation, and long context processing.<br>
-          • The LM2 integrates an auxiliary memory module, which utilizes cross-attention mechanisms and gating technology to enhance information storage and update capabilities.<br>
-          • In multiple benchmark tests, LM2 has demonstrated significantly superior performance, particularly excelling in long context reasoning tasks, effectively enhancing the ability to process and remember complex information.
+          • LM2 旨在克服传统 Transformer 在多步推理、关系论证和长上下文处理方面的局限性。<br>
+          • LM2 集成了一个辅助记忆模块,利用交叉注意力机制和门控技术来增强信息存储和更新能力。<br>
+          • 在多个基准测试中,LM2 展示了显著优越的性能,特别是在长上下文推理任务中表现出色,有效增强了处理和记忆复杂信息的能力。
         </td>
     </tr>
     <tr>
@@ -2134,9 +2097,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Introduces SECOM, a memory management method that constructs memory banks at the segment level to address limitations of turn-level and session-level approaches in long-term conversations.<br>
-          • SECOM partitions conversations into topically coherent segments and employs prompt compression (LLMLingua-2) as a denoising mechanism to enhance retrieval accuracy.<br>
-          • Experimental results demonstrate that SECOM significantly outperforms existing baselines on long-term conversation benchmarks like LOCOMO and Long-MT-Bench+.
+          • 介绍了 SECOM,这是一种在段落级别构建记忆库的记忆管理方法,以解决长期对话中轮次级别和会话级别方法的局限性。<br>
+          • SECOM 将对话划分为主题连贯的段落,并采用提示压缩(LLMLingua-2)作为去噪机制来增强检索准确性。<br>
+          • 实验结果表明,SECOM 在 LOCOMO 和 Long-MT-Bench+ 等长期对话基准测试上显著优于现有基线。
         </td>
     </tr>
     <tr>
@@ -2151,9 +2114,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Proposes Alternate Preference Optimization (AltPO), a method designed to effectively address the challenges of machine unlearning in large language models (LLMs).<br>
-          • AltPO enhances unlearning by combining negative feedback from the forget set with positive feedback from the same domain to generate multiple alternative responses, thereby improving forgetting capability while preserving overall model performance.<br>
-          • Experimental results demonstrate that AltPO outperforms existing methods in terms of both unlearning quality and model utility.
+          • 提出了交替偏好优化(AltPO),这是一种旨在有效解决大型语言模型(LLM)中机器反学习挑战的方法。<br>
+          • AltPO 通过将遗忘集的负反馈与来自同一领域的正反馈相结合来生成多个替代响应,从而增强遗忘能力,同时保持整体模型性能。<br>
+          • 实验结果表明,AltPO 在反学习质量和模型实用性方面都优于现有方法。
         </td>
     </tr>
     <tr>
@@ -2168,9 +2131,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • "Titans" aims to enhance the model's memory capacity when dealing with long sequences and complex contexts.<br>
-          • The Titans architecture combines short-term memory and long-term memory modules, overcomes the limitations of traditional recursive models and attention mechanisms, and is capable of handling larger context Windows.<br>
-          • The experimental results show that Titans exhibit superior performance and flexibility, especially in handling long dependency relationships and diverse tasks.
+          • "Titans"旨在增强模型在处理长序列和复杂上下文时的记忆容量。<br>
+          • Titans 架构结合了短期记忆和长期记忆模块,克服了传统递归模型和注意力机制的局限性,能够处理更大的上下文窗口。<br>
+          • 实验结果表明,Titans 表现出卓越的性能和灵活性,特别是在处理长依赖关系和多样化任务方面。
         </td>
     </tr>
     <tr>
@@ -2185,9 +2148,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • The paper investigates how the structure and retrieval methods of memory modules in large language models (LLMs) affect model performance, with a focus on different memory architectures and their roles in information extraction and generation.<br>
-          • The study finds that hybrid memory structures outperform others in complex tasks, demonstrating greater robustness in noisy environments.<br>
-          • Through hyperparameter sensitivity analysis, the research identifies memory retrieval strategies that are best suited to different task settings.
+          • 该论文研究了大型语言模型(LLM)中记忆模块的结构和检索方法如何影响模型性能,重点关注不同的记忆架构及其在信息提取和生成中的作用。<br>
+          • 该研究发现,混合记忆结构在复杂任务中优于其他结构,在噪声环境中展示了更强的鲁棒性。<br>
+          • 通过超参数敏感性分析,该研究确定了最适合不同任务设置的记忆检索策略。
         </td>
     </tr>
     <tr>
@@ -2207,9 +2170,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Proposes SELF-PARAM, a method to integrate contexts directly into LLM parameters without requiring extra storage modules, ensuring both high efficacy and long-term retention.<br>
-          • Employs a training objective that minimizes the KL divergence between an original model (with context access) and a target model (without context), utilizing diverse generated QA pairs.<br>
-          • Experiments demonstrate that SELF-PARAM significantly outperforms existing continual learning and RAG methods in question-answering and conversational recommendation tasks, achieving near-optimal performance with zero storage complexity.
+          • 提出了 SELF-PARAM,这是一种将上下文直接集成到 LLM 参数中的方法,无需额外的存储模块,确保高效性和长期保留。<br>
+          • 采用训练目标,最小化原始模型(具有上下文访问)和目标模型(没有上下文)之间的 KL 散度,利用多样化生成的问答对。<br>
+          • 实验表明,SELF-PARAM 在问答和对话推荐任务中显著优于现有的持续学习和 RAG 方法,以零存储复杂度实现接近最优的性能。
         </td>
     </tr>
     <tr>
@@ -2225,9 +2188,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • This study introduces the Sequence Order Recall Task (SORT), designed to evaluate the episodic memory capabilities of large language models (LLMs).<br>
-          • The task highlights the importance of episodic memory—linking memories with relevant context such as time and location—particularly in everyday cognitive tasks.<br>
-          • Preliminary results indicate that LLMs exhibit strong memory performance when contextual information is provided, but their performance degrades significantly when relying solely on training data.
+          • 该研究引入了序列顺序回忆任务(SORT),旨在评估大型语言模型(LLM)的情景记忆能力。<br>
+          • 该任务强调了情景记忆的重要性——将记忆与相关上下文(如时间和地点)联系起来——特别是在日常认知任务中。<br>
+          • 初步结果表明,当提供上下文信息时,LLM 表现出强大的记忆性能,但仅依赖训练数据时,其性能会显著下降。
         </td>
     </tr>
     <tr>
@@ -2245,9 +2208,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • ELDER proposes a novel lifelong model editing method using a Mixture-of-LoRA structure to establish continuous associations between data and adapters, enhancing robustness against rephrased inputs.<br>
-          • The framework integrates a router network with a guided loss function to align LoRA allocations with edit knowledge and utilizes a deferral mechanism to preserve the model's general capabilities.<br>
-          • Extensive experiments on GPT-2 XL and LLaMA2-7B demonstrate that ELDER outperforms existing baselines in reliability, generalization, and scalability while maintaining performance on downstream tasks.
+          • ELDER 提出了一种使用 Mixture-of-LoRA 结构的新颖终身模型编辑方法,在数据和适配器之间建立连续关联,增强对改写输入的鲁棒性。<br>
+          • 该框架将路由器网络与引导损失函数集成,以将 LoRA 分配与编辑知识对齐,并利用延迟机制来保留模型的通用能力。<br>
+          • 在 GPT-2 XL 和 LLaMA2-7B 上的大量实验表明,ELDER 在可靠性、泛化性和可扩展性方面优于现有基线,同时保持下游任务的性能。
         </td>
     </tr>
     <tr>
@@ -2262,9 +2225,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • This paper introduces the Selective Knowledge Unlearning (SKU) framework, aimed at improving the safety of large language models (LLMs).<br>
-          • The SKU framework consists of two main stages: harmful knowledge acquisition, followed by knowledge negation, which focuses on removing undesirable knowledge without degrading model utility under benign prompts.<br>
-          • SKU successfully reduces harmful outputs while preserving response quality, and demonstrates a strong balance between unlearning effectiveness and model utility across multiple LLM architectures, such as OPT and LLaMA2.
+          • 该论文介绍了选择性知识反学习(SKU)框架,旨在提高大型语言模型(LLM)的安全性。<br>
+          • SKU 框架由两个主要阶段组成:有害知识获取,然后是知识否定,重点是删除不需要的知识,而不会在良性提示下降低模型效用。<br>
+          • SKU 成功减少了有害输出,同时保持了响应质量,并在 OPT 和 LLaMA2 等多个 LLM 架构中展示了反学习有效性和模型效用之间的强大平衡。
         </td>
     </tr>
      <tr>
@@ -2279,9 +2242,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • RULER is designed for the comprehensive evaluation of long-context language models (LMs) across a wide range of tasks.<br>
-          • It extends the traditional Needle-in-a-Haystack (NIAH) test by incorporating tasks such as multi-hop tracking and aggregation, enabling a more thorough assessment of models’ understanding under long-context settings.<br>
-          • RULER demonstrates strong performance in multi-hop reasoning and information retrieval tasks.
+          • RULER 旨在跨广泛的任务对长上下文语言模型(LM)进行全面评估。<br>
+          • 它通过合并多跳跟踪和聚合等任务来扩展传统的"大海捞针"(NIAH)测试,能够更全面地评估模型在长上下文设置下的理解能力。<br>
+          • RULER 在多跳推理和信息检索任务中展示了强大的性能。
         </td>
     </tr>
      <tr>
@@ -2296,9 +2259,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • ReadAgent is a reading comprehension system designed to improve the performance of large language models (LLMs) when processing long-form text.<br>
-          • Through three steps—episodic pagination, memory summarization, and interactive lookup—ReadAgent significantly extends the effective context length by up to 20×.<br>
-          • ReadAgent outperforms traditional approaches on long-document reading comprehension benchmarks such as QuALITY, NarrativeQA, and QMSum.
+          • ReadAgent 是一个阅读理解系统,旨在提高大型语言模型(LLM)处理长文本时的性能。<br>
+          • 通过三个步骤——情景分页、记忆摘要和交互式查找——ReadAgent 将有效上下文长度显著扩展了多达 20 倍。<br>
+          • ReadAgent 在 QuALITY、NarrativeQA 和 QMSum 等长文档阅读理解基准测试中优于传统方法。
         </td>
     </tr>
      <tr>
@@ -2312,9 +2275,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Introduces E2URec, a recommendation data unlearning method specifically designed for LLM-based recommender systems (LLMRec).<br>
-          • E2URec significantly improves unlearning efficiency while preserving recommendation performance by updating only Low-Rank Adaptation (LoRA) parameters.<br>
-          • Experimental results show that E2URec outperforms existing baseline methods on real-world datasets.
+          • 介绍了 E2URec,这是一种专门为基于 LLM 的推荐系统(LLMRec)设计的推荐数据反学习方法。<br>
+          • E2URec 通过仅更新低秩适应(LoRA)参数,显著提高了反学习效率,同时保持了推荐性能。<br>
+          • 实验结果表明,E2URec 在真实世界数据集上优于现有的基线方法。
         </td>
     </tr>
     <tr>
@@ -2334,9 +2297,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Proposes Knowledge Graph Tuning (KGT), a novel approach that personalizes large language models (LLMs) by optimizing external knowledge graphs based on user feedback, without modifying model parameters.<br>
-          • KGT extracts personalized factual knowledge triples from user interactions and employs a heuristic optimization algorithm, avoiding the high computational costs and low interpretability of back-propagation methods.<br>
-          • Experiments with models like Llama2 and Llama3 demonstrate that KGT significantly enhances personalization performance while reducing latency by up to 84% and GPU memory costs by up to 77%.
+          • 提出了知识图谱调优(KGT),这是一种通过基于用户反馈优化外部知识图谱来个性化大型语言模型(LLM)的新颖方法,无需修改模型参数。<br>
+          • KGT 从用户交互中提取个性化的事实知识三元组,并采用启发式优化算法,避免了反向传播方法的高计算成本和低可解释性。<br>
+          • 使用 Llama2 和 Llama3 等模型的实验表明,KGT 显著增强了个性化性能,同时将延迟降低了多达 84%,GPU 内存成本降低了多达 77%。
         </td>
     </tr>
     <tr>
@@ -2352,9 +2315,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • MEMORYLLM is a self-updating large language model designed to effectively integrate new knowledge while maintaining long-term information retention.<br>
-          • By embedding a fixed-size memory pool in the latent space of the transformer, MEMORYLLM achieves a seamless combination of model self-updating and knowledge preservation.<br>
-          • Key design features include memory tokens that store compressed knowledge, an intelligent self-updating mechanism, and comprehensive evaluations of knowledge integration, retention capability, and robustness.
+          • MEMORYLLM 是一个自更新的大型语言模型,旨在有效整合新知识,同时保持长期信息保留。<br>
+          • 通过在 Transformer 的潜在空间中嵌入固定大小的记忆池,MEMORYLLM 实现了模型自更新和知识保留的无缝结合。<br>
+          • 关键设计特性包括存储压缩知识的记忆令牌、智能自更新机制,以及对知识整合、保留能力和鲁棒性的全面评估。
         </td>
     </tr>
     <tr>
@@ -2375,9 +2338,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • HippoRAG is a novel retrieval framework inspired by the hippocampal indexing theory of human long-term memory, designed to enable deeper and more efficient knowledge integration for LLMs.<br>
-          • By orchestrating LLMs, knowledge graphs, and Personalized PageRank (PPR) to mimic the neocortex and hippocampus, it enables effective single-step multi-hop retrieval.<br>
-          • The method outperforms state-of-the-art retrieval-augmented generation (RAG) methods on multi-hop QA tasks by up to 20% and is significantly faster and cheaper than iterative retrieval approaches.
+          • HippoRAG 是一个受人类长期记忆的海马体索引理论启发的新颖检索框架,旨在为 LLM 实现更深入、更高效的知识整合。<br>
+          • 通过编排 LLM、知识图谱和个性化 PageRank(PPR)来模拟新皮层和海马体,它实现了有效的单步多跳检索。<br>
+          • 该方法在多跳问答任务中比最先进的检索增强生成(RAG)方法高出多达 20%,并且比迭代检索方法显著更快、更便宜。
         </td>
     </tr>
     <tr>
@@ -2397,9 +2360,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Identifies an "impossible triangle" in lifelong model editing—reliability, generalization, and locality cannot be simultaneously achieved—attributing this to the gap between long-term and working memory mechanisms.<br>
-          • Proposes WISE, a dual parametric memory framework that utilizes a side memory for edits and a router to bridge it with the pretrained main memory, employing knowledge sharding and merging to handle continuous updates.<br>
-          • Extensive experiments show that WISE outperforms existing methods in question answering, hallucination correction, and out-of-distribution generalization settings across multiple LLM architectures.
+          • 识别了终身模型编辑中的"不可能三角"——可靠性、泛化性和局部性不能同时实现——将其归因于长期记忆和工作记忆机制之间的差距。<br>
+          • 提出了 WISE,这是一个双参数记忆框架,利用侧记忆进行编辑,并使用路由器将其与预训练的主记忆桥接,采用知识分片和合并来处理连续更新。<br>
+          • 大量实验表明,WISE 在多个 LLM 架构的问答、幻觉纠正和分布外泛化设置中优于现有方法。
         </td>
     </tr>
     <tr>
@@ -2419,9 +2382,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Proposes the Self-Controlled Memory (SCM) framework to unleash infinite-length input capacity for Large Language Models (LLMs) without requiring modification or fine-tuning.<br>
-          • The framework comprises an LLM-based agent, a memory stream for storing historical information, and a memory controller that dynamically manages "Activation Memory" (long-term) and "Flash Memory" (short-term).<br>
-          • The authors also contribute a dataset covering long-term dialogues, book summarization, and meeting summarization, demonstrating that SCM achieves superior retrieval recall and response generation compared to baselines.
+          • 提出了自控记忆(SCM)框架,为大型语言模型(LLM)释放无限长度的输入容量,无需修改或微调。<br>
+          • 该框架包括一个基于 LLM 的智能体、一个用于存储历史信息的记忆流,以及一个动态管理"激活记忆"(长期)和"闪存"(短期)的记忆控制器。<br>
+          • 作者还贡献了一个涵盖长期对话、书籍摘要和会议摘要的数据集,表明 SCM 与基线相比实现了卓越的检索召回和响应生成。
         </td>
     </tr>
     <tr>
@@ -2441,9 +2404,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Introduces GraphRAG, a graph-based retrieval-augmented generation approach designed to address the limitations of conventional vector RAG in answering global questions about an entire text corpus.<br>
-          • The method constructs an entity knowledge graph from source documents, partitions it into hierarchical communities using the Leiden algorithm, and pre-generates summaries to facilitate global sensemaking.<br>
-          • By utilizing a map-reduce mechanism over community summaries, GraphRAG significantly outperforms baseline RAG systems in comprehensiveness and diversity for large-scale datasets.
+          • 介绍了 GraphRAG,这是一种基于图的检索增强生成方法,旨在解决传统向量 RAG 在回答整个文本语料库的全局问题方面的局限性。<br>
+          • 该方法从源文档构建实体知识图谱,使用 Leiden 算法将其划分为分层社区,并预生成摘要以促进全局意义构建。<br>
+          • 通过利用社区摘要的 map-reduce 机制,GraphRAG 在大规模数据集的全面性和多样性方面显著优于基线 RAG 系统。
         </td>
     </tr>
     <tr>
@@ -2462,9 +2425,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Introduces the Memory Sharing (MS) framework, which enables multiple LLM-based agents to share Prompt-Answer (PA) pairs as memories in a dynamic, real-time pool.<br>
-          • The framework employs a dual-purpose mechanism where newly generated high-quality memories are used to enhance In-Context Learning for agents and simultaneously train the retriever to improve future retrieval relevance.<br>
-          • Experimental results across domains like Literary Creation and Logic Problem-solving demonstrate that the MS framework effectively evolves individual intelligence into collective intelligence, significantly improving performance on open-ended questions without explicit fine-tuning.
+          • 介绍了记忆共享(MS)框架,使多个基于 LLM 的智能体能够在动态实时池中共享提示-答案(PA)对作为记忆。<br>
+          • 该框架采用双重目的机制,其中新生成的高质量记忆用于增强智能体的上下文学习,同时训练检索器以提高未来的检索相关性。<br>
+          • 在文学创作和逻辑问题解决等领域的实验结果表明,MS 框架有效地将个体智能演化为集体智能,在没有显式微调的情况下显著提高了开放式问题的性能。
         </td>
     </tr>
     <tr>
@@ -2478,9 +2441,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Investigates the information recall capabilities of large language models (LLMs), with particular emphasis on their dependence on prompt content and formatting.<br>
-          • Using the Needle-in-a-Haystack (NIAH) evaluation, the study finds that recall performance is strongly influenced by training data bias, as well as the content and structure of prompts.<br>
-          • The results show that architectural improvements, training strategy adjustments, and fine-tuning can all effectively enhance recall performance.
+          • 研究了大型语言模型(LLM)的信息回忆能力,特别强调其对提示内容和格式的依赖性。<br>
+          • 使用"大海捞针"(NIAH)评估,该研究发现回忆性能受训练数据偏差以及提示的内容和结构的强烈影响。<br>
+          • 结果表明,架构改进、训练策略调整和微调都可以有效增强回忆性能。
         </td>
     </tr>
     <tr>
@@ -2500,9 +2463,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Introduces Memory of Amortized Contexts (MAC), an efficient online adaptation framework for large language models (LLMs) designed to address catastrophic forgetting and high computational costs in keeping models up-to-date.<br>
-          • MAC utilizes a meta-learned amortization network to compress new documents into compact parameter-efficient finetuning (PEFT) modulations stored in a memory bank, using an aggregation network to retrieve and combine relevant knowledge for specific queries.<br>
-          • Experimental results on StreamingQA and SQuAD-Seq demonstrate that MAC significantly outperforms existing online finetuning methods in both adaptation performance and knowledge retention, while offering superior time and memory efficiency.
+          • 介绍了摊销上下文记忆(MAC),这是一个用于大型语言模型(LLM)的高效在线适应框架,旨在解决灾难性遗忘和保持模型最新的高计算成本问题。<br>
+          • MAC 利用元学习的摊销网络将新文档压缩为存储在记忆库中的紧凑参数高效微调(PEFT)调制,使用聚合网络检索和组合特定查询的相关知识。<br>
+          • 在 StreamingQA 和 SQuAD-Seq 上的实验结果表明,MAC 在适应性能和知识保留方面都显著优于现有的在线微调方法,同时提供卓越的时间和记忆效率。
         </td>
     </tr>
      <tr>
@@ -2517,9 +2480,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • MemoryBank is a long-term memory mechanism designed for large language models (LLMs) to address memory limitations in continuous interactions.<br>
-          • By enabling models to effectively recall, update, and adapt user memories, MemoryBank enhances contextual understanding and user experience.<br>
-          • Experimental results and analyses demonstrate MemoryBank’s effectiveness in improving emotional support and personalized interactions.
+          • MemoryBank 是一个为大型语言模型(LLM)设计的长期记忆机制,用于解决连续交互中的记忆限制。<br>
+          • 通过使模型能够有效地回忆、更新和适应用户记忆,MemoryBank 增强了上下文理解和用户体验。<br>
+          • 实验结果和分析表明,MemoryBank 在改善情感支持和个性化交互方面是有效的。
         </td>
     </tr>
      <tr>
@@ -2534,9 +2497,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Explores methods for implementing “forgetting” or “unlearning” in large language models (LLMs) to eliminate undesired or misaligned behaviors.<br>
-          • By applying a gradient ascent (GA) strategy and introducing a random-output loss, the study demonstrates that unlearning can effectively prevent models from generating harmful responses.<br>
-          • Experimental results show that the GA and GA + Mismatch approaches perform particularly well in reducing content leakage rates.
+          • 探索了在大型语言模型(LLM)中实施"遗忘"或"反学习"的方法,以消除不需要的或不一致的行为。<br>
+          • 通过应用梯度上升(GA)策略并引入随机输出损失,该研究表明反学习可以有效防止模型生成有害响应。<br>
+          • 实验结果表明,GA 和 GA + Mismatch 方法在降低内容泄漏率方面表现特别好。
         </td>
     </tr>
      <tr>
@@ -2551,12 +2514,12 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Proposes a compressed contextual memory approach to improve the memory efficiency and computational performance of online language models when handling extended contexts.<br>
-          • By leveraging conditional LoRA integration and parallel computation, the method significantly reduces memory requirements and enables support for effectively unlimited context lengths, surpassing traditional sliding-window strategies.<br>
-          • Experimental results demonstrate that, across applications such as multi-task learning and dialogue generation, the approach reduces memory usage by up to 5× while effectively preserving generation quality and accuracy.
+          • 提出了一种压缩上下文记忆方法,以改善在线语言模型在处理扩展上下文时的记忆效率和计算性能。<br>
+          • 通过利用条件 LoRA 集成和并行计算,该方法显著减少了记忆需求,并支持有效的无限上下文长度,超越了传统的滑动窗口策略。<br>
+          • 实验结果表明,在多任务学习和对话生成等应用中,该方法将记忆使用量减少了多达 5 倍,同时有效保持了生成质量和准确性。
         </td>
     </tr>
-    <tr>
+     <tr>
       <td rowspan="2" style="width: 15%;">2023-12-10</td>
       <td style="width: 55%;"><strong>Unlearn What You Want to Forget: Efficient Unlearning for LLMs</strong></td>
       <td style="width: 15%;"><img src="https://img.shields.io/badge/Machine%20Forgetting-sienna" alt="Machine Forgetting">
@@ -2567,9 +2530,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Introduces the Efficient Unlearning (EUL) framework, designed to address the challenges of handling user privacy data in large language models (LLMs).<br>
-          • As LLMs are widely deployed, models may inadvertently memorize sensitive information during pretraining, raising significant privacy concerns.<br>
-          • EUL enables the effective removal of specific sensitive data from LLMs without full retraining, while preserving overall predictive performance.
+          • 介绍了高效反学习(EUL)框架,旨在解决大型语言模型(LLM)中处理用户隐私数据的挑战。<br>
+          • 随着 LLM 的广泛部署,模型可能在预训练期间无意中记忆敏感信息,引发重大隐私担忧。<br>
+          • EUL 能够在不完全重新训练的情况下有效地从 LLM 中删除特定的敏感数据,同时保持整体预测性能。
         </td>
     </tr>
     <tr>
@@ -2586,9 +2549,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • JARVIS-1 is an open-world multi-task agent for Minecraft that generates plans and executes tasks using a multimodal language model (MLM). It can perceive visual information and human instructions, and, by combining multimodal memory, it leverages past experiences to improve future task performance.<br>
-        • JARVIS-1 integrates MLM and multimodal memory to generate action plans using visual observations and instructions, which are executed by goal-conditioned controllers. It features a self-improvement mechanism, where it autonomously generates tasks through self-instruction, explores the environment, and accumulates experiences to enhance decision-making abilities.<br>
-        • JARVIS-1 excels in over 200 Minecraft tasks, especially in long-term tasks (such as obtaining a diamond pickaxe), outperforming current state-of-the-art models by five times in success rate. As the game progresses, its performance improves through continuous learning and experience accumulation.
+        • JARVIS-1是一款用于Minecraft的开放世界多任务代理，通过多模态语言模型（MLM）生成计划并执行任务。它能感知视觉信息和人类指令，并结合多模态记忆，利用过去的经验提升未来任务的执行能力。<br>
+        • JARVIS-1结合了MLM和多模态记忆，使用视觉观察和指令生成行动计划，并通过目标控制器执行。它具有自我改进机制，能通过自我指令生成任务并探索环境，积累经验以提升决策能力。<br>
+        • JARVIS-1在超过200个Minecraft任务中表现出色，特别是在长期任务（如获取钻石镐）中，成功率比现有最先进模型高出5倍。随着游戏进行，它通过不断学习和经验积累，表现逐渐提升。
       </td>
     </tr>
     <tr>
@@ -2602,9 +2565,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Introduces a novel memory mechanism, Think-in-Memory (TiM), designed to enhance the performance of large language models (LLMs) in long-term human–AI interactions.<br>
-          • TiM incorporates an efficient retrieval mechanism based on locality-sensitive hashing, enabling effective memory storage and management over extended interactions.<br>
-          • Experimental results show that TiM significantly improves response accuracy and coherence in multi-turn dialogues.
+          • 介绍了一种新颖的记忆机制,Think-in-Memory(TiM),旨在增强大型语言模型(LLM)在长期人机交互中的性能。<br>
+          • TiM 结合了基于局部敏感哈希的高效检索机制,使扩展交互中的有效记忆存储和管理成为可能。<br>
+          • 实验结果表明,TiM 在多轮对话中显著提高了响应准确性和连贯性。
         </td>
     </tr>
     <tr>
@@ -2623,9 +2586,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Introduces <strong>Character-LLM</strong>, a trainable agent framework that teaches LLMs to act as specific characters (e.g., Beethoven) by learning from reconstructed experiences rather than relying solely on prompts.<br>
-          • Proposes an <strong>Experience Upload</strong> process involving profile collection, scene extraction, and experience completion to generate high-quality, character-specific training data.<br>
-          • Implements <strong>Protective Experiences</strong> to mitigate hallucinations, enabling agents to effectively "forget" or refuse knowledge inconsistent with their character's era or identity.
+          • 介绍了 <strong>Character-LLM</strong>,这是一个可训练的智能体框架,通过从重构的经验中学习而不是仅依赖提示,教会 LLM 扮演特定角色(例如贝多芬)。<br>
+          • 提出了一个<strong>经验上传</strong>过程,涉及档案收集、场景提取和经验完成,以生成高质量的、特定于角色的训练数据。<br>
+          • 实施了<strong>保护性经验</strong>以缓解幻觉,使智能体能够有效地"忘记"或拒绝与其角色的时代或身份不一致的知识。
         </td>
     </tr>
     <tr>
@@ -2641,9 +2604,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Introduces a new framework, LONGMEM, designed to enhance the ability of large language models (LLMs) to process long-form text.<br>
-          • LONGMEM employs a decoupled network architecture that combines a frozen LLM memory encoder with an adaptive residual side network, enabling efficient caching and updating of long-term contextual information.<br>
-          • By incorporating specialized memory-augmentation layers, a token-based memory retrieval module, and a joint attention mechanism, LONGMEM improves memory retrieval and context utilization, and demonstrates effectiveness across a variety of tasks.
+          • 介绍了一个新框架 LONGMEM,旨在增强大型语言模型(LLM)处理长文本的能力。<br>
+          • LONGMEM 采用解耦的网络架构,将冻结的 LLM 记忆编码器与自适应残差侧网络相结合,实现长期上下文信息的高效缓存和更新。<br>
+          • 通过结合专门的记忆增强层、基于令牌的记忆检索模块和联合注意力机制,LONGMEM 改进了记忆检索和上下文利用,并在各种任务中展示了有效性。
         </td>
     </tr>
     <tr>
@@ -2662,9 +2625,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Proposes MemoChat, an instruction tuning pipeline designed to enable Large Language Models (LLMs) to employ self-composed memos for maintaining consistency in long-range open-domain conversations.<br>
-        • The approach utilizes a "memorization-retrieval-response" cycle, teaching LLMs to restructure dialogue history into memos and retrieve relevant evidence for answering current queries.<br>
-        • Experiments show that MemoChat outperforms strong baselines on a newly curated, expert-annotated consistency benchmark (MT-Bench+), verifying the efficacy of the memo-equipped inner thinking process.
+        • 提出了 MemoChat,这是一个指令调优流水线,旨在使大型语言模型(LLM)能够采用自我编写的备忘录来维持长距离开放域对话中的一致性。<br>
+        • 该方法利用"记忆-检索-响应"循环,教会 LLM 将对话历史重构为备忘录,并检索相关证据来回答当前查询。<br>
+        • 实验表明,MemoChat 在新策划的、专家标注的一致性基准(MT-Bench+)上优于强大的基线,验证了配备备忘录的内部思维过程的有效性。
       </td>
     </tr>
     <tr>
@@ -2683,9 +2646,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • RET-LLM is a framework that equips large language models (LLMs) with a dedicated read-write memory unit, enabling them to explicitly extract, store, and recall knowledge from text.<br>
-        • Inspired by Davidsonian semantics, the system extracts knowledge in the form of triplets (concept, relationship, concept) and uses a controller to manage interactions between the LLM and the memory module using a text-based API.<br>
-        • The memory unit is designed to be scalable, updatable, and interpretable, effectively handling temporal-based question answering tasks where static models often fail.
+        • RET-LLM 是一个框架,为大型语言模型(LLM)配备了专用的读写记忆单元,使它们能够显式地从文本中提取、存储和回忆知识。<br>
+        • 受戴维森语义学启发,该系统以三元组(概念、关系、概念)的形式提取知识,并使用控制器通过基于文本的 API 管理 LLM 与记忆模块之间的交互。<br>
+        • 记忆单元设计为可扩展、可更新和可解释的,有效地处理静态模型经常失败的基于时间的问答任务。
       </td>
     </tr>
     <tr>
@@ -2704,9 +2667,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Introduces RECURRENTGPT, a language-based simulacrum of the LSTM recurrence mechanism built upon LLMs to generate arbitrarily long texts without forgetting.<br>
-        • Utilizes a dual-memory system: a short-term memory updated in the prompt and a long-term memory stored on hard drives retrieved via semantic search.<br>
-        • Enables interpretable and interactive text generation ("AI as Contents"), allowing human users to observe and edit natural language memories and plans during the generation process.
+        • 介绍了 RECURRENTGPT,这是一个基于语言的 LSTM 循环机制的模拟,构建在 LLM 之上,以生成任意长度的文本而不会遗忘。<br>
+        • 利用双重记忆系统:在提示中更新的短期记忆和通过语义搜索检索的存储在硬盘上的长期记忆。<br>
+        • 实现可解释和交互式的文本生成("AI 即内容"),允许人类用户在生成过程中观察和编辑自然语言记忆和计划。
       </td>
     </tr>
     <tr>
@@ -2726,45 +2689,44 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Proposes MPC (Modular Prompted Chatbot), a novel approach using pre-trained LLMs as individual modules (clarifier, memory processor, utterance generator, summarizer) to create high-quality conversational agents without fine-tuning.<br>
-        • Utilizes techniques like few-shot prompting, chain-of-thought (CoT), and external memory (using DPR) to achieve long-term consistency and flexibility in open-domain dialogue.<br>
-        • Human evaluation results demonstrate that MPC is on par with or superior to fine-tuned models like Blenderbot3 in terms of sensibleness, consistency, and engagingness, particularly in maintaining long-term persona consistency.
+        • 提出了 MPC(模块化提示聊天机器人),这是一种使用预训练 LLM 作为独立模块(澄清器、记忆处理器、话语生成器、摘要器)的新颖方法,以创建高质量的对话智能体而无需微调。<br>
+        • 利用少样本提示、思维链(CoT)和外部记忆(使用 DPR)等技术,在开放域对话中实现长期一致性和灵活性。<br>
+        • 人类评估结果表明,MPC 在合理性、一致性和吸引力方面与 Blenderbot3 等微调模型相当或更优,特别是在维持长期人物一致性方面。
       </td>
     </tr>
     
-
-
   </table>
 
 </details>
 
+
 <details>
-  <summary><strong>Datasets & Benchmark</strong></summary>
+  <summary><strong>数据集和评估基准类论文</strong></summary>
 
   <table style="width: 100%;">
     <tr>
-      <td><strong>Date</strong></td>
-      <td><strong>Paper & Summary</strong></td>
-      <td><strong>Tags</strong></td>
-      <td><strong>Links</strong></td>
+      <td><strong>时间</strong></td>
+      <td><strong>论文与摘要</strong></td>
+      <td><strong>标签</strong></td>
+      <td><strong>链接</strong></td>
     </tr>
     <tr>
       <td rowspan="2" style="width: 15%;">2026-01-29</td>
       <td style="width: 55%;"><strong>AgentLongBench: A Controllable Long Benchmark For Long-Contexts Agents via Environment Rollouts</strong></td>
       <td style="width: 15%;">
-        <img src="https://img.shields.io/badge/Benchmark-red" alt="Benchmark">
-        <img src="https://img.shields.io/badge/Long--Context-gold" alt="Long-Context">
-        <img src="https://img.shields.io/badge/Environment%20Sim-darkgreen" alt="Environment Simulation">
+      <img src="https://img.shields.io/badge/Benchmark-red" alt="Benchmark">
+      <img src="https://img.shields.io/badge/Long--Context-gold" alt="Long-Context">
+      <img src="https://img.shields.io/badge/Environment%20Sim-darkgreen" alt="Environment Simulation">
       </td>
       <td style="width: 15%;"><a href="https://arxiv.org/pdf/2601.20730">
-        <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge">
+      <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge">
       </a></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Proposed AgentLongBench, evaluating long-context agents via simulated environment rollouts with context lengths ranging from 32K to 4M tokens.<br>
-        • Constructed dynamic interaction trajectories based on Lateral Thinking Puzzles, featuring both Knowledge-Intensive and Knowledge-Free settings.<br>
-        • Revealed that high information density in tool responses poses a greater challenge than memory fragmentation, identifying "minimum token requirement" as a key factor.
+      • 提出了 AgentLongBench，一个通过模拟环境推演（Environment Rollouts）来评估长上下文智能体的基准测试，包含 32K 到 4M 的上下文长度。<br>
+      • 基于横向思维谜题（Lateral Thinking Puzzles）构建动态交互轨迹，包含知识密集型和无知识型两种设定，以区分推理能力与参数化知识。<br>
+      • 揭示了现有模型在处理海量工具响应中的高信息密度时，比处理长对话中的记忆碎片化面临更大的挑战，提出了“最小 Token 需求”作为关键因素。
       </td>
     </tr>
     <tr>
@@ -2781,9 +2743,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Proposed MemoryRewardBench, the first benchmark to systematically evaluate the ability of Reward Models (RMs) to assess long-term memory management.<br>
-        • Covers 10 settings across reasoning, dialogue, and generation tasks with contexts from 8K to 128K tokens.<br>
-        • Designed Outcome-based and Process-based evaluation criteria, revealing a generational advantage in newer models for evaluating memory capabilities.
+        • 提出了 MemoryRewardBench，这是第一个系统评估奖励模型（RM）对 LLM 长期记忆管理过程评价能力的基准测试。<br>
+        • 涵盖长上下文推理、多轮对话和长文本生成三大类任务，包含 10 种不同的记忆管理设置，上下文长度从 8K 到 128K。<br>
+        • 设计了基于结果（Outcome-based）和基于过程（Process-based）的评估标准，发现新一代模型在评估记忆管理方面表现出代际优势。
       </td>
     </tr>
     <tr>
@@ -2800,9 +2762,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Proposed the problem of Rational Personalization and introduced the RPEval benchmark to evaluate appropriate user preference utilization.<br>
-        • Included a dataset for intent reasoning and a multi-granularity evaluation protocol, revealing widespread "irrational personalization" (e.g., Filter Bubbles).<br>
-        • Proposed RP-Reasoner, a pragmatics-based mechanism to infer latent user intent and selectively integrate personalized information, reducing errors significantly.
+        • 提出了 LLM 理性个性化（Rational Personalization）的问题，并发布了 RPEval 基准测试，用于评估个性化助手在不同场景下对用户偏好的利用是否合理。<br>
+        • 包含个性化意图推理数据集和多粒度评估协议，揭示了现有 LLM 中广泛存在的“非理性个性化”（如 Filter Bubble）现象。<br>
+        • 提出了 RP-Reasoner，一种基于语用学推理的机制，通过推断用户潜在意图来选择性地整合个性化信息，显著减少了非理性个性化错误。
       </td>
     </tr>
     <tr>
@@ -2819,9 +2781,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Proposed Mem2ActBench to evaluate agents' ability to actively leverage long-term memory for executing tool-based tasks, beyond passive retrieval.<br>
-        • Constructed a dataset of 2,029 sessions via automation and reverse-generated 400 memory-dependent tool-use tasks.<br>
-        • Experiments revealed that existing systems struggle with "Parameter Grounding," failing to extract correct parameters from memory for tool execution.
+        • 提出了 Mem2ActBench，用于评估智能体主动利用长期记忆执行基于工具的任务的能力，而非简单的被动事实检索。<br>
+        • 通过自动化流程构建了包含 2029 个会话的数据集，并采用逆向生成方法创建了 400 个必须依赖记忆才能完成的工具调用任务。<br>
+        • 实验表明，现有系统在“参数接地”（Parameter Grounding）方面表现不佳，即难以从记忆中提取正确参数来执行工具调用。
       </td>
     </tr>
     <tr>
@@ -2840,9 +2802,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Introduces CLONEMEM, a benchmark designed to evaluate long-term memory in AI Clones by utilizing non-conversational digital traces (e.g., diaries, social media, emails) spanning 1–3 years, rather than traditional conversational history.<br>
-        • Proposes a hierarchical data construction framework that generates coherent longitudinal life trajectories, capturing the evolution of an individual's experiences, emotions, and opinions over time.<br>
-        • Experimental results reveal that existing memory systems (such as A-Mem and Mem0) struggle with this setting, often underperforming compared to flat retrieval and failing to accurately track internal state changes due to lossy compression and reliance on narrative templates.
+        • 提出了 CLONEMEM，一个旨在评估 AI 克隆体长期记忆的基准测试，利用非对话式数字痕迹（如日记、社交媒体、邮件）跨越 1-3 年，而非传统的对话历史。<br>
+        • 提出了一个层级数据构建框架，生成连贯的纵向生活轨迹，捕捉个体经历、情感和观点随时间的演变。<br>
+        • 实验结果表明，现有记忆系统（如 A-Mem 和 Mem0）在该设置下表现不佳，往往不如扁平检索，且由于有损压缩和对叙事模板的依赖而无法准确追踪内部状态变化。
       </td>
     </tr>
     <tr>
@@ -2859,9 +2821,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • RealMem is a benchmark designed to evaluate LLMs in "long-term project-oriented" interactions, distinguishing itself from casual or task-oriented dialogue benchmarks by focusing on evolving goals and dynamic states.<br>
-          • The framework employs a three-stage synthesis pipeline (Project Foundation, Multi-Agent Generation, Memory Management) to create over 2,000 cross-session dialogues across 11 realistic scenarios.<br>
-          • Evaluations indicate that current state-of-the-art memory systems struggle with managing long-term project states, temporal reasoning, and proactive alignment, highlighting a critical gap in autonomous agent capabilities.
+          • RealMem 是一个旨在评估 LLM 在"长期项目导向"交互中表现的基准测试，与休闲或任务导向对话基准不同，它专注于不断演变的目标和动态状态。<br>
+          • 该框架采用三阶段合成管道（项目基础、多智能体生成、记忆管理），在 11 个现实场景中创建超过 2000 个跨会话对话。<br>
+          • 评估表明，当前 SOTA 记忆系统在管理长期项目状态、时间推理和主动对齐方面存在困难，揭示了自主智能体能力的关键差距。
         </td>
     </tr>
     <tr>
@@ -2879,9 +2841,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • <strong>Introduction:</strong> Introduces KnowMe-Bench, a benchmark derived from long-form autobiographical narratives (4.7M tokens) designed to evaluate "person understanding"—inferring stable motivations and principles—in lifelong digital companions, moving beyond simple fact retrieval.<br>
-          • <strong>Methodology:</strong> Utilizes a "Cognitive-Stream Reconstruction" pipeline to transform raw narratives into flashback-aware, time-anchored streams rich in inner thoughts and sensory details. It employs a 3-tier hierarchical evaluation suite ranging from factual extraction to psychoanalytic depth.<br>
-          • <strong>Findings:</strong> Experiments with various memory architectures (RAG, Mem0, MemOS) reveal that while retrieval systems improve factual accuracy, they struggle with temporal grounding and deep reasoning (e.g., the "Update Paradox"), highlighting a critical gap in modeling the complex, non-linear nature of human memory.
+          • <strong>简介：</strong> 提出了 KnowMe-Bench，这是一个基于长篇自传叙事（470万 token）构建的基准测试，旨在超越简单的事实检索，评估终身数字伴侣对用户动机、原则等深层“人”的理解能力。<br>
+          • <strong>方法：</strong> 采用了“认知流重构”管道，将非线性叙事转化为具备倒叙感知和时间锚定的流式数据，包含内心独白和感官细节，并实施了从事实提取到精神分析深度的三层分级评估体系。<br>
+          • <strong>发现：</strong> 对不同记忆架构（RAG, Mem0, MemOS）的实验表明，虽然检索增强系统在事实准确性上表现良好，但在处理时间逻辑和深度推理（如“更新悖论”）时存在显著缺陷，揭示了当前模型在模拟人类复杂非线性记忆方面的差距。
         </td>
     </tr>
     <tr>
@@ -2899,9 +2861,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • <strong>Introduction:</strong> Introduces <strong>Mem-Gallery</strong>, a benchmark designed to evaluate multimodal long-term conversational memory in MLLM agents, bridging the gap between text-only long-context benchmarks and single-session multimodal tasks.<br>
-          • <strong>Methodology:</strong> Constructs a dataset of high-quality multi-session conversations grounded in both visual and textual information. It establishes an evaluation framework covering three functional dimensions: Memory Extraction & Adaptation, Memory Reasoning, and Memory Knowledge Management.<br>
-          • <strong>Findings:</strong> Extensive benchmarking across thirteen memory systems reveals that explicit multimodal information retention is crucial. However, current models struggle with memory reasoning, handling knowledge conflicts, and face significant efficiency bottlenecks.
+          • <strong>简介：</strong> 提出了 <strong>Mem-Gallery</strong>，这是一个用于评估多模态大语言模型（MLLM）智能体在长期对话中多模态记忆能力的基准测试，旨在解决现有基准在多模态与长期记忆评估上的错位问题。<br>
+          • <strong>方法：</strong> 构建了一个基于视觉和文本信息的高质量多会话对话数据集，并提出了一个包含三个功能维度的评估框架：记忆提取与适应、记忆推理以及记忆知识管理（包括冲突检测和知识更新）。<br>
+          • <strong>发现：</strong> 对13个记忆系统的基准测试表明，显式的多模态信息保留是有效的，但现有模型在涉及复杂推理和动态知识管理的场景中仍存在局限，且面临存储和检索的效率瓶颈。
         </td>
     </tr>
     <tr>
@@ -2919,9 +2881,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • <strong>Introduction:</strong> Introduces EvolMem, a cognitive-driven benchmark designed to evaluate the multi-session memory capabilities of LLMs and agent systems, addressing the gap in assessing non-declarative memory and long-term consistency.<br>
-          • <strong>Methodology:</strong> Grounded in cognitive psychology, it categorizes memory into declarative (e.g., Retrieval, Inference) and non-declarative (e.g., Habituation) types. The benchmark uses a hybrid data synthesis framework—combining topic-initiated generation and narrative-inspired transformations—to create diverse, controllable multi-session dialogues.<br>
-          • <strong>Findings:</strong> Evaluations reveal that no LLM consistently excels across all memory dimensions, with significant weaknesses in non-declarative tasks. Furthermore, existing agent memory mechanisms often fail to outperform strong base models and suffer from high latency.
+          • <strong>简介：</strong> 提出了 EvolMem，这是一个基于认知心理学的基准测试，旨在评估大语言模型（LLMs）和智能体系统在多会话场景下的记忆能力，填补了对非陈述性记忆和长期一致性评估的空白。<br>
+          • <strong>方法：</strong> 该基准将记忆划分为陈述性（如检索、推理）和非陈述性（如习惯化）两类。它采用混合数据合成框架——结合话题驱动生成和叙事启发转换——构建了多样化且可控的多会话对话数据。<br>
+          • <strong>发现：</strong> 评估显示，没有任何模型能在所有记忆维度上持续领先，且在非陈述性任务上表现普遍较弱。此外，现有的智能体记忆机制在性能上往往无法超越强大的基础模型，并面临严重的延迟问题。
         </td>
     </tr>
     <tr>
@@ -2940,9 +2902,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Introduction: Introduces PersonaMem-v2, a state-of-the-art dataset featuring 1,000 realistic personas, 300+ scenarios, and 20,000+ implicit user preferences embedded in long-context interactions (up to 128k tokens).<br>
-          • Gap & Findings: Benchmarking reveals that frontier LLMs (including GPT-5) struggle with implicit personalization, achieving only 37-48% accuracy. However, Reinforcement Fine-Tuning (RFT) significantly improves reasoning capabilities for user understanding.<br>
-          • Methodology: Proposes an "Agentic Memory" framework that maintains a single, human-readable, and evolving memory. This approach outperforms GPT-5 with 55% accuracy while being 16× more token-efficient (using 2k memory vs. 32k history).
+          • 简介：推出了 PersonaMem-v2，这是一个用于 LLM 个性化的 SOTA 数据集，包含 1,000 个真实用户画像、300 多个场景以及嵌入在长达 128k token 上下文中的 20,000 多个隐式用户偏好。<br>
+          • 发现与差距：评测显示，包括 GPT-5 在内的前沿 LLM 在隐式个性化方面表现挣扎，准确率仅为 37-48%。研究发现，强化微调（RFT）能显著提升模型在用户理解方面的长上下文推理能力。<br>
+          • 方法创新：提出了一种“代理记忆（Agentic Memory）”框架，该框架维护一个持续演进的、人类可读的单一记忆体。该方法以 16 倍的效率优势（仅使用 2k 记忆 token 对比 32k 历史记录）超越了 GPT-5，达到了 55% 的准确率。
         </td>
     </tr>
     <tr>
@@ -2958,9 +2920,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Introduces the IMPLEXCONV dataset and the TACITREE framework for studying implicit reasoning in personalized dialogue.<br>
-          • IMPLEXCONV consists of 2,500 examples focused on implicit reasoning scenarios, capturing subtle syntactic and semantic relationships within conversations.<br>
-          • TACITREE enhances large language models (LLMs)’ ability to perform implicit contextual reasoning in long dialogues by hierarchically organizing dialogue history.
+          • 介绍了 IMPLEXCONV 数据集以及 TACITREE 框架，用于研究个性化对话中的隐式推理能力。<br>
+          • IMPLEXCONV 包含 2500 个以隐式推理场景为核心的示例，能够捕捉对话中细微的句法与语义关系。<br>
+          • TACITREE 通过对对话历史进行分层式组织，增强了大型语言模型（LLMs）在长对话中进行隐式上下文推理的能力。
         </td>
     </tr>
     <tr>
@@ -2975,11 +2937,11 @@ Framework for Experience-Driven Agent Evolution</strong></td>
       </a></td>
     </tr>
     <tr>
-        <td colspan="3">
-          • Introduces the PERSONAMEM benchmark, designed to evaluate the performance of large language models (LLMs) in dynamic user profiling and personalized response generation.<br>
-          • Although existing models achieve some success in recalling user preferences, they still exhibit significant performance gaps when handling novel scenarios.<br>
-          • The paper provides a detailed description of the benchmark’s structure, the process for generating user dialogues, the methods for evaluating model performance, and related work, highlighting the importance of personalized dialogue generation in enhancing user experience.
-        </td>
+      <td colspan="3">
+        • 介绍了 PERSONAMEM 基准测试，该基准旨在评估大型语言模型（LLMs）在动态用户画像建模与个性化回复生成方面的表现。<br>
+        • 尽管现有模型在回忆用户偏好方面取得了一定成效，但在应对全新场景时仍然存在显著的性能差距。<br>
+        • 论文详细阐述了该基准的结构、用户对话的生成流程、模型性能的评估方法以及相关研究，强调了个性化对话生成在提升用户体验中的重要性。
+      </td>
     </tr>
     <tr>
       <td rowspan="2" style="width: 15%;">2025-10-10</td>
@@ -2993,9 +2955,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • EM-LLM (Event Memory Large Language Model) is a novel large language model designed to address the limitations of existing models in handling long contexts.<br>
-        • EM-LLM achieves near-unlimited context processing without fine-tuning, delivering significant improvements over existing models across multiple benchmarks.<br>
-        • The model integrates surprise-based event segmentation, graph-theoretic boundary refinement, and a two-stage memory retrieval mechanism, substantially enhancing performance on information retrieval and question-answering tasks.
+        • EM-LLM（事件记忆大语言模型）是一种新型大语言模型，旨在解决现有模型在长文本处理中的局限性。<br>
+        • EM-LLM 无需微调即可实现近乎无限的上下文处理能力，在多个基准测试中显著优于现有模型。<br>
+        • 该模型整合了基于突发性事件分割、图论边界优化和两阶段记忆检索机制，显著提升信息检索与问答任务的性能。
       </td>
     </tr>
     <tr>
@@ -3009,95 +2971,11 @@ Framework for Experience-Driven Agent Evolution</strong></td>
       </a></td>
     </tr>
     <tr>
-        <td colspan="3">
-          • MemoryAgentBench is a benchmark designed to evaluate four core capabilities of language models with memory mechanisms (Memory Agents): accurate retrieval, test-time learning, long-range understanding, and conflict resolution.<br>
-          • By integrating existing datasets with newly constructed data, MemoryAgentBench enables a systematic evaluation of these capabilities.<br>
-          • The benchmark reveals limitations of current approaches in memory updating and long-horizon dialogue processing, highlighting key challenges for future research.
-        </td>
-    </tr>
-    <tr>
-      <td rowspan="2" style="width: 15%;">2025-07-27</td>
-      <td style="width: 55%;"><strong>MiniLongBench: The Low-cost Long Context Understanding Benchmark for Large Language Models</strong></td>
-      <td style="width: 15%;"><img src="https://img.shields.io/badge/Long--Text%20Understanding-darkseagreen" alt="Long-Text Understanding">
-      <img src="https://img.shields.io/badge/Benchmark-darkred" alt="Benchmark">
-      </td>
-      <td style="width: 15%;"><a href="https://aclanthology.org/2025.acl-long.560.pdf">
-      <img src="https://img.shields.io/badge/ACL-Paper-black?labelColor=deepskyblue" alt="ACL Paper">
-      </a></td>
-    </tr>
-    <tr>
       <td colspan="3">
-        • MiniLongBench is a low-cost long-text understanding benchmark designed to improve the efficiency and affordability of evaluating large language models (LLMs) on long-context understanding (LCU).<br>
-        • By applying data compression techniques, MiniLongBench significantly reduces the number of evaluation samples while maintaining evaluation consistency, and shows a high correlation with results from the original LongBench benchmark.<br>
-        • Evaluations across multiple task categories demonstrate MiniLongBench’s effectiveness, although further improvements are still needed for summarization and synthesis tasks.
+        • MemoryAgentBench 是一个用于评估具备记忆机制的语言模型（记忆智能体，Memory Agents）四项核心能力的基准测试，包括精准检索、测试时学习、长程理解以及冲突消解。<br>
+        • 通过整合现有数据集与新构建的数据，MemoryAgentBench 实现了对上述能力的系统性评估。<br>
+        • 该基准揭示了当前方法在记忆更新与长时跨度对话处理方面的局限性，凸显了未来研究亟需解决的关键挑战。
       </td>
-    </tr>
-    <tr>
-        <td rowspan="2" style="width: 15%;">2025-07-27</td>
-        <td style="width: 55%;"><strong>PersonaBench: Evaluating AI Models on Understanding Personal Information through Accessing (Synthetic) Private User Data</strong></td>
-        <td style="width: 15%;"><img src="https://img.shields.io/badge/Benchmark-darkred" alt="Benchmark">
-        <img src="https://img.shields.io/badge/Personalized%20Evaluation-tealgreen" alt="Personalized Evaluation">
-        </td>
-        <td style="width: 15%;"><a href="https://aclanthology.org/2025.findings-acl.49.pdf">
-        <img src="https://img.shields.io/badge/ACL%20Findings-Paper-black?labelColor=pink" alt="ACL Findings Paper">
-        </td>
-    </tr>
-    <tr>
-        <td colspan="3">
-          • PersonaBench is a benchmark designed to evaluate AI models’ ability to understand personal information.<br>
-          • The paper highlights the importance of personalization in AI assistants and emphasizes the challenge posed by the lack of publicly available datasets for assessing such capabilities.<br>
-          • The evaluation primarily focuses on retrieval-augmented generation (RAG) models, with results indicating that current models still struggle to effectively handle personal queries.
-        </td>
-    </tr>
-    <tr>
-        <td rowspan="2" style="width: 15%;">2025-07-27</td>
-        <td style="width: 55%;"><strong>MemBench: Towards More Comprehensive Evaluation on the Memory of LLM-based Agents</strong></td>
-        <td style="width: 15%;"><img src="https://img.shields.io/badge/Benchmark-darkred" alt="Benchmark">
-        </td>
-        <td style="width: 15%;"><a href="https://aclanthology.org/2025.findings-acl.989.pdf">
-        <img src="https://img.shields.io/badge/ACL%20Findings-Paper-black?labelColor=pink" alt="ACL Findings Paper">
-        </td>
-    </tr>
-    <tr>
-        <td colspan="3">
-          • MemBench is designed to comprehensively evaluate the memory capabilities of LLM-based agents.<br>
-          • By constructing datasets that cover both factual memory and reflective memory, the study addresses limitations of existing evaluation approaches.<br>
-          • The paper provides a detailed description of memory mechanism construction—including user relationship graphs and multi-layer memory designs—and emphasizes the importance of evaluation metrics such as accuracy, efficiency, and capacity.
-        </td>
-    </tr>
-    <tr>
-        <td rowspan="2" style="width: 15%;">2025-07-27</td>
-        <td style="width: 55%;"><strong>Evaluating the Long-term memory of large language models</strong></td>
-        <td style="width: 15%;"><img src="https://img.shields.io/badge/Dataset-seagreen" alt="Dataset">
-        <img src="https://img.shields.io/badge/Long--Term%20Memory%20Evaluation-darkslateblue" alt="Long-Term Memory Evaluation">
-        </td>
-        <td style="width: 15%;"><a href="https://aclanthology.org/2025.findings-acl.1014.pdf">
-        <img src="https://img.shields.io/badge/ACL%20Findings-Paper-black?labelColor=pink" alt="ACL Findings Paper">
-        </td>
-    </tr>
-    <tr>
-        <td colspan="3">
-          • This paper investigates the memory capabilities of large language models (LLMs) in long-term tasks, with a particular focus on dialogue systems.<br>
-          • By constructing the Long-Order Chronological Conversation (LOCCO) dataset, the study provides a quantitative evaluation of LLMs’ long-term memory performance.<br>
-          • Experimental results show that while LLMs can retain historical conversational information to some extent, their memory gradually degrades over time.
-        </td>
-    </tr>
-    <tr>
-      <td rowspan="2" style="width: 15%;">2025-07-27</td>
-      <td style="width: 55%;"><strong>Know You First and Be You Better: Modeling Human-Like User Simulators via Implicit Profiles</strong></td>
-      <td style="width: 15%;"><img src="https://img.shields.io/badge/Dialogue%20Augmentation-olive" alt="Dialogue Augmentation">
-      <img src="https://img.shields.io/badge/Human--AI%20Interaction-firebrick" alt="Human-AI Interaction">
-      </td>
-      <td style="width: 15%;"><a href="https://aclanthology.org/2025.acl-long.1025.pdf">
-      <img src="https://img.shields.io/badge/ACL-Paper-black?labelColor=deepskyblue" alt="ACL Paper">
-      </a></td>
-    </tr>
-    <tr>
-        <td colspan="3">
-          • Introduces a user simulation framework, the Implicit User Profile User Simulator (USP), designed to enhance interactions between dialogue systems and human users by inferring implicit user attributes.<br>
-          • USP extracts implicit features from user dialogues and combines conditionally supervised fine-tuning with reinforcement learning under cycle consistency, improving the realism and coherence of generated conversations.<br>
-          • Experimental results show that USP achieves significant advantages across multiple metrics, particularly when compared with other dialogue generation models such as GPT-4o and PlatoLM.
-        </td>
     </tr>
     <tr>
       <td rowspan="2" style="width: 15%;">2025-07-27</td>
@@ -3112,10 +2990,94 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Investigates privacy vulnerabilities in LLM agent memory, specifically the risk of extracting private user-agent interactions stored in long-term memory.<br>
-          • Proposes the Memory EXTRaction Attack (MEXTRA), a black-box attack leveraging a novel prompt design (Locator + Aligner) and automated prompt generation to extract sensitive user queries.<br>
-          • Experiments on representative agents (EHRAgent and RAP) demonstrate significant vulnerability, analyzing key factors like similarity scoring functions and memory configurations that influence leakage.
+          • 研究大语言模型代理记忆中的隐私漏洞，特别关注从长期记忆中提取敏感用户-代理交互信息的风险。<br>
+          • 提出记忆提取攻击（MEXTRA），该黑盒攻击通过创新的提示设计（定位器+对齐器）和自动化提示生成技术，实现敏感用户查询的提取。<br>
+          • 在代表性代理系统（EHRAgent和RAP）上的实验表明存在显著漏洞，通过分析相似性评分函数、内存配置等影响泄露的关键因素，揭示了记忆系统安全性的薄弱环节。
         </td>
+    </tr>
+    <tr>
+      <td rowspan="2" style="width: 15%;">2025-07-27</td>
+      <td style="width: 55%;"><strong>MiniLongBench: The Low-cost Long Context Understanding Benchmark for Large Language Models</strong></td>
+      <td style="width: 15%;"><img src="https://img.shields.io/badge/Long--Text%20Understanding-darkseagreen" alt="Long-Text Understanding">
+      <img src="https://img.shields.io/badge/Benchmark-darkred" alt="Benchmark">
+      </td>
+      <td style="width: 15%;"><a href="https://aclanthology.org/2025.acl-long.560.pdf">
+      <img src="https://img.shields.io/badge/ACL-Paper-black?labelColor=deepskyblue" alt="ACL Paper">
+      </a></td>
+    </tr>
+    <tr>
+      <td colspan="3">        
+        • MiniLongBench是一个低成本的长文本理解基准，旨在提升大语言模型（LLMs）在长上下文理解（LCU）任务中的评估效率与经济可行性。<br>
+        • 通过应用数据压缩技术，MiniLongBench在保持评估结果一致性的前提下显著减少评估样本数量，并显示出与原始LongBench基准高度相关的结果。<br>
+        • 多任务类别的评估验证了MiniLongBench的有效性，尽管在总结生成和信息综合类任务上仍需进一步优化。
+      </td>
+    </tr>
+    <tr>
+        <td rowspan="2" style="width: 15%;">2025-07-27</td>
+        <td style="width: 55%;"><strong>PersonaBench: Evaluating AI Models on Understanding Personal Information through Accessing (Synthetic) Private User Data</strong></td>
+        <td style="width: 15%;"><img src="https://img.shields.io/badge/Benchmark-darkred" alt="Benchmark">
+        <img src="https://img.shields.io/badge/Personalized%20Evaluation-tealgreen" alt="Personalized Evaluation">
+        </td>
+        <td style="width: 15%;"><a href="https://aclanthology.org/2025.findings-acl.49.pdf">
+        <img src="https://img.shields.io/badge/ACL%20Findings-Paper-black?labelColor=pink" alt="ACL Findings Paper">
+        </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        • PersonaBench 是一个用于评估 AI 模型理解个人信息能力的基准测试。<br>
+        • 论文强调了个性化在 AI 助手中的重要性，并指出由于缺乏可公开获取的数据集，用于评估此类能力面临着显著挑战。<br>
+        • 评测主要聚焦于检索增强生成（RAG）模型，结果表明当前模型在有效处理个人化查询方面仍然存在困难。
+      </td>
+    </tr>
+    <tr>
+        <td rowspan="2" style="width: 15%;">2025-07-27</td>
+        <td style="width: 55%;"><strong>MemBench: Towards More Comprehensive Evaluation on the Memory of LLM-based Agents</strong></td>
+        <td style="width: 15%;"><img src="https://img.shields.io/badge/Benchmark-darkred" alt="Benchmark">
+        </td>
+        <td style="width: 15%;"><a href="https://aclanthology.org/2025.findings-acl.989.pdf">
+        <img src="https://img.shields.io/badge/ACL%20Findings-Paper-black?labelColor=pink" alt="ACL Findings Paper">
+        </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        • MemBench 旨在对基于 LLM 的智能体记忆能力进行全面评估。<br>
+        • 通过构建同时涵盖事实记忆与反思记忆的数据集，该研究弥补了现有评测方法的局限性。<br>
+        • 论文详细介绍了记忆机制的构建方式——包括用户关系图与多层级记忆设计——并强调了准确率、效率与容量等评估指标的重要性。
+      </td>
+    </tr>
+    <tr>
+        <td rowspan="2" style="width: 15%;">2025-07-27</td>
+        <td style="width: 55%;"><strong>Evaluating the Long-term memory of large language models</strong></td>
+        <td style="width: 15%;"><img src="https://img.shields.io/badge/Dataset-seagreen" alt="Dataset">
+        <img src="https://img.shields.io/badge/Long--Term%20Memory%20Evaluation-darkslateblue" alt="Long-Term Memory Evaluation">
+        </td>
+        <td style="width: 15%;"><a href="https://aclanthology.org/2025.findings-acl.1014.pdf">
+        <img src="https://img.shields.io/badge/ACL%20Findings-Paper-black?labelColor=pink" alt="ACL Findings Paper">
+        </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        • 本文探究了大型语言模型（LLMs）在长期任务中的记忆能力，重点聚焦于对话系统。<br>
+        • 通过构建 Long-Order Chronological Conversation（LOCCO）数据集，研究对 LLM 的长期记忆性能进行了定量评估。<br>
+        • 实验结果表明，尽管 LLM 在一定程度上能够保留历史对话信息，但其记忆能力会随着时间推移而逐步衰退。
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" style="width: 15%;">2025-07-27</td>
+      <td style="width: 55%;"><strong>Know You First and Be You Better: Modeling Human-Like User Simulators via Implicit Profiles</strong></td>
+      <td style="width: 15%;"><img src="https://img.shields.io/badge/Dialogue%20Augmentation-olive" alt="Dialogue Augmentation">
+      <img src="https://img.shields.io/badge/Human--AI%20Interaction-firebrick" alt="Human-AI Interaction">
+      </td>
+      <td style="width: 15%;"><a href="https://aclanthology.org/2025.acl-long.1025.pdf">
+      <img src="https://img.shields.io/badge/ACL-Paper-black?labelColor=deepskyblue" alt="ACL Paper">
+      </a></td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        • 介绍了一种用户模拟框架——隐式用户画像用户模拟器（Implicit User Profile User Simulator，USP），该框架通过推断用户的隐式属性来增强对话系统与人类用户之间的交互效果。<br>
+        • USP 从用户对话中提取隐式特征，并将条件监督微调与循环一致性约束下的强化学习相结合，从而提升生成对话的真实感与连贯性。<br>
+        • 实验结果表明，USP 在多项评估指标上展现出显著优势，尤其是在与 GPT-4o、PlatoLM 等其他对话生成模型对比时表现更为突出。
+      </td>
     </tr>
     <tr>
         <td rowspan="2" style="width: 15%;">2025-06-15</td>
@@ -3128,11 +3090,11 @@ Framework for Experience-Driven Agent Evolution</strong></td>
         </a></td>
     </tr>
     <tr>
-        <td colspan="3">
-          • Proposes the PersonaFeedback benchmark for evaluating large language models (LLMs) in personalized response generation.<br>
-          • The study shows that while LLMs have made progress in producing personalized content, they still face limitations in complex scenarios.<br>
-          • By leveraging dynamic user attribute inference, personalized profiles, and reward models, the researchers aim to improve the effectiveness of personalized question answering.
-        </td>
+      <td colspan="3">
+        • 提出了 PersonaFeedback 基准测试，用于评估大型语言模型（LLMs）在个性化回复生成方面的能力。<br>
+        • 研究表明，尽管 LLM 在生成个性化内容方面已有一定进展，但在复杂场景下仍然存在明显局限。<br>
+        • 研究者通过引入动态用户属性推断、个性化画像以及奖励模型，旨在提升个性化问答的整体效果。
+      </td>
     </tr>
     <tr>
         <td rowspan="2" style="width: 15%;">2025-06-09</td>
@@ -3145,11 +3107,11 @@ Framework for Experience-Driven Agent Evolution</strong></td>
         </td>
     </tr>
     <tr>
-        <td colspan="3">
-          • Minerva is a programmable memory testing benchmark designed to evaluate large language models (LLMs) across diverse memory tasks.<br>
-          • It quantitatively assesses models’ ability to use memory, with a particular focus on tasks such as information retrieval, reasoning, and state tracking.<br>
-          • Experimental results indicate that while some models perform well on simple tasks, there remain substantial gaps on more complex tasks.
-        </td>
+      <td colspan="3">
+        • Minerva 是一个可编程的记忆测试基准，用于在多样化的记忆任务上评估大型语言模型（LLMs）的表现。<br>
+        • 该基准对模型使用记忆的能力进行了定量评估，重点关注信息检索、推理以及状态跟踪等任务。<br>
+        • 实验结果表明，尽管部分模型在简单任务上表现良好，但在更复杂的任务中仍然存在显著差距。
+      </td>
     </tr>
     <tr>
       <td rowspan="2" style="width: 15%;">2025-05-28</td>
@@ -3166,9 +3128,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • The Agentic Long-Context Understanding (AgenticLU) framework is designed to enhance large language models (LLMs) in long-text understanding and reasoning.<br>
-        • AgenticLU introduces a Chain-of-Clarifications (CoC) mechanism that optimizes the model’s self-clarification process and employs tree-structured search paths to generate clarification questions, thereby significantly improving the accuracy and effectiveness of multi-step reasoning.<br>
-        • Evaluation results show that the framework outperforms existing prompting techniques on long-context question answering, while keeping computational overhead well controlled.
+        • AgenticLU框架（智能代理长上下文理解框架）旨在增强大语言模型（LLMs）在长文本理解与推理任务中的表现。<br>
+        • 该框架提出澄清链机制（Chain-of-Clarifications, CoC），通过优化模型自我澄清过程并采用树状搜索路径生成澄清性问题，从而显著提升多步骤推理的准确率与有效性。<br>
+        • 验证结果表明，该框架在长上下文问答任务中优于现有提示技术，同时将计算开销控制在合理范围内。
       </td>
     </tr>
     <tr>
@@ -3188,9 +3150,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • The paper investigates the challenges LLM-powered embodied agents face in personalized assistance, specifically focusing on memory utilization for object semantics and user behavioral patterns.<br>
-        • It introduces MEMENTO, a two-stage evaluation framework, which reveals that current agents struggle with sequential user patterns and coordinating multiple memories due to information overload.<br>
-        • The study proposes a hierarchical knowledge graph-based user-profile memory module that separates personalized knowledge from episodic history, achieving substantial improvements in both single and joint-memory tasks.
+        • 本文研究了大语言模型驱动的具身智能体在个性化辅助任务中面临的挑战，特别聚焦于物体语义记忆与用户行为模式的记忆利用问题。<br>
+        • 研究提出MEMENTO（记忆评估框架），通过两阶段评估揭示当前智能体在处理连续用户行为模式及多记忆协同时存在困难，其根本原因在于信息过载问题。<br>
+        • 该工作设计了基于分层知识图谱的用户画像记忆模块，通过分离个性化知识与情景记忆历史，在单一记忆任务和联合记忆任务中均取得显著性能提升。
       </td>
     </tr>
     <tr>
@@ -3205,9 +3167,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • SCBENCH (Shared Context BENCH) is a benchmark specifically designed to evaluate long-context large language models (LLMs).<br>
-        • SCBENCH focuses on the lifecycle of key–value (KV) caches, covering generation, compression, retrieval, and loading, and aims to fill a gap in existing benchmarks regarding KV cache evaluation in multi-turn interactions.<br>
-        • Experimental results reveal substantial differences across methods on different tasks, and show that dynamic sparse attention and cache optimization strategies deliver superior performance in complex scenarios.
+        • SCBENCH（共享上下文基准）是一个专为评估长上下文大语言模型（LLMs）设计的基准测试框架。<br>
+        • 该基准聚焦于键值缓存（KV缓存）的生命周期管理，涵盖生成、压缩、检索与加载等核心环节，旨在填补现有基准在多轮交互场景下KV缓存评估方面的空白。<br>
+        • 实验结果表明，不同方法在任务中展现出显著性能差异，其中动态稀疏注意力机制与缓存优化策略在复杂场景中表现出更优性能。
       </td>
     </tr>
     <tr>
@@ -3223,9 +3185,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • The paper introduces LONGMEMEVAL, a comprehensive benchmark for evaluating the long-term memory capabilities of chat assistants.<br>
-        • The benchmark assesses five core memory abilities, capturing key challenges faced by existing systems.<br>
-        • LONGMEMEVAL adopts a unified three-stage framework—indexing, retrieval, and reading—and proposes several design optimizations to improve memory recall and question-answering accuracy.
+        • 论文提出了 LONGMEMEVAL，这是一个用于评估聊天助手长期记忆能力的综合性基准测试。<br>
+        • 该基准评估了五项核心记忆能力，覆盖了现有系统面临的关键挑战。<br>
+        • LONGMEMEVAL 采用统一的三阶段框架——索引、检索与阅读，并提出了多项设计优化，以提升记忆召回效果与问答准确率。
       </td>
     </tr>
     <tr>
@@ -3240,9 +3202,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Explores machine unlearning in large language models (LLMs) and the importance of its evaluation, with a particular focus on eliminating unnecessary data memorization.<br>
-        • The study addresses two key challenges: the robustness of evaluation metrics and the trade-off between removing target knowledge and preserving other knowledge.<br>
-        • It recommends Extraction Strength (ES) as a primary evaluation metric to ensure accuracy and robustness in unlearning assessment.
+        • 探讨了大型语言模型（LLMs）中的机器遗忘问题及其评估的重要性，重点关注消除不必要的数据记忆。<br>
+        • 研究针对两个关键挑战展开：评估指标的稳健性，以及在移除目标知识与保留其他知识之间的权衡。<br>
+        • 研究建议将 提取强度（Extraction Strength，ES）作为主要评估指标，以确保遗忘评估的准确性与可靠性。
       </td>
     </tr>
     <tr>
@@ -3257,9 +3219,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • PREFEVAL is a benchmark designed to evaluate large language models (LLMs) in their ability to infer, remember, and follow user preferences over long conversations.<br>
-        • The benchmark includes 3,000 user preference–query pairs spanning 20 topics, revealing significant challenges for current LLMs in adhering to user preferences.<br>
-        • The study shows that explicit preferences are easier for models to infer than implicit preferences, and that task types and preference expression styles have a substantial impact on model performance.
+        • PREFEVAL 是一个用于评估大型语言模型（LLMs）在长对话中推断、记忆并遵循用户偏好能力的基准测试。<br>
+        • 该基准包含 3000 组用户偏好—查询对，涵盖 20 个主题，揭示了当前 LLM 在遵循用户偏好方面面临的显著挑战。<br>
+        • 研究表明，相较于隐式偏好，模型更容易推断显式偏好，同时任务类型与偏好表达方式都会对模型性能产生显著影响。
       </td>
     </tr>
     <tr>
@@ -3274,9 +3236,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Explores the importance of episodic memory in large language models (LLMs) and proposes the construction of new benchmarks to evaluate models’ reasoning capabilities.<br>
-        • The authors develop a comprehensive framework with newly designed tasks and evaluation protocols, emphasizing the need for novel training strategies to effectively integrate episodic memory.<br>
-        • The framework provides a promising solution for evaluating episodic memory in LLMs.
+        • 探讨情景记忆在大语言模型（LLMs）中的重要性，并提出构建新型基准测试框架以评估模型推理能力。<br>
+        • 研究人员开发了包含全新设计任务与评估协议的综合性框架，强调需要创新训练策略以有效融合情景记忆机制。<br>
+        • 该框架为评估大语言模型中的情景记忆提供了一种可行的技术路径。
       </td>
     </tr>
     <tr>
@@ -3292,9 +3254,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • LongGenBench is a benchmark designed to evaluate large language models (LLMs) in generating high-quality long-form text, with a particular emphasis on following complex instructions.<br>
-        • Unlike existing benchmarks, LongGenBench focuses specifically on long-text generation scenarios, covering tasks such as diary writing and menu design.<br>
-        • Despite strong performance on other evaluations, LLMs face significant challenges on the LongGenBench benchmark.
+        • LongGenBench 是一个用于评估大型语言模型（LLMs）生成高质量长文本能力的基准测试，重点强调对复杂指令的遵循能力。<br>
+        • 不同于现有基准，LongGenBench 专门聚焦于长文本生成场景，涵盖日记写作、菜单设计等任务。<br>
+        • 尽管在其他评测中表现强劲，LLM 在 LongGenBench 基准上仍面临显著挑战。
       </td>
     </tr>
     <tr>
@@ -3311,9 +3273,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • LongBench v2 is a multi-task benchmark for evaluating large language models (LLMs) in long-context understanding and reasoning.<br>
-        • It consists of 503 multiple-choice questions spanning diverse task types, with a focus on comprehending and answering long-form text.<br>
-        • The study finds that the best-performing models surpass human experts in long-context tasks, highlighting the importance of enhanced reasoning and increased test-time computation.
+        • LongBench v2（长文本理解与推理基准测试）是一个用于评估大语言模型在长上下文任务中表现的多任务基准测试框架。<br>
+        • 该框架包含503道涵盖多种任务类型的多项选择题，重点评估模型对长文本的理解与回答能力。<br>
+        • 研究发现表现最佳的模型在长上下文任务中已超越人类专家，凸显了增强推理能力与提升推理时计算资源的重要性。
       </td>
     </tr>
     <tr>
@@ -3328,9 +3290,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • MT-Eval is a benchmark designed to evaluate the performance of large language models (LLMs) in multi-turn conversations.<br>
-        • While existing evaluations primarily focus on single-turn dialogue, MT-Eval fills this gap by constructing 1,170 multi-turn queries.<br>
-        • The benchmark categorizes interaction patterns into recall, expansion, refinement, and follow-up, revealing that most models perform consistently worse in multi-turn settings than in single-turn scenarios.
+        • MT-Eval 是一个用于评估大型语言模型（LLMs）在多轮对话中表现的基准测试。<br>
+        • 现有评测多聚焦于单轮对话，MT-Eval 通过构建 1170 条多轮查询弥补了这一空白。<br>
+        • 该基准将交互模式划分为回忆、扩展、细化与跟进四类，结果显示大多数模型在多轮场景下的表现明显弱于单轮对话。
       </td>
     </tr>
     <tr>
@@ -3345,12 +3307,12 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • LongGenBench is a newly proposed long-context generation benchmark designed to evaluate the performance of large language models (LLMs) on long-form text generation tasks.<br>
-        • It complements existing benchmarks that primarily focus on retrieval skills by emphasizing coherence and logical consistency across multiple sub-questions.<br>
-        • The study shows that different models exhibit substantial performance disparities in long-text generation.
+        • LongGenBench 是新近提出的一项长上下文生成基准，用于评估大型语言模型（LLMs）在长文本生成任务中的表现。<br>
+        • 该基准补充了主要侧重检索能力的现有评测体系，转而强调在多个子问题之间保持连贯性与逻辑一致性。<br>
+        • 研究表明，不同模型在长文本生成方面存在显著的性能差异。
       </td>
     </tr>
-    <tr>
+     <tr>
       <td rowspan="2" style="width: 15%;">2024-10-23</td>
       <td style="width: 55%;"><strong>MADial-Bench Towards real-world evaluation of memory-augmented diglogue generation</strong></td>
       <td style="width: 15%;"><img src="https://img.shields.io/badge/Benchmark-darkred" alt="Benchmark">
@@ -3364,9 +3326,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • MADial-Bench is a benchmark for evaluating memory-augmented dialogue generation, targeting the limitations of current dialogue systems in long-term memory.<br>
-        • MADial-Bench incorporates concepts from cognitive science to assess memory retrieval and recognition, and introduces multi-dimensional evaluation metrics.<br>
-        • The study shows that while large language models (LLMs) perform well in emotional support, their memory recognition and injection capabilities still require improvement.
+        • MADial-Bench（记忆增强型对话生成基准测试）旨在评估对话系统在长期记忆能力上的局限性。<br>
+        • 该基准测试融合认知科学理论，通过记忆检索与识别能力评估框架，并引入多维度评估指标。<br>
+        • 研究表明，尽管大语言模型在情感支持任务中表现优异，但其记忆识别与注入能力仍需提升。
       </td>
     </tr>
     <tr>
@@ -3383,9 +3345,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • L-CiteEval is a multi-task evaluation benchmark for long-context models (LCMs), designed to measure their abilities in understanding and citation.<br>
-        • The benchmark covers 11 tasks, supports context lengths ranging from 8K to 48K, and provides a comprehensive evaluation framework.<br>
-        • The study shows that closed-source models outperform open-source models in citation quality and generation accuracy, while retrieval-augmented generation (RAG) techniques effectively improve citation quality.
+        • L-CiteEval（长上下文模型理解与引用评估基准）是一个面向长上下文模型的多任务评估基准测试，旨在评估其在理解和引用方面的能力。<br>
+        • 该基准测试涵盖11项任务，支持从8K至48K的上下文长度，并提供了综合性评估框架。<br>
+        • 研究表明，闭源模型在引用质量和生成准确性上优于开源模型，而检索增强生成（RAG）技术能显著提升引用质量。
       </td>
     </tr>
     <tr>
@@ -3402,9 +3364,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • PerLTQA is a question-answering dataset designed to enhance long-term memory integration in dialogue systems.<br>
-        • PerLTQA combines semantic memory and episodic memory, containing 8,593 questions across 30 personas, with the goal of improving memory classification, retrieval, and synthesis.<br>
-        • Experiments show that BERT-based models outperform other large language models in memory classification tasks.
+        • PerLTQA 是一个问答数据集，旨在增强对话系统中的长期记忆整合能力。<br>
+        • PerLTQA 融合了语义记忆与情景记忆，涵盖 30 个角色下的 8593 个问题，目标在于提升记忆分类、检索与综合能力。<br>
+        • 实验结果表明，在记忆分类任务中，基于 BERT 的模型优于其他大型语言模型。
       </td>
     </tr>
     <tr>
@@ -3419,9 +3381,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Explores the capabilities and limitations of large language models (LLMs) in long-text processing, and introduces the GLE benchmark for evaluating LLMs’ performance in long-context understanding.<br>
-        • The paper describes the construction process and evaluation criteria of long-dependency question-answering tasks, and compares the performance of different models.<br>
-        • Experimental results show that the GLE benchmark effectively assesses LLMs’ ability to process long-form text.
+        • 探讨大语言模型在长文本处理中的能力与局限性，并提出GLE（长文本理解评估）基准测试以评估其在长上下文理解中的表现。<br>
+        • 论文阐述了长依赖问答任务的构建过程与评估标准，并对比了不同模型的性能。<br>
+        • 实验结果表明，GLE基准测试能够有效评估大语言模型对长文本的处理能力。
       </td>
     </tr>
     <tr>
@@ -3436,9 +3398,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Evaluates the memory capabilities of large language models (LLMs) in long-duration conversations, with a particular focus on multimodal dialogue scenarios.<br>
-        • By developing the LOCOMO dataset, the researchers establish a comprehensive evaluation benchmark covering tasks such as question answering, event summarization, and multimodal dialogue generation.<br>
-        • Experimental results indicate that while some LLMs perform strongly, they still lag significantly behind humans in memory and reasoning, and the study outlines an evaluation framework and directions for future improvements.
+        • 评估了大型语言模型（LLMs）在长时对话中的记忆能力，尤其聚焦于多模态对话场景。<br>
+        • 研究者通过构建 LOCOMO 数据集，建立了一个覆盖问答、事件总结以及多模态对话生成等任务的综合评测基准。<br>
+        • 实验结果表明，尽管部分 LLM 表现出较强能力，但在记忆与推理方面仍显著落后于人类，同时论文还提出了相应的评测框架与未来改进方向。
       </td>
     </tr>
     <tr>
@@ -3454,12 +3416,12 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Explores the importance of large language models (LLMs) in personalized response generation and introduces LaMP, a new benchmark specifically designed for training and evaluating personalized text generation and classification tasks.<br>
-        • LaMP comprises seven personalized subtasks, highlighting the effectiveness of leveraging user-specific inputs (e.g., historical data) and retrieval-augmented strategies to enhance language model performance.<br>
-        • Experimental results demonstrate that personalization methods significantly improve model performance, with the best results achieved through fine-tuning and the use of appropriate retrieval strategies.
+        • 探讨了大型语言模型（LLMs）在个性化回复生成中的重要性，并提出了 LaMP，这是一个专门用于训练与评估个性化文本生成和分类任务的新基准。<br>
+        • LaMP 包含七项个性化子任务，突出了利用用户特定输入（如历史数据）以及检索增强策略来提升语言模型性能的有效性。<br>
+        • 实验结果表明，个性化方法能够显著提升模型表现，其中通过微调并结合合适的检索策略可取得最佳效果。
       </td>
     </tr>
-     <tr>
+    <tr>
       <td rowspan="2" style="width: 15%;">2024-06-19</td>
       <td style="width: 55%;"><strong>LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding</strong></td>
       <td style="width: 15%;"><img src="https://img.shields.io/badge/Benchmark-darkred" alt="Benchmark">
@@ -3472,9 +3434,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • LongBench is a bilingual, multi-task benchmark designed to evaluate large language models (LLMs) on long-context understanding.<br>
-        • The benchmark comprises 21 datasets spanning six task categories: single-document QA, multi-document QA, summarization, few-shot learning, synthetic tasks, and code completion, with an average length of 6,711 words and 13,386 characters.<br>
-        • Experimental results show that commercial models (e.g., GPT-3.5-Turbo-16k) generally outperform open-source models on long-context tasks.
+        • LongBench（长文本理解基准测试）是一个面向大语言模型的双语多任务基准测试框架，旨在评估其长上下文理解能力。<br>
+        • 该基准测试包含21个涵盖六类任务的数据集：单文档问答、多文档问答、摘要生成、少样本学习、合成任务和代码补全，平均文本长度达6,711单词（13,386字符）。<br>
+        • 实验结果表明，商业模型（如GPT-3.5-Turbo-16k）在长上下文任务中普遍优于开源模型。
       </td>
     </tr>
     <tr>
@@ -3488,9 +3450,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • HOMER (Hierarchical cOntext MERging) is an algorithm designed to address the limitations of large language models (LLMs) in handling long contexts.<br>
-        • By splitting long inputs into smaller chunks and hierarchically merging them, HOMER improves both memory efficiency and reasoning capability when processing long-form text.<br>
-        • Experimental results show that HOMER delivers strong performance with 32K and 64K context inputs, maintaining low perplexity and reduced memory consumption.
+        • HOMER（分层上下文合并算法）是一种旨在解决大语言模型在长上下文处理中局限性的算法。<br>
+        • 该算法通过将长输入分割为较小的块并进行分层合并，在处理长文本时显著提升内存效率与推理能力。<br>
+        • 实验结果表明，HOMER在32K和64K上下文输入中表现出色，保持低困惑度与较低内存消耗。
       </td>
     </tr>
   </table>
@@ -3499,32 +3461,32 @@ Framework for Experience-Driven Agent Evolution</strong></td>
 
 
 <details>
-  <summary><strong>Systems & Models</strong></summary>
+  <summary><strong>模型和系统类论文</strong></summary>
 
   <table style="width: 100%;">
     <tr>
-      <td><strong>Date</strong></td>
-      <td><strong>Paper & Summary</strong></td>
-      <td><strong>Tags</strong></td>
-      <td><strong>Links</strong></td>
+      <td><strong>时间</strong></td>
+      <td><strong>论文与摘要</strong></td>
+      <td><strong>标签</strong></td>
+      <td><strong>链接</strong></td>
     </tr>
     <tr>
       <td rowspan="2" style="width: 15%;">2026-01-28</td>
       <td style="width: 55%;"><strong>Memory Retrieval in Transformers: Insights from The Encoding Specificity Principle</strong></td>
       <td style="width: 15%;">
-        <img src="https://img.shields.io/badge/Interpretability-pink" alt="Interpretability">
-        <img src="https://img.shields.io/badge/Psycholinguistics-brown" alt="Psycholinguistics">
-        <img src="https://img.shields.io/badge/Attention%20Mechanism-blue" alt="Attention Mechanism">
+      <img src="https://img.shields.io/badge/Interpretability-pink" alt="Interpretability">
+      <img src="https://img.shields.io/badge/Psycholinguistics-brown" alt="Psycholinguistics">
+      <img src="https://img.shields.io/badge/Attention%20Mechanism-blue" alt="Attention Mechanism">
       </td>
       <td style="width: 15%;"><a href="https://arxiv.org/pdf/2601.20282">
-        <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge">
+      <img src="https://img.shields.io/badge/arXiv-Paper-%23D2691E?logo=arxiv" alt="Paper Badge">
       </a></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Investigated memory mechanisms in Transformer attention layers drawing on the "Encoding Specificity Principle" from psychology.<br>
-        • Proposed that Q encodes retrieval context, K indexes memory traces, and V stores content, identifying that contextual cues are encoded as keywords.<br>
-        • Identified specific attention neurons whose activations facilitate keyword retrieval, providing a theoretical basis and extraction method for downstream tasks like unlearning.
+      • 借鉴心理学中的“编码特异性原则”（Encoding Specificity Principle），研究了 Transformer 注意力层中的记忆机制。<br>
+      • 提出 Q 编码检索上下文，K 索引记忆痕迹，V 存储内容，并实证表明上下文线索被编码为关键词（Keywords）。<br>
+      • 识别出了特定的注意力神经元，其激活有助于上下文定义关键词的检索，为机器遗忘等下游任务提供了理论基础和提取方法。
       </td>
     </tr>
     <tr>
@@ -3541,9 +3503,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Proposed S3-Attention (Sparse & Semantic Streaming Attention), achieving O(1) GPU memory for long-context inference.<br>
-        • Uses Sparse Autoencoders (SAE) to decode attention states into sparse features, building a CPU-based inverted index and discarding the KV cache.<br>
-        • Retained near-full-context performance (e.g., 99.4% on Llama-3-8B) on LongBench via endogenous retrieval based on feature co-activation.
+        • 提出了 S3-Attention（Sparse & Semantic Streaming Attention），一种针对内存受限长上下文推理的框架，实现了 O(1) 的 GPU 内存占用。<br>
+        • 利用稀疏自动编码器（SAE）将注意力状态解码为稀疏特征，在流式处理中构建 CPU 倒排索引并丢弃 KV 缓存。<br>
+        • 通过特征共激活进行内源性检索，在 LongBench 上保持了接近全上下文的性能（例如在 Llama-3-8B 上保留了 99.4% 的性能）。
       </td>
     </tr>
     <tr>
@@ -3560,9 +3522,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Proposed LLM-as-RNN, an inference-only framework converting frozen LLMs into recurrent predictors to address immutable context history.<br>
-        • Represents the hidden state as a natural language memory (structured system prompt) updated via feedback-driven text rewriting at each step.<br>
-        • Significantly outperformed Zero-shot and MemPrompt baselines in healthcare, meteorology, and finance time-series tasks under fixed token budgets.
+        • 提出了 LLM-as-RNN，一种仅推理的框架，将冻结的 LLM 转换为循环预测器，解决了标准 ICL 无法更新错误的问题。<br>
+        • 将隐藏状态表示为自然语言记忆（结构化系统提示摘要），并通过基于反馈的文本重写在每一步更新该状态，实现了在线学习。<br>
+        • 在医疗、气象和金融的时序预测任务中，LLM-as-RNN 在固定 Token 预算下显著优于 Zero-shot 和 MemPrompt 基线。
       </td>
     </tr>
     <tr>
@@ -3580,9 +3542,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Memory Bear constructs a human-like memory architecture grounded in cognitive science (ACT-R, Ebbinghaus), distinguishing between explicit and implicit memory to achieve a leap from "memory" to "cognition."<br>
-        • It features a three-layer architecture with an Intelligent Semantic Pruning Algorithm and a Self-Reflection Engine, significantly reducing token consumption (~90%) while actively suppressing hallucinations.<br>
-        • Experiments demonstrate it outperforms Mem0 and MemGPT in accuracy and latency, with validated effectiveness in healthcare (chronic disease management), enterprise operations, and personalized education.
+        • Memory Bear 构建了一种基于认知科学（ACT-R、艾宾浩斯）的类人记忆架构，通过区分显性与隐性记忆及引入智能语义剪枝，实现了从“记忆”到“认知”的跃迁。<br>
+        • 该系统采用三层架构（存储、编排、应用），集成了自我反思引擎和多模态感知，在大幅降低 Token 消耗（约 90%）的同时，显著减少了幻觉并提升了长期交互的连贯性。<br>
+        • 实验结果表明，Memory Bear 在准确率和响应延迟上均优于 Mem0 和 MemGPT，并已在医疗（慢性病管理）、企业（知识库）和教育（个性化学习）场景中验证了其有效性。
       </td>
     </tr>
     <tr>
@@ -3600,9 +3562,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • O-Mem is a novel memory framework based on active user profiling that dynamically extracts and updates user characteristics and event records from proactive interactions.<br>
-        • Unlike systems relying on semantic grouping, O-Mem supports hierarchical retrieval of persona attributes and topic-related context to enable adaptive and coherent personalized responses.<br>
-        • The system achieves state-of-the-art performance on LoCoMo and PERSONAMEM benchmarks while significantly improving token efficiency and interaction response time compared to previous frameworks like LangMem and MemoryOS.
+        • O-Mem 是一种基于主动用户画像的新型记忆框架，能够通过主动交互动态提取并更新用户特征和事件记录。<br>
+        • 与依赖语义分组的系统不同，O-Mem 支持对角色属性和主题相关上下文进行层级检索，从而实现自适应且连贯的个性化响应。<br>
+        • 该系统在 LoCoMo 和 PERSONAMEM 基准测试中达到了最先进的性能，同时与 LangMem 和 MemoryOS 等先前的框架相比，显著提高了 Token 效率和交互响应时间。
       </td>
     </tr>
     <tr>
@@ -3620,9 +3582,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • LightMem is a lightweight memory architecture inspired by the Atkinson-Shiffrin human memory model, designed to balance performance and efficiency in LLMs.<br>
-        • It features a three-stage process: cognition-inspired sensory memory for filtering redundancy, topic-aware short-term memory for structured access, and long-term memory with sleep-time updates to decouple maintenance from inference.<br>
-        • Experimental results on LongMemEval and LoCoMo show LightMem outperforms strong baselines in accuracy while reducing token usage by up to 100× and API calls significantly.
+        • LightMem 是一种受 Atkinson-Shiffrin 人类记忆模型启发的轻量级记忆架构，旨在平衡 LLM 的性能与效率。<br>
+        • 它具有三阶段流程：受认知启发的感官记忆用于过滤冗余，主题感知的短期记忆用于结构化访问，以及具有睡眠时间更新机制的长期记忆，以将维护与推理解耦。<br>
+        • 在 LongMemEval 和 LoCoMo 上的实验结果表明，LightMem 在准确性上优于强大的基线模型，同时将 Token 使用量减少高达 100 倍，并显著降低了 API 调用。
       </td>
     </tr>
     <tr>
@@ -3640,9 +3602,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Introduces M3-Agent, a novel multimodal agent framework that mimics human memory by processing continuous visual and auditory inputs to build entity-centric episodic and semantic long-term memories.<br>
-        • Proposes M3-Bench, a comprehensive long-video question answering benchmark comprising 1,020 videos from robot and web perspectives, designed to evaluate capabilities like person understanding and cross-modal reasoning.<br>
-        • Experimental results demonstrate that M3-Agent, trained via reinforcement learning, significantly outperforms strong baselines such as Gemini-1.5-Pro and GPT-4o in memory retention and reasoning tasks.
+        • 介绍了 M3-Agent，这是一种新型多模态智能体框架，通过处理连续的视觉和听觉输入来模拟人类记忆，以构建以实体为中心的情景和语义长期记忆。<br>
+        • 提出了 M3-Bench，这是一个全面的长视频问答基准，包含来自机器人和网络视角的 1,020 个视频，旨在评估人物理解和跨模态推理等能力。<br>
+        • 实验结果表明，通过强化学习训练的 M3-Agent 在记忆保持和推理任务中显著优于 Gemini-1.5-Pro 和 GPT-4o 等强大的基线模型。
       </td>
     </tr>
     <tr>
@@ -3658,9 +3620,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • A-Mem introduces a Zettelkasten-inspired dynamic memory organization that equips LLM agents with genuine long-term memory.<br>
-        • Beyond simple storage, A-Mem enables self-linking and self-evolution, allowing agents to achieve significant advantages in complex reasoning tasks.<br>
-        • Experimental results demonstrate that A-Mem outperforms existing methods in performance, efficiency, and scalability, laying a strong foundation for building more intelligent and autonomous LLM agents.
+        • A-Mem 引入了一种受卢曼卡片盒笔记法（Zettelkasten）启发的动态记忆组织方式，赋予 LLM 智能体真正的长期记忆。<br>
+        • 除了简单的存储，A-Mem 还支持自链接和自进化，使智能体在复杂的推理任务中获得显著优势。<br>
+        • 实验结果表明，A-Mem 在性能、效率和可扩展性方面均优于现有方法，为构建更智能、更自主的 LLM 智能体奠定了坚实基础。
       </td>
     </tr>
     <tr>
@@ -3678,9 +3640,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Livia is an emotion-aware AR companion designed to combat loneliness through a modular multi-agent architecture and immersive augmented reality interactions.<br>
-        • It introduces two novel memory compression algorithms—Temporal Binary Compression (TBC) and Dynamic Importance Memory Filter (DIMF)—to efficiently manage long-term memory while retaining emotionally significant context.<br>
-        • The system integrates multimodal emotion recognition (text and voice) and an adaptive personality model, demonstrating high accuracy and fostering deeper emotional bonds with users.
+        • Livia 是一款具有情感意识的 AR 伴侣，旨在通过模块化的多智能体架构和沉浸式增强现实交互来缓解孤独感。<br>
+        • 它引入了两种新颖的记忆压缩算法——时间二进制压缩（TBC）和动态重要性记忆过滤器（DIMF）——以高效管理长期记忆，同时保留具有情感意义的上下文。<br>
+        • 该系统集成了多模态情感识别（文本和语音）和自适应个性模型，展现出高准确性并能与用户建立更深层的情感纽带。
       </td>
     </tr>
     <tr>
@@ -3700,9 +3662,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Nemori is a self-organizing memory architecture inspired by cognitive science, designed to address the limitations of Large Language Models in long-term interactions by enabling persistent, adaptive memory.<br>
-        • It introduces the Two-Step Alignment Principle for autonomous episode segmentation and the Predict-Calibrate Principle for proactive knowledge distillation, moving beyond passive storage to active learning.<br>
-        • Experimental results on LoCoMo and LongMemEval benchmarks show that Nemori significantly outperforms state-of-the-art systems while using 88% fewer tokens than full-context baselines.
+        • Nemori 是一种受认知科学启发的自组织记忆架构，旨在通过实现持久、自适应的记忆来解决大型语言模型在长期交互中的局限性。<br>
+        • 它引入了用于自主情节分割的“两步对齐原则”和用于主动知识蒸馏的“预测-校准原则”，实现了从被动存储到主动学习的转变。<br>
+        • 在 LoCoMo 和 LongMemEval 基准测试上的实验结果表明，Nemori 显著优于最先进的系统，且 Token 使用量比全上下文基线少 88%。
       </td>
     </tr>
     <tr>
@@ -3719,9 +3681,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Proposes H-MEM, a hierarchical memory architecture that organizes memory into four semantic levels with positional index encoding, enabling efficient layer-by-layer retrieval without exhaustive similarity computation.<br>
-        • Introduces a dynamic memory update mechanism that adjusts memory weights based on user feedback to reflect changing user interests and psychological states.<br>
-        • Experimental results on the LoCoMo dataset demonstrate that H-MEM consistently outperforms baselines in long-term dialogue tasks while significantly reducing computational cost and retrieval latency.
+        • 提出了 H-MEM，这是一种分层记忆架构，利用位置索引编码将记忆组织成四个语义层级，实现了高效的逐层检索，无需进行穷尽的相似度计算。<br>
+        • 引入了一种动态记忆更新机制，根据用户反馈调整记忆权重，以反映用户不断变化的兴趣和心理状态。<br>
+        • 在 LoCoMo 数据集上的实验结果表明，H-MEM 在长期对话任务中始终优于基线模型，同时显著降低了计算成本和检索延迟。
       </td>
     </tr>
     <tr>
@@ -3741,9 +3703,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • MIRIX is a modular, multi-agent memory system that addresses the limitations of flat memory architectures by integrating six specialized memory components—including Episodic, Semantic, and Procedural memory—managed by dedicated agents.<br>
-        • The framework introduces an "Active Retrieval" mechanism and a Meta Memory Manager to dynamically coordinate memory updates and retrieval, and validates these capabilities on a newly introduced multimodal benchmark, ScreenshotVQA, consisting of high-resolution user activity logs.<br>
-        • Experimental results show that MIRIX outperforms RAG baselines by 35% in accuracy on ScreenshotVQA while reducing storage by 99.9%, and achieves state-of-the-art performance on the LOCOMO long-form conversation benchmark.
+        • MIRIX 是一个模块化的多智能体记忆系统，通过集成由专用智能体管理的六个专门记忆组件（包括情景记忆、语义记忆和程序记忆），解决了扁平化记忆架构的局限性。<br>
+        • 该框架引入了“主动检索”机制和元记忆管理器来动态协调记忆更新与检索，并在新引入的多模态基准 ScreenshotVQA（由高分辨率用户活动日志组成）上验证了这些能力。<br>
+        • 实验结果表明，MIRIX 在 ScreenshotVQA 上的准确率比 RAG 基线高出 35%，存储空间减少了 99.9%，并在 LOCOMO 长对话基准上达到了最先进的性能。
       </td>
     </tr>
     <tr>
@@ -3763,9 +3725,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Introduces Ella, an embodied social agent equipped with a structured long-term multimodal memory system comprising name-centric semantic memory and spatiotemporal episodic memory.<br>
-        • By integrating this lifelong memory system with foundation models, Ella can retrieve relevant information for decision-making, plan daily activities, and build social relationships in a 3D open world.<br>
-        • Experimental results in a dynamic environment demonstrate Ella's ability to influence, lead, and cooperate with other agents, highlighting the potential of combining structured memory with foundation models.
+        • 介绍了 Ella，这是一个具身社交智能体，配备了结构化的终身多模态记忆系统，包含以名字为中心的语义记忆和时空情景记忆。<br>
+        • 通过将这种终身记忆系统与基础模型集成，Ella 可以检索相关信息以进行决策、规划日常活动，并在 3D 开放世界中建立社会关系。<br>
+        • 在动态环境中的实验结果证明了 Ella 影响、领导以及与其他智能体合作的能力，突显了结合结构化记忆与基础模型的潜力。
       </td>
     </tr>
     <tr>
@@ -3782,9 +3744,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • MemoryOS aims to provide comprehensive and efficient memory management for AI agents.<br>
-        • Inspired by memory management principles in computer operating systems and the hierarchical structure of human memory, MemoryOS adopts a unique segment–page hierarchical storage architecture and comprises four core functional modules: memory storage, memory updating, memory retrieval, and response generation.<br>
-        • Experimental results show that MemoryOS significantly improves contextual coherence and personalized memory retention in long conversations across mainstream benchmarks; for example, on the LoCoMo benchmark, average F1 and BLEU-1 scores increase by 49.11% and 46.18%, respectively.
+        • MemoryOS 旨在为 AI 智能体提供全面且高效的记忆管理。<br>
+        • 受计算机操作系统内存管理原理和人类记忆分层结构的启发，MemoryOS 采用独特的段-页分层存储架构，包含四个核心功能模块：记忆存储、记忆更新、记忆检索和响应生成。<br>
+        • 实验结果表明，MemoryOS 在主流基准测试的长对话中显著提高了上下文连贯性和个性化记忆保持能力；例如，在 LoCoMo 基准测试上，平均 F1 和 BLEU-1 分数分别提高了 49.11% 和 46.18%。
       </td>
     </tr>
     <tr>
@@ -3802,9 +3764,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • MemOS (Memory Operating System) is a memory operating system designed for AI systems that treats memory as a manageable system resource, unifying the representation, scheduling, and evolution of explicit, activation-based, and parameter-level memory to enable cost-efficient storage and retrieval.<br>
-        • MemOS adopts a three-layer architecture consisting of an interface layer, an operation layer, and an infrastructure layer. The interface layer interacts with users or upstream systems and provides standardized memory APIs; the operation layer organizes and schedules memory resources; and the infrastructure layer handles storage, security, migration, and data flow of memory.<br>
-        • MemOS provides operating-system-level support for cross-task adaptation, cross-modality evolution, and cross-platform migration. Its introduction marks a key transition for large models from “perception and generation only” to “memory-enabled and evolutionary” intelligence.
+        • MemOS（记忆操作系统）是专为 AI 系统设计的记忆操作系统，它将记忆视为可管理的系统资源，统一了显式记忆、基于激活的记忆和参数级记忆的表示、调度和进化，以实现低成本的存储和检索。<br>
+        • MemOS 采用三层架构，由接口层、操作层和基础设施层组成。接口层与用户或上游系统交互并提供标准化记忆 API；操作层组织和调度记忆资源；基础设施层处理记忆的存储、安全、迁移和数据流。<br>
+        • MemOS 为跨任务适应、跨模态进化和跨平台迁移提供了操作系统级的支持。它的引入标志着大模型从“仅感知和生成”向“具有记忆和进化能力”智能的关键转变。
       </td>
     </tr>
     <tr>
@@ -3820,9 +3782,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Mem0 is a memory architecture that dynamically extracts and integrates key information from conversations, enabling AI systems to remember important content and sustain cross-session dialogue.<br>
-        • The authors further propose Mem0g, which extends Mem0 by incorporating graph-structured memory (i.e., knowledge graphs), allowing AI systems to handle complex relational reasoning more effectively.<br>
-        • NLI tasks enhance constituency grammar induction ability, whereas SMS tasks reduce it in the upper layers.
+        • Mem0 是一种记忆架构，能从对话中动态提取并整合关键信息，使 AI 系统能够记住重要内容并维持跨会话对话。<br>
+        • 作者进一步提出了 Mem0g，通过结合图结构记忆（即知识图谱）扩展了 Mem0，使 AI 系统能更有效地处理复杂的关系推理。<br>
+        • NLI 任务增强了成分句法归纳能力，而 SMS 任务则降低了上层的这一能力。
       </td>
     </tr>
     <tr>
@@ -3841,9 +3803,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Introduces Zep, a memory layer service for AI agents powered by Graphiti, a dynamic and temporally-aware knowledge graph engine.<br>
-        • Zep synthesizes unstructured conversational data and structured business data while maintaining historical relationships, enabling agents to handle complex, evolving contexts.<br>
-        • Experimental results demonstrate that Zep outperforms MemGPT on the Deep Memory Retrieval (DMR) benchmark and achieves significant improvements in accuracy and latency on the more challenging LongMemEval benchmark.
+        • 介绍了 Zep，这是一种由动态且具有时间感知的知识图谱引擎 Graphiti 驱动的 AI 智能体记忆层服务。<br>
+        • Zep 在保持历史关系的同时，综合了非结构化对话数据和结构化业务数据，使智能体能够处理复杂、演变的上下文。<br>
+        • 实验结果表明，Zep 在深度记忆检索（DMR）基准测试中优于 MemGPT，并在更具挑战性的 LongMemEval 基准测试中显著提高了准确性和延迟表现。
       </td>
     </tr>
     <tr>
@@ -3861,9 +3823,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Proposes Embodied VideoAgent, a multimodal agent that constructs persistent scene memory by fusing egocentric video with embodied sensory inputs like depth and pose to address dynamic scene understanding.<br>
-        • Features a VLM-driven memory update mechanism that dynamically tracks object state changes and relations during actions, ensuring the memory remains accurate over long-form interactions.<br>
-        • The agent achieves state-of-the-art performance on benchmarks such as Ego4D-VQ3D and OpenEQA, and demonstrates practical utility in generating synthetic embodied user-assistant interaction data.
+        • 提出了 Embodied VideoAgent，这是一种多模态智能体，通过融合第一视角视频与深度、姿态等具身感知输入来构建持久的场景记忆，以解决动态场景理解问题。<br>
+        • 具有 VLM 驱动的记忆更新机制，可在动作过程中动态跟踪物体状态变化和关系，确保记忆在长形式交互中保持准确。<br>
+        • 该智能体在 Ego4D-VQ3D 和 OpenEQA 等基准测试中达到了最先进的性能，并在生成合成具身用户-助手交互数据方面展示了实用价值。
       </td>
     </tr>
     <tr>
@@ -3882,9 +3844,9 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
       <td colspan="3">
-        • Proposes THEANINE, a framework for lifelong dialogue agents that utilizes a relation-aware memory graph to store memories without deletion, preserving temporal and cause-effect connections.<br>
-        • Introduces a timeline-augmented response generation approach that retrieves and refines entire memory timelines, ensuring rich contextual cues are maintained for long-term interaction.<br>
-        • Presents TeaFarm, a counterfactual-driven evaluation pipeline designed to stress-test dialogue agents' ability to correctly reference past conversations, where THEANINE demonstrates superior performance over existing baselines.
+        • 提出了 THEANINE，这是一个用于终身对话智能体的框架，利用关系感知的记忆图谱来存储记忆而不删除，保留了时间与因果连接。<br>
+        • 引入了一种时间轴增强的响应生成方法，检索并细化整个记忆时间轴，确保为长期交互保留丰富的上下文线索。<br>
+        • 展示了 TeaFarm，这是一个反事实驱动的评估流程，旨在压力测试对话智能体正确引用过去对话的能力，THEANINE 在该流程中表现出优于现有基线的性能。
       </td>
     </tr>
     <tr>
@@ -3904,58 +3866,38 @@ Framework for Experience-Driven Agent Evolution</strong></td>
     </tr>
     <tr>
         <td colspan="3">
-          • Memoro is a wearable audio-based memory assistant designed to minimize disruption during social interactions by utilizing Large Language Models (LLMs) for concise memory retrieval.<br>
-          • The system introduces a "Queryless Mode" that proactively infers user memory needs based on real-time conversational context, alongside a traditional "Query Mode" for explicit natural language requests.<br>
-          • User studies indicate that Memoro increases recall confidence and reduces device interaction time while effectively preserving the quality of ongoing conversations.
+          • Memoro 是一款可穿戴的音频记忆助手，旨在利用大型语言模型（LLM）进行简明的记忆检索，从而最大限度地减少社交互动中的干扰。<br>
+          • 该系统引入了“无查询模式”，根据实时对话上下文主动推断用户的记忆需求，同时保留了用于明确自然语言请求的传统“查询模式”。<br>
+          • 用户研究表明，Memoro 提高了回忆的信心并减少了设备交互时间，同时有效地保持了正在进行的对话质量。
         </td>
     </tr>
-    <!-- <tr>
-      <td rowspan="2" style="width: 15%;">2024-09-21</td>
-      <td style="width: 55%;"><strong>Memory3: Language modeling with explict memory</strong></td>
-      <td style="width: 15%;"><img src="https://img.shields.io/badge/Base%20Model-darkred" alt="Base Model">
-      <img src="https://img.shields.io/badge/Explicit%20Memory-darkgreen" alt="Explicit Memory">
-      <img src="https://img.shields.io/badge/Memory%20Circuit-slateblue" alt="Memory Circuit">
-      <img src="https://img.shields.io/badge/Long--Context%20Models-royalblue" alt="Long-Context Models">
-      </td>
-      <td style="width: 15%;"><a href="https://doi.org/10.4208/jml.240708">
-      <img src="https://img.shields.io/badge/Journal%20of%20ML-Paper-black?labelColor=blueviolet" alt="Journal of ML Paper">
-      </a></td>
-    </tr>
-    <tr>
-      <td colspan="3">
-        • Memory3 is a novel large language model that introduces explicit memory to reduce training and inference costs.<br>
-        • The study proposes a memory circuit theory that describes the process of memory externalization, clarifies the definition of knowledge, and highlights the model’s advantages in handling long contexts.<br>
-        • Memory3 effectively manages the costs of knowledge writing and reading, and employs compression techniques to significantly reduce the storage requirements of explicit memory.
-      </td>
-    </tr> -->
-
   </table>
 
 </details>
 
-## 🧰 Resources
+## 🧰 仓库资源
 
-### 📊 Benchmarks and Tasks
+### 📊 测试基准
 
-|     Task Type      | Benchmarks \& Datasets                                                  |
+|     任务类型      | 数据集和评估基准                                                  |
 | :-----------------------: | ------------------------------------------------------------ |
-| **Personalized Task Evaluation**  | [IMPLEXCONV](https://aclanthology.org/2025.emnlp-main.580.pdf), [PERSONAMEM](https://arxiv.org/pdf/2504.14225), [PERSONAMEM-v2](https://www.arxiv.org/pdf/2512.06688), [PersonaBench](https://aclanthology.org/2025.findings-acl.49.pdf), [PersonaFeedback](https://arxiv.org/pdf/2506.12915), [LaMP](https://aclanthology.org/2024.acl-long.399.pdf), [MemDaily](https://arxiv.org/pdf/2409.20163), [MPR](https://arxiv.org/pdf/2508.13250), [KnowMe-Bench](https://arxiv.org/abs/2601.04745)  |
-|  **Comprehensive Evaluation**   | [MemoryAgentBench](https://arxiv.org/pdf/2507.05257), [LifelongAgentBench](https://arxiv.org/pdf/2505.11942), [StreamBench](https://arxiv.org/pdf/2406.08747) |
-|  **Memory Mechanism Evaluation**   | [MemBench](https://aclanthology.org/2025.findings-acl.989.pdf),  [Minerva](https://arxiv.org/pdf/2502.03358), [MemoryBench](https://arxiv.org/pdf/2510.17281) |
-|  **Long-Term Memory Evaluation**   | [LOCCO](https://aclanthology.org/2025.findings-acl.1014.pdf), [LONGMEMEVAL](https://arxiv.org/pdf/2410.10813), [LOCOMO](https://aclanthology.org/2024.acl-long.747.pdf), [MADial-Bench](https://arxiv.org/abs/2409.15240), [StoryBench](https://arxiv.org/pdf/2506.13356), [DialSim](https://arxiv.org/pdf/2406.13144), [Mem-Gallery](https://arxiv.org/pdf/2601.03515), [RealMem](https://arxiv.org/pdf/2601.06966), [CloneMem](https://arxiv.org/pdf/2601.07023) |
-|  **Long-Dialogue Reasoning**   | [PREFEVAL](https://arxiv.org/pdf/2502.09597),  [MiniLongBench](https://aclanthology.org/2025.acl-long.560.pdf)|
-|  **Long-Context Understanding**   | [LongBench V2](https://arxiv.org/pdf/2412.15204), [LongBench](https://arxiv.org/abs/2308.14508), [BABILong](https://arxiv.org/pdf/2406.10149), [HotpotQA](https://aclanthology.org/D18-1259.pdf) |
-|  **Long-Context Evaluation** |[SCBENCH](https://arxiv.org/abs/2412.10319), [L-CiteEval](https://arxiv.org/pdf/2410.02115), [GLE](https://aclanthology.org/2024.acl-long.859/), [HOMER](https://arxiv.org/pdf/2404.10308), [RULER](https://arxiv.org/pdf/2404.06654), [MM-Needle](https://aclanthology.org/2025.naacl-long.166.pdf) |
-|  **Long-Form Text Generation**   | [LongGenBench](https://arxiv.org/pdf/2409.02076) |
-|  **Episodic Memory Evaluation**   | [PerLTQA](https://aclanthology.org/2024.sighan-1.18.pdf)|
-|  **Memory Hallucination Evaluation**   | [HaluMem](https://arxiv.org/pdf/2511.03506) |
-|  **Web Interaction & Navigation** | [WebChoreArena](https://arxiv.org/pdf/2506.01952), [MT-Mind2Web](https://arxiv.org/pdf/2402.15057), [WebShop](https://arxiv.org/pdf/2207.01206), [WebArena](https://arxiv.org/pdf/2307.13854) |
+| **个性化任务评估**  | [IMPLEXCONV](https://aclanthology.org/2025.emnlp-main.580.pdf), [PERSONAMEM](https://arxiv.org/pdf/2504.14225), [PERSONAMEM-v2](https://www.arxiv.org/pdf/2512.06688), [PersonaBench](https://aclanthology.org/2025.findings-acl.49.pdf), [PersonaFeedback](https://arxiv.org/pdf/2506.12915), [LaMP](https://aclanthology.org/2024.acl-long.399.pdf), [MemDaily](https://arxiv.org/pdf/2409.20163), [MPR](https://arxiv.org/pdf/2508.13250), [KnowMe-Bench](https://arxiv.org/abs/2601.04745)  |
+|  **综合评价**   | [MemoryAgentBench](https://arxiv.org/pdf/2507.05257), [LifelongAgentBench](https://arxiv.org/pdf/2505.11942), [StreamBench](https://arxiv.org/pdf/2406.08747) |
+|  **记忆机制评价**   | [MemBench](https://aclanthology.org/2025.findings-acl.989.pdf),  [Minerva](https://arxiv.org/pdf/2502.03358), [MemoryBench](https://arxiv.org/pdf/2510.17281) |
+|  **长期记忆评估**   | [LOCCO](https://aclanthology.org/2025.findings-acl.1014.pdf), [LONGMEMEVAL](https://arxiv.org/pdf/2410.10813), [LOCOMO](https://aclanthology.org/2024.acl-long.747.pdf), [MADial-Bench](https://arxiv.org/abs/2409.15240), [StoryBench](https://arxiv.org/pdf/2506.13356), [DialSim](https://arxiv.org/pdf/2406.13144), [Mem-Gallery](https://arxiv.org/pdf/2601.03515), [RealMem](https://arxiv.org/pdf/2601.06966), [CloneMem](https://arxiv.org/pdf/2601.07023) |
+|  **长对话推理**   | [PREFEVAL](https://arxiv.org/pdf/2502.09597),  [MiniLongBench](https://aclanthology.org/2025.acl-long.560.pdf)|
+|  **长上下文理解**   | [LongBench V2](https://arxiv.org/pdf/2412.15204), [LongBench](https://arxiv.org/abs/2308.14508), [BABILong](https://arxiv.org/pdf/2406.10149), [HotpotQA](https://aclanthology.org/D18-1259.pdf) |
+|  **长上下文评估** |[SCBENCH](https://arxiv.org/abs/2412.10319), [L-CiteEval](https://arxiv.org/pdf/2410.02115), [GLE](https://aclanthology.org/2024.acl-long.859/), [HOMER](https://arxiv.org/pdf/2404.10308), [RULER](https://arxiv.org/pdf/2404.06654), [MM-Needle](https://aclanthology.org/2025.naacl-long.166.pdf) |
+|  **长文本生成**   | [LongGenBench](https://arxiv.org/pdf/2409.02076) |
+|  **情景记忆评估**   | [PerLTQA](https://aclanthology.org/2024.sighan-1.18.pdf)|
+|  **记忆幻觉评估**   | [HaluMem](https://arxiv.org/pdf/2511.03506) |
+|  **Web交互与导航** | [WebChoreArena](https://arxiv.org/pdf/2506.01952), [MT-Mind2Web](https://arxiv.org/pdf/2402.15057), [WebShop](https://arxiv.org/pdf/2207.01206), [WebArena](https://arxiv.org/pdf/2307.13854) |
 
 
-### 💻 Systems and Open Sources
-Systems below are ordered by **publication date**:
+### 💻 开源系统
+下面系统按照时间顺序排列:
 
-| System      | Time       | Stars | GitHub & Website |
+| 系统      | 时间       | 关注数 | 开源网址和官方网站 |
 |-------------|------------|-------|------------------|
 | Zep         | 2023-05-19 | ![GitHub Repo stars](https://img.shields.io/github/stars/getzep/zep?style=social) | https://github.com/getzep/zep<br>https://www.getzep.com/ |
 | Agentmemory | 2023-07-07 | ![GitHub Repo stars](https://img.shields.io/github/stars/elizaOS/agentmemory?style=social) | https://github.com/elizaOS/agentmemory<br>No official website |
@@ -3981,149 +3923,100 @@ Systems below are ordered by **publication date**:
 | EverMemOS   | 2025-10-29 | ![GitHub Repo stars](https://img.shields.io/github/stars/EverMind-AI/EverMemOS?style=social) | https://github.com/EverMind-AI/EverMemOS<br>https://evermind.ai/ |
 | MemoryBear  | 2025-12-17 | ![GitHub Repo stars](https://img.shields.io/github/stars/SuanmoSuanyangTechnology/MemoryBear?style=social) | https://github.com/SuanmoSuanyangTechnology/MemoryBear<br>https://www.memorybear.ai/ |
 
-### 🎥 Multi-media resource
+### 🎥 多媒体资源
 
 <table>
   <thead>
     <tr>
-      <th>Type</th>
-      <th>Website Link</th>
-      <th>Video Introduction</th>
+      <th>类型</th>
+      <th>网址链接</th>
+      <th>视频内容简介</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td rowspan="6"><strong>Basic Theory of Memory</strong></td>
+      <td rowspan="6"><strong>记忆基本理论</strong></td>
       <td>https://www.youtube.com/watch?v=k3FUWWEwgfc</td>
-      <td>Short-Term Memory with LangGraph</td>
+      <td>基于LangGraph的短期记忆</td>
     </tr>
     <tr>
       <td>https://www.youtube.com/watch?v=WsGVXiWzTpI</td>
-      <td>OpenAI: Agent Memory Patterns
-</td>
+      <td>OpenAI: 智能体记忆设计模式</td>
     </tr>
     <tr>
       <td>https://www.youtube.com/watch?v=fsENEq4F55Q</td>
-      <td>Long-Term Memory with LangGraph</td>
+      <td>基于LangGraph的长期记忆</td>
     </tr>
     <tr>
       <td>https://www.youtube.com/watch?v=L-au0tvDJbI</td>
-      <td>LLMs Do Not Have Human-Like Working Memories</td>
+      <td>llm不具备类似人类的工作记忆</td>
     </tr>
     <tr>
       <td>https://www.youtube.com/watch?v=RkWor1BZOn0</td>
-      <td> long-term memory and personalization for LLM applications</td>
+      <td> LLM进行长期记忆和个性化</td>
     </tr>
     <tr>
       <td>https://www.youtube.com/watch?v=CFih0_6tn2w</td>
-      <td>A Paradigm Shift to Memory as a First Class Citizen for LLMs</td>
+      <td>将记忆作为大语言模型的一等任务</td>
     </tr>
     <tr>
-      <td rowspan="4"><strong>Memory-Related Tools</strong></td>
+      <td rowspan="4"><strong>记忆相关工具</strong></td>
       <td>https://www.bilibili.com/video/BV1hom8YAEhX</td>
-      <td>LLMs as Operating Systems: Agent Memory</td>
+      <td>记忆Agent</td>
     </tr>
     <tr>
       <td>https://www.bilibili.com/video/BV1CU421o7DL</td>
-      <td>Langchain Agent with memory</td>
+      <td>基于Langchain的记忆agent</td>
     </tr>
     <tr>
       <td>https://www.bilibili.com/video/BV1arJazVEaX</td>
-      <td>Open Memory MCP</td>
+      <td>开启记忆MCP</td>
     </tr>
     <tr>
       <td>https://www.bilibili.com/video/BV11HxXzuExk</td>
-      <td> Agentic Memory for LLM Agents</td>
+      <td>大模型Agent记忆</td>
     </tr>
     <tr>
-      <td rowspan="10"><strong>Memory-Related Papers</strong></td>
+      <td rowspan="10"><strong>记忆相关论文</strong></td>
       <td>https://www.bilibili.com/video/BV1XT8ez6E46</td>
-      <td>AI agent Survey Memory</td>
+      <td>AI agent记忆综述</td>
     </tr>
     <tr>
       <td>https://www.bilibili.com/video/BV1f12wBpEXX</td>
-      <td>MemGen: Weaving Generative Latent Memory for Self-Evolving Agents</td>
+      <td>为自进化智能体组织生成潜在记忆</td>
     </tr>
     <tr>
       <td>https://www.bilibili.com/video/BV1deyFBKEFh</td>
-      <td>MLP Memory: A Retriever-Pretrained Memory for Large Language Models</td>
+      <td>大型语言模型的检索器预训练记忆</td>
     </tr>
     <tr>
       <td>https://www.bilibili.com/video/BV18FnVzpE6S</td>
-      <td>How Memory Management Impacts LLM Agents: An Empirical Study of Experience-Following Behavior</td>
+      <td>记忆管理经验跟随行为的实证研究</td>
     </tr>
     <tr>
       <td>https://www.bilibili.com/video/BV1mpbrzSEH9</td>
-      <td>Agent Workflow Memory</td>
+      <td>Agent记忆工作流</td>
     </tr>
     <tr>
       <td>https://www.bilibili.com/video/BV1qEtozyEoh</td>
-      <td>Introduction to the Memory Mechanism of Large Language Model Agents</td>
+      <td>大型语言模型智能体记忆机制简介</td>
     </tr>
     <tr>
       <td>https://www.bilibili.com/video/BV1FGrhYhEZK</td>
-      <td>Memory Layers at Scale</td>
+      <td>记忆层大规模扩展</td>
     </tr>
     <tr>
       <td>https://www.bilibili.com/video/BV1aQ1xBkE45</td>
-      <td>Agentic Memory for LLM Agents</td>
+      <td>LLM agent记忆</td>
     </tr>
     <tr>
       <td>https://www.bilibili.com/video/BV1Yz421f7uH</td>
-      <td>Evaluating Very Long-Term Conversational Memory of LLM Agents</td>
+      <td>评估LLM智能体的非常长期的会话记忆</td>
     </tr>
     <tr>
       <td>https://www.bilibili.com/video/BV19RWdzxEsR</td>
-      <td>Lightweight plug-in memory system</td>
+      <td>轻量级插件式记忆系统</td>
     </tr>
   </tbody>
 </table>
-
-
-## 🤝  Make a Contribution
-Issue Template: 
-```
-Title: [paper's title]
-Head: [head name1] (, [head name2] ...)
-Published: [arXiv / ACL / ICLR / NIPS / ...]
-Summary:
-  - Innovation:
-  - Tasks:
-  - Significant Result: 
-```
-
-## 💬 Community & Support
-
-Join our community to ask questions, share your projects, and connect with other developers.
-
-- **GitHub Issues**: Report bugs or request features in our <a href="https://github.com/IAAR-Shanghai/Awesome-AI-Memory/issues" target="_blank">GitHub Issues</a>.
-- **GitHub Pull Requests**: Contribute code improvements via <a href="https://github.com/IAAR-Shanghai/Awesome-AI-Memory/pulls" target="_blank">Pull Requests</a>.
-- **GitHub Discussions**: Participate in our <a href="https://github.com/IAAR-Shanghai/Awesome-AI-Memory/discussions" target="_blank">GitHub Discussions</a> to ask questions or share ideas.
-- **WeChat**: Scan the QR code below to join our discussion group, get the latest research information related to Memory, or promote your related research results.
-
-<!-- <div style="text-align: center;">
-  <img src="assets/wechat-qr-code.png" alt="QR Code" width="255">
-</div> -->
-
-<!-- <center>
-  <img src="assets/wechat-qr-code.png" alt="QR Code" width="255">
-</center> -->
-
-<table style="width:100%">
-  <tr>
-    <td align="center">
-      <img src="assets/wechat-qr-code.png" alt="QR Code" width="255">
-    </td>
-  </tr>
-</table>
-
-## 🌟 Star Trends
-
-<a href="https://www.star-history.com/#IAAR-Shanghai/Awesome-AI-Memory&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=IAAR-Shanghai/Awesome-AI-Memory&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=IAAR-Shanghai/Awesome-AI-Memory&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=IAAR-Shanghai/Awesome-AI-Memory&type=date&legend=top-left" />
- </picture>
-</a>
 
