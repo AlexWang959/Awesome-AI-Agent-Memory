@@ -3894,6 +3894,27 @@ Framework for Experience-Driven Agent Evolution</strong></td>
 |  **Web交互与导航** | [WebChoreArena](https://arxiv.org/pdf/2506.01952), [MT-Mind2Web](https://arxiv.org/pdf/2402.15057), [WebShop](https://arxiv.org/pdf/2207.01206), [WebArena](https://arxiv.org/pdf/2307.13854) |
 
 
+### 🤖 智能体记忆（Agent Memory）优化小模型与框架调研汇总
+
+| 模型/框架名称 | 核心定位与特色 | 推荐/支持模型规模 | 项目链接 |
+| --- | --- | --- | --- |
+| **Memory-R1** | 基于强化学习的主动内存管理框架，支持 ADD/UPDATE/DELETE 操作。 | 3B - 14B (Qwen2.5, Llama3.1) | [GitHub](https://www.google.com/search?q=https://github.com/Memory-R1/Memory-R1) |
+| **Mem0 (Mem0g)** | 生产级智能记忆层，结合向量数据库与知识图谱，支持多租户与自动事实提取。 | 兼容各类 SLM (如 Qwen, Llama) | [GitHub](https://github.com/mem0ai/mem0) |
+| **MemoRAG** | 基于“全局记忆”的 RAG 框架，利用小模型生成线索引导精准检索。 | 7B (Qwen2-7B, Mistral-7B) | [GitHub](https://github.com/qhjqhj00/MemoRAG) |
+| **Phi-4-mini** | 微软推出的推理小模型，内置门控记忆单元 (GMU) 优化长上下文检索。 | 3.8B | [HuggingFace](https://huggingface.co/microsoft/phi-4-mini-instruct) |
+| **Gemma 3 (1B/4B)** | 谷歌最新多模态小模型，5:1 局部/全局注意力机制显著降低 KV 缓存开销。 | 1B (Text) / 4B (Multimodal) | [HuggingFace](https://huggingface.co/google/gemma-3-4b-it) |
+| **MemAdapter** | 统一显式、参数化与潜伏记忆的对齐框架，实现极速的跨范式内存对齐。 | 1.5B - 7B (Qwen2.5) | [GitHub](https://www.google.com/search?q=https://github.com/MemAdapter-Agent/MemAdapter) |
+| **FlashMem** | 通过“计算重用”从推理状态直接蒸馏内在记忆，大幅降低推理延迟。 | 适配长程智能体任务 | [GitHub](https://www.google.com/search?q=https://github.com/FlashMem-Agent/FlashMem) |
+| **LangMem** | LangChain 推出的长效记忆 SDK，支持从对话中自动提取事实与优化行为模式。 | 框架无关，支持各类 SLM | [GitHub](https://github.com/langchain-ai/langmem) |
+| **Titans** | 谷歌提出的神经长期记忆架构，模拟人类“惊讶度”机制进行测试时学习。 | 可扩展至 2M+ 上下文 | ([https://github.com/google-research/titans](https://www.google.com/search?q=https://github.com/google-research/titans)) |
+
+#### 说明：
+
+* **Memory-R1** 和 **MemAdapter** 是目前学术界针对“如何用极小代价训练模型管理内存”最前沿的研究。
+* **Gemma 3** 和 **Phi-4-mini** 是大厂在模型架构层面原生支持“更省内存的长上下文”的代表作。
+* **Mem0** 和 **LangMem** 则是工业界目前最成熟、即插即用的记忆层组件。
+
+  
 ### 💻 开源系统
 下面系统按照时间顺序排列:
 
