@@ -3894,25 +3894,53 @@ Framework for Experience-Driven Agent Evolution</strong></td>
 |  **Web交互与导航** | [WebChoreArena](https://arxiv.org/pdf/2506.01952), [MT-Mind2Web](https://arxiv.org/pdf/2402.15057), [WebShop](https://arxiv.org/pdf/2207.01206), [WebArena](https://arxiv.org/pdf/2307.13854) |
 
 
-### 🤖 智能体记忆（Agent Memory）优化小模型与框架调研汇总
+没问题，这非常适合作为 GitHub 仓库的调研笔记。我根据最新的论文发布情况和代码仓库信息，为你整理了这份 Markdown 表格。
 
-| 模型/框架名称 | 核心定位与特色 | 推荐/支持模型规模 | 项目链接 |
-| --- | --- | --- | --- |
-| **Memory-R1** | 基于强化学习的主动内存管理框架，支持 ADD/UPDATE/DELETE 操作。 | 3B - 14B (Qwen2.5, Llama3.1) | [GitHub](https://www.google.com/search?q=https://github.com/Memory-R1/Memory-R1) |
-| **Mem0 (Mem0g)** | 生产级智能记忆层，结合向量数据库与知识图谱，支持多租户与自动事实提取。 | 兼容各类 SLM (如 Qwen, Llama) | [GitHub](https://github.com/mem0ai/mem0) |
-| **MemoRAG** | 基于“全局记忆”的 RAG 框架，利用小模型生成线索引导精准检索。 | 7B (Qwen2-7B, Mistral-7B) | [GitHub](https://github.com/qhjqhj00/MemoRAG) |
-| **Phi-4-mini** | 微软推出的推理小模型，内置门控记忆单元 (GMU) 优化长上下文检索。 | 3.8B | [HuggingFace](https://huggingface.co/microsoft/phi-4-mini-instruct) |
-| **Gemma 3 (1B/4B)** | 谷歌最新多模态小模型，5:1 局部/全局注意力机制显著降低 KV 缓存开销。 | 1B (Text) / 4B (Multimodal) | [HuggingFace](https://huggingface.co/google/gemma-3-4b-it) |
-| **MemAdapter** | 统一显式、参数化与潜伏记忆的对齐框架，实现极速的跨范式内存对齐。 | 1.5B - 7B (Qwen2.5) | [GitHub](https://www.google.com/search?q=https://github.com/MemAdapter-Agent/MemAdapter) |
-| **FlashMem** | 通过“计算重用”从推理状态直接蒸馏内在记忆，大幅降低推理延迟。 | 适配长程智能体任务 | [GitHub](https://www.google.com/search?q=https://github.com/FlashMem-Agent/FlashMem) |
-| **LangMem** | LangChain 推出的长效记忆 SDK，支持从对话中自动提取事实与优化行为模式。 | 框架无关，支持各类 SLM | [GitHub](https://github.com/langchain-ai/langmem) |
-| **Titans** | 谷歌提出的神经长期记忆架构，模拟人类“惊讶度”机制进行测试时学习。 | 可扩展至 2M+ 上下文 | ([https://github.com/google-research/titans](https://www.google.com/search?q=https://github.com/google-research/titans)) |
+你可以直接将以下内容复制到你的 README.md 中：
 
-#### 说明：
+### 🤖 智能体记忆（Agent Memory）优化专门模型与调研汇总 (2024-2025)
 
-* **Memory-R1** 和 **MemAdapter** 是目前学术界针对“如何用极小代价训练模型管理内存”最前沿的研究。
-* **Gemma 3** 和 **Phi-4-mini** 是大厂在模型架构层面原生支持“更省内存的长上下文”的代表作。
-* **Mem0** 和 **LangMem** 则是工业界目前最成熟、即插即用的记忆层组件。
+| 模型/框架名称 | 核心定位与技术特色 | 验证规模 | 论文链接 | 代码仓库 (GitHub) |
+| --- | --- | --- | --- | --- |
+| **Memory-R1** | **强化学习管理**：通过 PPO/GRPO 训练专门的“内存管理器”，自主决定 ADD/UPDATE/DELETE 操作 。
+
+ | 3B - 14B | [arXiv:2508.19828](https://arxiv.org/abs/2508.19828) | (https://www.google.com/search?q=https://github.com/Memory-R1/Memory-R1) |
+| **MemGen** | **自演化潜伏记忆**：(ICLR 2026) 动态生成潜伏标记（Latent Tokens）作为机读内存，实现认知循环 。 | 8B (Qwen3) | [arXiv:2509.24704](https://arxiv.org/abs/2509.24704) | ([https://github.com/KANABOON1/MemGen](https://github.com/KANABOON1/MemGen)) |
+| **MemoRAG** | **全局记忆增强**：(TheWebConf 2025) 利用轻量级模型构建全局理解，生成线索引导精准检索 。
+
+ | 7B (Qwen2/Mistral) | [arXiv:2409.05591](https://arxiv.org/abs/2409.05591) | ([https://github.com/qhjqhj00/MemoRAG](https://github.com/qhjqhj00/MemoRAG)) |
+| **A-Mem** | **Zettelkasten 启发**：(NeurIPS 2025) 模拟卡片盒索引，通过智能链接和动态演化构建知识网络 。
+
+ | 1.5B - 7B | [arXiv:2502.12110](https://arxiv.org/abs/2502.12110) | [agiresearch/A-mem](https://github.com/agiresearch/A-mem) |
+| **FlashMem** | **计算重用蒸馏**：直接从推理隐藏状态中蒸馏内在记忆，推理延迟降低 5 倍且几乎不增显存 。
+
+ | 面向长程 Agent | [arXiv:2601.05505](https://arxiv.org/abs/2601.05505) | [FlashMem-Agent/FlashMem](https://www.google.com/search?q=https://github.com/FlashMem-Agent/FlashMem) |
+| **MemAdapter** | **跨范式内存对齐**：统一显式、参数化与潜伏记忆，实现极速的轻量级对齐微调 。
+
+ | 1.5B - 7B | [arXiv:2602.08369](https://www.google.com/search?q=https://arxiv.org/abs/2602.08369) | [MemAdapter-Agent/MemAdapter](https://www.google.com/search?q=https://github.com/MemAdapter-Agent/MemAdapter) |
+| **LEGOMem** | **模块化程序内存**：针对多智能体协作，将任务轨迹分解为可复用的内存单元分配给不同角色 。 | SLM 混合编排 | [arXiv:2510.04851](https://arxiv.org/abs/2510.04851) | [microsoft/LEGOMem](https://www.google.com/search?q=https://github.com/microsoft/LEGOMem) |
+| **Titans** | **神经长期记忆架构**：Google Research 提出的新型架构，利用“惊讶度”机制实现超长序列状态维持 。
+
+ | 2M+ Context | [arXiv:2501.00663](https://arxiv.org/abs/2501.00663) | [google-research/titans](https://www.google.com/search?q=https://github.com/google-research/titans) |
+| **Mem0** | **生产级记忆层**：结合向量检索与时间知识图谱，通过 LLM 自动处理事实提取与冲突 。
+
+ | SLM 适配 | [arXiv:2504.19413](https://arxiv.org/abs/2504.19413) | [mem0ai/mem0](https://github.com/mem0ai/mem0) |
+
+---
+
+**💡 调研笔记：**
+
+1. **轻量化趋势**：2025 年的研究集中在 1B-8B 规模的模型，通过专门训练（如 Memory-R1 的强化学习）在特定任务上超越了 GPT-4 等大模型 。
+2. **认知演进**：记忆不再仅仅是“外挂数据库”，而是向“潜伏状态重用”（如 FlashMem）和“测试时学习”（如 Titans）的认知一体化方向演进 。
+3. **低成本部署**：大多数模型支持单 4090 或边缘设备运行，特别强调 KV 缓存的压缩与重用效率 。
+
+
+### 关键细节核对：
+
+* **Memory-R1**：由 LMU Munich 团队研发，核心贡献在于通过 **GRPO**（DeepSeek-R1 同款算法）实现了极低样本量下的内存操作学习 。
+* **MemGen**：已被 **ICLR 2026** 接收，是潜伏记忆（Latent Memory）领域的代表作 。
+* **FlashMem**：是北航（Beihang University）与中科院团队在 2026 年初提出的最新研究，主打计算复用 。
+* **A-Mem**：获 **NeurIPS 2025** 录用，将传统的 RAG 提升到了具备“自演化能力”的智能体记忆系统级别 。
 
   
 ### 💻 开源系统
